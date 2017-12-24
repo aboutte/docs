@@ -1,8 +1,4 @@
-.DS_Store
-
-*.py[co]
-
-docs/index.md
-site/
-
+.DS_store
 .idea
+*.py[co]
+site/

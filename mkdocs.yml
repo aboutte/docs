@@ -1,9 +1,9 @@
-site_name: 'Awesome DevOps Jobs'
-site_url: 'https://awesome-devops-jobs.com'
-site_description: 'A curated list of Awesome DevOps Jobs'
+site_name: "Andy Boutte's Documentation"
+site_url: 'http://docs.andyboutte.com'
+site_description: "Andy Boutte's Documentation"
 site_author: 'Andy Boutte'
-repo_name: 'awesome-devops-jobs'
-repo_url: 'https://github.com/aboutte/awesome-devops-jobs'
+repo_name: 'docs'
+repo_url: 'https://github.com/aboutte/docs'
 remote_name: 'mine'
 theme: 'material'
 extra:
@@ -18,8 +18,5 @@ extra:
     - type: 'linkedin'
       link: 'https://www.linkedin.com/in/aboutte'
 google_analytics:
-  - 'UA-111280757-1'
+  - 'UA-111549698-1'
   - 'auto'
-pages:
-  - "Home": "index.md"
-  - "Contribute": "contribute.md"

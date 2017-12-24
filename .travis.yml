@@ -7,4 +7,4 @@ before_script:
   - gem install awesome_bot
 
 script:
-  - awesome_bot README.md --skip-save-results --allow-dupe --allow-redirect --white-list https://www.linkedin.com/jobs/devops-jobs
+  - awesome_bot docs/* --skip-save-results --allow-dupe --allow-redirect
