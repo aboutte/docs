@@ -11,19 +11,674 @@
             "title": "Awesome DevOps Jobs"
         }, 
         {
-            "location": "/contribute/", 
-            "text": "Contributing\n\n\nYour contributions are always welcome!\n\n\nGuidelines\n\n\n\n\nAdd one link per Pull Request.\n\n\nFill in all fields:Name, Website, Region, Remote\n\n\nWebsite link should look like:\n* [company-name](http://example.com/)\n\n\nOptionally fill out a company profile under /company-profile\n\n\nKeep descriptions concise.\n\n\n\n\n\n\nSearch previous suggestions before making a new one, as yours may be a duplicate.\n\n\nCheck your spelling and grammar.\n\n\nRemove any trailing whitespace.\n\n\nSend a Pull Request with the reason why the company is awesome.", 
-            "title": "Contribute"
+            "location": "/AWS/VPC Flow Logs/", 
+            "text": "Install awslogs\n\n\npip install awslogs\n\n\n\nCapture\n\n\nawslogs get aws_vpc_log_groups ALL --start='12/05/2017 17:00' --end='12/05/2017 20:00' \n vpcflowlog\n\n\n\nRemove first two columns\n\n\ncat vpcflowlog | awk '{print $3 \" \" $4 \" \" $5 \" \" $6 \" \" $7 \" \" $8 \" \" $9 \" \" $10 \" \" $11 \" \" $12 \" \" $13 \" \" $14 \" \" $15 \" \" $16}' \n tmp\n\n\n\nGet rows that are inter VPC communication and drop intra VPC communication\n\n\ncat tmp | awk '{ if( $4 ~ /10\\.100/ \n $5 ~ /10\\.100/ ) {} else { print } }' \n vpcflowlog", 
+            "title": "VPC Flow Logs"
         }, 
         {
-            "location": "/contribute/#contributing", 
-            "text": "Your contributions are always welcome!", 
-            "title": "Contributing"
+            "location": "/AWS/VPC Flow Logs/#install-awslogs", 
+            "text": "pip install awslogs", 
+            "title": "Install awslogs"
         }, 
         {
-            "location": "/contribute/#guidelines", 
-            "text": "Add one link per Pull Request.  Fill in all fields:Name, Website, Region, Remote  Website link should look like: * [company-name](http://example.com/)  Optionally fill out a company profile under /company-profile  Keep descriptions concise.    Search previous suggestions before making a new one, as yours may be a duplicate.  Check your spelling and grammar.  Remove any trailing whitespace.  Send a Pull Request with the reason why the company is awesome.", 
-            "title": "Guidelines"
+            "location": "/AWS/VPC Flow Logs/#capture", 
+            "text": "awslogs get aws_vpc_log_groups ALL --start='12/05/2017 17:00' --end='12/05/2017 20:00'   vpcflowlog", 
+            "title": "Capture"
+        }, 
+        {
+            "location": "/AWS/VPC Flow Logs/#remove-first-two-columns", 
+            "text": "cat vpcflowlog | awk '{print $3 \" \" $4 \" \" $5 \" \" $6 \" \" $7 \" \" $8 \" \" $9 \" \" $10 \" \" $11 \" \" $12 \" \" $13 \" \" $14 \" \" $15 \" \" $16}'   tmp", 
+            "title": "Remove first two columns"
+        }, 
+        {
+            "location": "/AWS/VPC Flow Logs/#get-rows-that-are-inter-vpc-communication-and-drop-intra-vpc-communication", 
+            "text": "cat tmp | awk '{ if( $4 ~ /10\\.100/   $5 ~ /10\\.100/ ) {} else { print } }'   vpcflowlog", 
+            "title": "Get rows that are inter VPC communication and drop intra VPC communication"
+        }, 
+        {
+            "location": "/Backup/Personal Backup Review/", 
+            "text": "Personal Backup Review\n\n\nMy personal CrashPlan subscription is expiring in January 2018.  I need to find a replacement backup solution.\n\nI currently have an Unlimited Family subscription with CrashPlan and backup ~5 machines with ~1.5TB of data.\n\n\nRequirements\n\n\n\n\nHigh\n\n\nCross platform - Mac and Linux at a minimum\n\n\nCustom encryption key\n\n\nScheduled\n\n\n\n\n\n\nMedium\n\n\n3-2-1 Backup Strategy - 3 copies, two local on different devices, and one remote\n\n\nCentral reporting (dashboard) or notifications\n\n\nCLI\n\n\n\n\n\n\n\n\nBackup Software\n\n\n\n\n\n\n\n\nName\n\n\n1.a\n\n\n1.b\n\n\n1.c\n\n\n2.a\n\n\n2.b\n\n\n2.c\n\n\n\n\n\n\n\n\n\n\nArq\n\n\nN\n\n\nY\n\n\n\n\nY\n\n\n\n\nN\n\n\n\n\n\n\nBacula\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBurp\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBorg\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCloudBerry\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDuplicacy\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDuplicity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDuplicati\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nurbackup\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nwasabi\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNotes\n\n\nArq\n\n\nSection 1.a\n\n\nArq has no Linux client.", 
+            "title": "Personal Backup Review"
+        }, 
+        {
+            "location": "/Backup/Personal Backup Review/#personal-backup-review", 
+            "text": "My personal CrashPlan subscription is expiring in January 2018.  I need to find a replacement backup solution. \nI currently have an Unlimited Family subscription with CrashPlan and backup ~5 machines with ~1.5TB of data.", 
+            "title": "Personal Backup Review"
+        }, 
+        {
+            "location": "/Backup/Personal Backup Review/#requirements", 
+            "text": "High  Cross platform - Mac and Linux at a minimum  Custom encryption key  Scheduled    Medium  3-2-1 Backup Strategy - 3 copies, two local on different devices, and one remote  Central reporting (dashboard) or notifications  CLI", 
+            "title": "Requirements"
+        }, 
+        {
+            "location": "/Backup/Personal Backup Review/#backup-software", 
+            "text": "Name  1.a  1.b  1.c  2.a  2.b  2.c      Arq  N  Y   Y   N    Bacula          Burp          Borg          CloudBerry          Duplicacy          Duplicity          Duplicati          urbackup          wasabi", 
+            "title": "Backup Software"
+        }, 
+        {
+            "location": "/Backup/Personal Backup Review/#notes", 
+            "text": "", 
+            "title": "Notes"
+        }, 
+        {
+            "location": "/Backup/Personal Backup Review/#arq", 
+            "text": "", 
+            "title": "Arq"
+        }, 
+        {
+            "location": "/Backup/Personal Backup Review/#section-1a", 
+            "text": "Arq has no Linux client.", 
+            "title": "Section 1.a"
+        }, 
+        {
+            "location": "/Backup/Storage Tiers/", 
+            "text": "Storage Tiers\n\n\nTier 1\n\n\nTier 2\n\n\nTier 3", 
+            "title": "Storage Tiers"
+        }, 
+        {
+            "location": "/Backup/Storage Tiers/#storage-tiers", 
+            "text": "", 
+            "title": "Storage Tiers"
+        }, 
+        {
+            "location": "/Backup/Storage Tiers/#tier-1", 
+            "text": "", 
+            "title": "Tier 1"
+        }, 
+        {
+            "location": "/Backup/Storage Tiers/#tier-2", 
+            "text": "", 
+            "title": "Tier 2"
+        }, 
+        {
+            "location": "/Backup/Storage Tiers/#tier-3", 
+            "text": "", 
+            "title": "Tier 3"
+        }, 
+        {
+            "location": "/Booktype/Install/", 
+            "text": "apt-get update; apt-get upgrade -y\napt-get install -y wget curl vim git unzip\n\n\ndatabase\n\n\napt-get install postgresql -y\nsudo -u postgres createuser -SDRP booktype-user (password: password)\nsudo -u postgres createdb -E utf8 -T template0 -O booktype-user booktype-db\nservice postgresql restart\n\n\npdf\n\n\napt-get install -y php5-cli php5-gd\nmkdir -p /var/www/\ncd /tmp/\nwget http://www.mpdfonline.com/repos/MPDF_6_0.zip\nunzip MPDF_6_0.zip -d /var/www/\ncd /var/www/mpdf60/\nchown www-data.www-data examples/test.pdf graph_cache/ tmp/ ttfontdata/\n\n\nbooktype\n\n\nadd booktype repo to apt-get\n\n\nvim /etc/apt/sources.list\n\n\n# Booktype\n\n\ndeb http://apt.sourcefabric.org/ trusty main\n\n\napt-get update\napt-get install sourcefabric-keyring --force-yes -y\napt-get update\napt-get install booktype -y", 
+            "title": "Install"
+        }, 
+        {
+            "location": "/Booktype/Install/#database", 
+            "text": "apt-get install postgresql -y\nsudo -u postgres createuser -SDRP booktype-user (password: password)\nsudo -u postgres createdb -E utf8 -T template0 -O booktype-user booktype-db\nservice postgresql restart", 
+            "title": "database"
+        }, 
+        {
+            "location": "/Booktype/Install/#pdf", 
+            "text": "apt-get install -y php5-cli php5-gd\nmkdir -p /var/www/\ncd /tmp/\nwget http://www.mpdfonline.com/repos/MPDF_6_0.zip\nunzip MPDF_6_0.zip -d /var/www/\ncd /var/www/mpdf60/\nchown www-data.www-data examples/test.pdf graph_cache/ tmp/ ttfontdata/", 
+            "title": "pdf"
+        }, 
+        {
+            "location": "/Booktype/Install/#booktype", 
+            "text": "", 
+            "title": "booktype"
+        }, 
+        {
+            "location": "/Booktype/Install/#add-booktype-repo-to-apt-get", 
+            "text": "vim /etc/apt/sources.list", 
+            "title": "add booktype repo to apt-get"
+        }, 
+        {
+            "location": "/Booktype/Install/#booktype_1", 
+            "text": "", 
+            "title": "# Booktype"
+        }, 
+        {
+            "location": "/Booktype/Install/#deb-httpaptsourcefabricorg-trusty-main", 
+            "text": "apt-get update\napt-get install sourcefabric-keyring --force-yes -y\napt-get update\napt-get install booktype -y", 
+            "title": "deb http://apt.sourcefabric.org/ trusty main"
+        }, 
+        {
+            "location": "/CUPS/README/", 
+            "text": "cups\n\n\nThese are the steps I used to setup a raspberry pi as a cups server:\n\n\napt-get update\napt-get upgrade\napt-get install build-essential wget curl git vim unzip screen dnsutils avahi-utils\nuseradd aboutte\nusermod -aG sudo aboutte\nwget https://github.com/apple/cups/archive/v2.2.6.zip\nunzip v2.2.6.zip\ncd cups-2.2.6\n./configure\nmake\nmake install\n/etc/init.d/cups start\n\n\n\nSetting up airprint\n\n\napt-get install python-pip\npip install pycups\ngit clone https://github.com/tjfontaine/airprint-generate.git\ncd airprint-generate\nairprint-generate.py -p \"\" -d /etc/avahi/services/\nservice avahi-daemon restart\n\n\n\nInstall brother driver on raspberry pi\n\n\nsearch for HL-2140 on Brother site.  Download and execute the \"Driver Install Tool\" script on Pi\n\n\nadding printer\n\n\nAfter cups is installed use the cupsd.conf in this directory and open up web interface.  Use the add printer button and select RAW for make and model.  The Brother printer driver will be used on the client side to speed up printing.\n\n\nCommand I have used to add printer on workstations (first download the Brother printer driver):\n\n\n/usr/sbin/lpadmin -p Brother -E -v ipp://cups.andyboutte.com:631/printers/Brother -P \"/Library/Printers/PPDs/Contents/Resources/Brother HL-2140 series CUPS.gz\" -D \"Brother\" -L \"Hobbit hole\" -o PageSize=A4\n\n\n\nBrowse Bonjour devices\n\n\navahi-browse -alr", 
+            "title": "README"
+        }, 
+        {
+            "location": "/CUPS/README/#cups", 
+            "text": "", 
+            "title": "cups"
+        }, 
+        {
+            "location": "/CUPS/README/#these-are-the-steps-i-used-to-setup-a-raspberry-pi-as-a-cups-server", 
+            "text": "apt-get update\napt-get upgrade\napt-get install build-essential wget curl git vim unzip screen dnsutils avahi-utils\nuseradd aboutte\nusermod -aG sudo aboutte\nwget https://github.com/apple/cups/archive/v2.2.6.zip\nunzip v2.2.6.zip\ncd cups-2.2.6\n./configure\nmake\nmake install\n/etc/init.d/cups start", 
+            "title": "These are the steps I used to setup a raspberry pi as a cups server:"
+        }, 
+        {
+            "location": "/CUPS/README/#setting-up-airprint", 
+            "text": "apt-get install python-pip\npip install pycups\ngit clone https://github.com/tjfontaine/airprint-generate.git\ncd airprint-generate\nairprint-generate.py -p \"\" -d /etc/avahi/services/\nservice avahi-daemon restart", 
+            "title": "Setting up airprint"
+        }, 
+        {
+            "location": "/CUPS/README/#install-brother-driver-on-raspberry-pi", 
+            "text": "search for HL-2140 on Brother site.  Download and execute the \"Driver Install Tool\" script on Pi", 
+            "title": "Install brother driver on raspberry pi"
+        }, 
+        {
+            "location": "/CUPS/README/#adding-printer", 
+            "text": "After cups is installed use the cupsd.conf in this directory and open up web interface.  Use the add printer button and select RAW for make and model.  The Brother printer driver will be used on the client side to speed up printing.", 
+            "title": "adding printer"
+        }, 
+        {
+            "location": "/CUPS/README/#command-i-have-used-to-add-printer-on-workstations-first-download-the-brother-printer-driver", 
+            "text": "/usr/sbin/lpadmin -p Brother -E -v ipp://cups.andyboutte.com:631/printers/Brother -P \"/Library/Printers/PPDs/Contents/Resources/Brother HL-2140 series CUPS.gz\" -D \"Brother\" -L \"Hobbit hole\" -o PageSize=A4", 
+            "title": "Command I have used to add printer on workstations (first download the Brother printer driver):"
+        }, 
+        {
+            "location": "/CUPS/README/#browse-bonjour-devices", 
+            "text": "avahi-browse -alr", 
+            "title": "Browse Bonjour devices"
+        }, 
+        {
+            "location": "/ELK/Elasticsearch Snapshotting/", 
+            "text": "/ebsvolume/usr/share/elasticsearch/bin/elasticsearch-plugin install repository-s3\n\n\nSNAPSHOT DATASTORE CREATION\n\n\ncurl -v -XPUT 'http://chef_user:password@127.0.0.1:9200/_snapshot/s3-ustc-radar-backups?pretty' -H 'Content-Type: application/json' -d'\n{\n  \"type\": \"s3\",\n  \"settings\": {\n    \"bucket\": \"ustc-radar-backups\",\n    \"region\": \"us-gov-west-1\"\n  }\n}'\n\n\nSNAPSHOT\n\n\ncurl -XPUT 'http://chef_user:password@127.0.0.1:9200/_snapshot/s3-ustc-radar-backups/snapshot_before_destroy?wait_for_completion=false\npretty'\n\n\nSTATUS\n\n\ncurl 'http://chef_user:password@127.0.0.1:9200/_snapshot/s3-ustc-radar-backups/snapshot_before_destroy?pretty'\n\n\nLIST\n\n\ncurl -XGET 'http://chef_user:password@127.0.0.1:9200/_snapshot/s3-ustc-radar-backups/_all?pretty'\n\n\nRESTORE\n\n\ncurl -XPOST 'http://chef_user:password@127.0.0.1:9200/_snapshot/s3-ustc-radar-backups/snapshot_before_destroy/_restore?pretty' -H 'Content-Type: application/json' -d'\n{\n  \"indices\": \".configure_ui,.radar,security\",\n  \"ignore_unavailable\": true\n}\n'", 
+            "title": "Elasticsearch Snapshotting"
+        }, 
+        {
+            "location": "/Mac OS X/AirPort/", 
+            "text": "$ /System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport prefs\nAirPort preferences for en0:\n\n\nDisconnectOnLogout=NO\nJoinMode=Strongest\nJoinModeFallback=DoNothing\nRememberRecentNetworks=YES\nRequireAdminIBSS=NO\nRequireAdminNetworkChange=NO\nRequireAdminPowerToggle=NO\nWoWEnabled=NO\n\n\n$ sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport prefs joinMode=Strongest\n\n\n$ /System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport prefs\nAirPort preferences for en0:\n\n\nDisconnectOnLogout=NO\nJoinMode=Strongest\nJoinModeFallback=DoNothing\nRememberRecentNetworks=YES\nRequireAdminIBSS=NO\nRequireAdminNetworkChange=NO\nRequireAdminPowerToggle=NO\nWoWEnabled=NO", 
+            "title": "AirPort"
+        }, 
+        {
+            "location": "/Packet Capture/README/", 
+            "text": "remote capture of packets for pfsense\n\n\nrm /tmp/remotecapture.fifo; mkfifo /tmp/remotecapture.fifo; wireshark -kni /tmp/remotecapture.fifo\n\n\nssh root@rtr.andyboutte.com tcpdump -s 0 -n -w - -U -i any \n /tmp/remotecapture.fifo\n\n\nremote capture of packets for amazon linux\n\n\nrun the following on the ec2\n\n\nyum install wireshark tcpdump\ngroupadd pcap\nusermod -a -G pcap ec2-user\nchgrp pcap /usr/sbin/tcpdump\nchmod 750 /usr/sbin/tcpdump\nsetcap cap_net_raw,cap_net_admin=eip /usr/sbin/tcpdump\n\n\n(might need to update /etc/sudoers to allow %wheel passwordless access)\n\n\nrun the following locally on workstation\n\n\nssh ec2-user@ec2-52-40-43-38.us-west-2.compute.amazonaws.com /usr/sbin/tcpdump -s 0 -n -w - -U -i eth0 port 9091 \n /tmp/remotecapture.fifo", 
+            "title": "README"
+        }, 
+        {
+            "location": "/Packet Capture/README/#remote-capture-of-packets-for-pfsense", 
+            "text": "rm /tmp/remotecapture.fifo; mkfifo /tmp/remotecapture.fifo; wireshark -kni /tmp/remotecapture.fifo  ssh root@rtr.andyboutte.com tcpdump -s 0 -n -w - -U -i any   /tmp/remotecapture.fifo", 
+            "title": "remote capture of packets for pfsense"
+        }, 
+        {
+            "location": "/Packet Capture/README/#remote-capture-of-packets-for-amazon-linux", 
+            "text": "run the following on the ec2  yum install wireshark tcpdump\ngroupadd pcap\nusermod -a -G pcap ec2-user\nchgrp pcap /usr/sbin/tcpdump\nchmod 750 /usr/sbin/tcpdump\nsetcap cap_net_raw,cap_net_admin=eip /usr/sbin/tcpdump  (might need to update /etc/sudoers to allow %wheel passwordless access)  run the following locally on workstation  ssh ec2-user@ec2-52-40-43-38.us-west-2.compute.amazonaws.com /usr/sbin/tcpdump -s 0 -n -w - -U -i eth0 port 9091   /tmp/remotecapture.fifo", 
+            "title": "remote capture of packets for amazon linux"
+        }, 
+        {
+            "location": "/Packet Capture/tshark commands/", 
+            "text": "Common tshark / dumpcap commands\n\n\ndumpcap\n\n\ncapture everything to a single file\n\n\ndumpcap -B 200 -ni any -w dumpcap.pcap\n\n\n\ncapture for duration of time with specific number of captured files\n\n\ndumpcap -B 200 -ni any -b duration:300 -b files:50 -w dumpcap.pcap\n\n\n\ntshark\n\n\ncapture http and https traffic\n\n\ntshark -te -ni any -R '(tcp.dstport == '9191' || tcp.dstport == '8181')' -o dump.pcap\n\n\n\ncapture memcache key\n\n\ntshark -ni any -R memcache.command\n\n\n\ncapture with a filter\n\n\ntshark -te -ni any -R '(ip.src == 10.129.160.56/32 \n ip.dst == 10.129.0.0/24) || (ip.src == 10.129.0.0/24 \n ip.dst == 10.129.160.56/32) \n ip.src!=10.129.0.2/32 \n ip.dst!=10.129.0.2/32'\n\n\n\ndisplay dns traffic\n\n\ntshark -te -ni any -R 'dns'\n\n\n\ndisplay tcp retransmissions\n\n\ntshark -ni any -R tcp.analysis.retransmission\n\n\n\ndisplay tcp retransmissions with more fields\n\n\ntshark -R tcp.analysis.retransmission -e tcp.stream -e frame.number -e frame.time -e ip.src -e tcp.srcport -e ip.dst -e tcp.dstport -e tcp.analysis.retransmission -e frame.packet_flags_packet_too_error -e frame.packet_flags_packet_too_short_error -e frame.packet_flags_direction -e frame.protocols -e frame.pkt_len -T fields\n\n\n\nPost process pcap files\n\n\nmerge multiple captured files into one\n\n\nmergecap -w mergedfile.pcap dump*.pcap\n\n\n\nrun a captured file through a thsark filter and output into a new capture file\n\n\ntshark -r mergedfile.pcap -Y \"((tcp.srcport == 51706 \n tcp.dstport == 3306) || (tcp.dstport == 51706 \n tcp.srcport == 3306))\" -w merged_filtered.pcap\n\n\n\nWireshark Queries\n\n\nDNS lookups that result in \"No such name\"\n\n\ndns.flags.rcode == 3  \n !(dns.qry.type == 28) \n (dns.qry.name contains \"google.com\")\n\n\n\nDNS lookup that resulted in \"Server failure\"\n\n\n((dns.flags.rcode == 2) \n !(dns.qry.type == 28)) \n (dns.qry.name contains \"google.com\" || dns.qry.name contains \"google.com\")\n\n\n\nDNS query\n\n\ndns.qry.name == \"google.com\"\n\n\n\nattaching ebs volume for large captures\n\n\nlsblk\nsudo mkfs -t ext4 /dev/xvdf\nsudo mkdir /data\nsudo mount /dev/xvdf /data", 
+            "title": "Tshark commands"
+        }, 
+        {
+            "location": "/Packet Capture/tshark commands/#common-tshark-dumpcap-commands", 
+            "text": "", 
+            "title": "Common tshark / dumpcap commands"
+        }, 
+        {
+            "location": "/Packet Capture/tshark commands/#dumpcap", 
+            "text": "", 
+            "title": "dumpcap"
+        }, 
+        {
+            "location": "/Packet Capture/tshark commands/#capture-everything-to-a-single-file", 
+            "text": "dumpcap -B 200 -ni any -w dumpcap.pcap", 
+            "title": "capture everything to a single file"
+        }, 
+        {
+            "location": "/Packet Capture/tshark commands/#capture-for-duration-of-time-with-specific-number-of-captured-files", 
+            "text": "dumpcap -B 200 -ni any -b duration:300 -b files:50 -w dumpcap.pcap", 
+            "title": "capture for duration of time with specific number of captured files"
+        }, 
+        {
+            "location": "/Packet Capture/tshark commands/#tshark", 
+            "text": "", 
+            "title": "tshark"
+        }, 
+        {
+            "location": "/Packet Capture/tshark commands/#capture-http-and-https-traffic", 
+            "text": "tshark -te -ni any -R '(tcp.dstport == '9191' || tcp.dstport == '8181')' -o dump.pcap", 
+            "title": "capture http and https traffic"
+        }, 
+        {
+            "location": "/Packet Capture/tshark commands/#capture-memcache-key", 
+            "text": "tshark -ni any -R memcache.command", 
+            "title": "capture memcache key"
+        }, 
+        {
+            "location": "/Packet Capture/tshark commands/#capture-with-a-filter", 
+            "text": "tshark -te -ni any -R '(ip.src == 10.129.160.56/32   ip.dst == 10.129.0.0/24) || (ip.src == 10.129.0.0/24   ip.dst == 10.129.160.56/32)   ip.src!=10.129.0.2/32   ip.dst!=10.129.0.2/32'", 
+            "title": "capture with a filter"
+        }, 
+        {
+            "location": "/Packet Capture/tshark commands/#display-dns-traffic", 
+            "text": "tshark -te -ni any -R 'dns'", 
+            "title": "display dns traffic"
+        }, 
+        {
+            "location": "/Packet Capture/tshark commands/#display-tcp-retransmissions", 
+            "text": "tshark -ni any -R tcp.analysis.retransmission", 
+            "title": "display tcp retransmissions"
+        }, 
+        {
+            "location": "/Packet Capture/tshark commands/#display-tcp-retransmissions-with-more-fields", 
+            "text": "tshark -R tcp.analysis.retransmission -e tcp.stream -e frame.number -e frame.time -e ip.src -e tcp.srcport -e ip.dst -e tcp.dstport -e tcp.analysis.retransmission -e frame.packet_flags_packet_too_error -e frame.packet_flags_packet_too_short_error -e frame.packet_flags_direction -e frame.protocols -e frame.pkt_len -T fields", 
+            "title": "display tcp retransmissions with more fields"
+        }, 
+        {
+            "location": "/Packet Capture/tshark commands/#post-process-pcap-files", 
+            "text": "", 
+            "title": "Post process pcap files"
+        }, 
+        {
+            "location": "/Packet Capture/tshark commands/#merge-multiple-captured-files-into-one", 
+            "text": "mergecap -w mergedfile.pcap dump*.pcap", 
+            "title": "merge multiple captured files into one"
+        }, 
+        {
+            "location": "/Packet Capture/tshark commands/#run-a-captured-file-through-a-thsark-filter-and-output-into-a-new-capture-file", 
+            "text": "tshark -r mergedfile.pcap -Y \"((tcp.srcport == 51706   tcp.dstport == 3306) || (tcp.dstport == 51706   tcp.srcport == 3306))\" -w merged_filtered.pcap", 
+            "title": "run a captured file through a thsark filter and output into a new capture file"
+        }, 
+        {
+            "location": "/Packet Capture/tshark commands/#wireshark-queries", 
+            "text": "", 
+            "title": "Wireshark Queries"
+        }, 
+        {
+            "location": "/Packet Capture/tshark commands/#dns-lookups-that-result-in-no-such-name", 
+            "text": "dns.flags.rcode == 3    !(dns.qry.type == 28)   (dns.qry.name contains \"google.com\")", 
+            "title": "DNS lookups that result in \"No such name\""
+        }, 
+        {
+            "location": "/Packet Capture/tshark commands/#dns-lookup-that-resulted-in-server-failure", 
+            "text": "((dns.flags.rcode == 2)   !(dns.qry.type == 28))   (dns.qry.name contains \"google.com\" || dns.qry.name contains \"google.com\")", 
+            "title": "DNS lookup that resulted in \"Server failure\""
+        }, 
+        {
+            "location": "/Packet Capture/tshark commands/#dns-query", 
+            "text": "dns.qry.name == \"google.com\"", 
+            "title": "DNS query"
+        }, 
+        {
+            "location": "/Packet Capture/tshark commands/#attaching-ebs-volume-for-large-captures", 
+            "text": "lsblk\nsudo mkfs -t ext4 /dev/xvdf\nsudo mkdir /data\nsudo mount /dev/xvdf /data", 
+            "title": "attaching ebs volume for large captures"
+        }, 
+        {
+            "location": "/Raspberry Pi/ntp/", 
+            "text": "Setting up Raspberry Pi as Stratum 0 NTP Server\n\n\nRaspbery Pi = B v1.2\nRaspian = Raspian Jessie Lite; Version:November 2016; Release date:2016-11-25; Kernel version:4.4\n\n\nconnect gps to pins 4 6 8 10 12\n\n\nsudo apt-get install picocom pps-tools ntp\n\n\n\nCommon commands:\n\n\nCheck status of ntp:\n\n\nntpq -p\n\n\n\nCheck status of gps:\n\n\ncgps -s\n\n\n\nsudo gpsd /dev/gps0 -D -n -N -F /var/run/gpsd.sock    \n\n\ncapturing ntp requests:\n\n\nrm /tmp/remotecapture.fifo; mkfifo /tmp/remotecapture.fifo; wireshark -kni /tmp/remotecapture.fifo\n\nssh ntp.andyboutte.com sudo /usr/sbin/tcpdump -s 0 -n -w - -U -i wlan0 port 123 \n /tmp/remotecapture.fifo\n\n\n\nhttps://frillip.com/raspberry-pi-stratum-1-ntp-server/\nhttps://www.eecis.udel.edu/~mills/ntp/html/refclock.html - description of each ntp driver (127.127.5.1)\nhttp://mythopoeic.org/pi-ntp/", 
+            "title": "Ntp"
+        }, 
+        {
+            "location": "/Raspberry Pi/ntp/#setting-up-raspberry-pi-as-stratum-0-ntp-server", 
+            "text": "Raspbery Pi = B v1.2\nRaspian = Raspian Jessie Lite; Version:November 2016; Release date:2016-11-25; Kernel version:4.4  connect gps to pins 4 6 8 10 12  sudo apt-get install picocom pps-tools ntp  Common commands:  Check status of ntp:  ntpq -p  Check status of gps:  cgps -s  sudo gpsd /dev/gps0 -D -n -N -F /var/run/gpsd.sock      capturing ntp requests:  rm /tmp/remotecapture.fifo; mkfifo /tmp/remotecapture.fifo; wireshark -kni /tmp/remotecapture.fifo \nssh ntp.andyboutte.com sudo /usr/sbin/tcpdump -s 0 -n -w - -U -i wlan0 port 123   /tmp/remotecapture.fifo  https://frillip.com/raspberry-pi-stratum-1-ntp-server/\nhttps://www.eecis.udel.edu/~mills/ntp/html/refclock.html - description of each ntp driver (127.127.5.1)\nhttp://mythopoeic.org/pi-ntp/", 
+            "title": "Setting up Raspberry Pi as Stratum 0 NTP Server"
+        }, 
+        {
+            "location": "/Software/crashplan/", 
+            "text": "point crashplan client at headless server\n\n\non workstation start an ssh connection to headless server:\n\n\nssh -N -T -R4243:localhost:4200 aboutte@192.168.0.150\n\n\nOn the headless machine get the authenticaion token out of this file:\n\n\n/var/lib/crashplan/.ui_info (4243,112a70d7-c6f8-43fa-8f78-1832748cecc7,127.0.0.1)\n\n\nOn the mac:\n\n\ncd /Library/Application\\ Support/CrashPlan\ncp .ui_info .ui_info.backup\nvim .ui_info\n\n\nChange port to 4200 and replace authentication token with the one from the headless server", 
+            "title": "Crashplan"
+        }, 
+        {
+            "location": "/Software/dd/", 
+            "text": "dd if=/dev/hda of=~/hdadisk.img\n\n\nIf dd does not work try unetbootin\n\n\nsudo umount /dev/disk3\nsudo diskutil eraseDisk FAT32 NAME MBRFormat /dev/disk3\n\n\na fat32 usb stick should show up in unetbootin", 
+            "title": "Dd"
+        }, 
+        {
+            "location": "/Software/ddrescue/", 
+            "text": "Mac\n\n\nbrew install ddrescue\ndiskutil list\nddrescue -v /dev/disk0s2 image.img ddrescue.log\n\n\n\nLinux (Parted Magic)\n\n\nMount NFS storage with this command\n\n\nmkdir /mnt/nfs\nmount -t nfs synology.andyboutte.com:/volume1/media /mnt/nfs\n\n\n\nFind disks\n\n\nlsblk -o name,label,size,fstype,model\n\n\n\nRun ddrescue\n\n\nddrescue -vd -r3 /dev/sda /mnt/nfs/test.img /mnt/nfs/test.logfile\n\n\n\nrestore the .img file\n\n\ndd if=test.img of=/dev/sda\n\n\n\nOr if you created the .img of a single partition you can mount that disk image and\nuse Carbon Copy Cloner to restore all the files to a new hard drive that has an empty partition", 
+            "title": "Ddrescue"
+        }, 
+        {
+            "location": "/Software/ddrescue/#mac", 
+            "text": "brew install ddrescue\ndiskutil list\nddrescue -v /dev/disk0s2 image.img ddrescue.log", 
+            "title": "Mac"
+        }, 
+        {
+            "location": "/Software/ddrescue/#linux-parted-magic", 
+            "text": "Mount NFS storage with this command  mkdir /mnt/nfs\nmount -t nfs synology.andyboutte.com:/volume1/media /mnt/nfs  Find disks  lsblk -o name,label,size,fstype,model  Run ddrescue  ddrescue -vd -r3 /dev/sda /mnt/nfs/test.img /mnt/nfs/test.logfile", 
+            "title": "Linux (Parted Magic)"
+        }, 
+        {
+            "location": "/Software/ddrescue/#restore-the-img-file", 
+            "text": "dd if=test.img of=/dev/sda  Or if you created the .img of a single partition you can mount that disk image and\nuse Carbon Copy Cloner to restore all the files to a new hard drive that has an empty partition", 
+            "title": "restore the .img file"
+        }, 
+        {
+            "location": "/Software/encrypt/", 
+            "text": "openssl aes-256-cbc -a -salt -in secrets.txt -out secrets.txt.enc\n\n\nDecrypt:\n\n\nopenssl aes-256-cbc -d -a -in secrets.txt.enc -out secrets.txt.new", 
+            "title": "Encrypt"
+        }, 
+        {
+            "location": "/Software/ffmpeg/", 
+            "text": "ffmpeg -i IMG_2829_cut.mp4 -ss 00:00:00 -t 00:00:48 -async 1 IMG_2829_cut2.mp4\n\n\nffmpeg -i IMG_6708.mov -s 640x480 -c:v libx264 -crf 25 -c:a libfaac -movflags faststart IMG_6708_converted.mp4\n\n\nffmpeg -i in.mov -vf \"transpose=2\" out.mov\n\n\n0 = 90CounterCLockwise and Vertical Flip (default)\n1 = 90Clockwise\n2 = 90CounterClockwise\n3 = 90Clockwise and Vertical Flip", 
+            "title": "Ffmpeg"
+        }, 
+        {
+            "location": "/Software/keybase/", 
+            "text": "Signing git commits\n\n\nhttps://github.com/pstadler/keybase-gpg-github\nhttps://www.ahmadnassri.com/blog/github-gpg-keybase-pgp/\nhttps://www.ramimassoud.com/2016/06/02/keybase-github-being-you/", 
+            "title": "Keybase"
+        }, 
+        {
+            "location": "/Software/keybase/#signing-git-commits", 
+            "text": "https://github.com/pstadler/keybase-gpg-github\nhttps://www.ahmadnassri.com/blog/github-gpg-keybase-pgp/\nhttps://www.ramimassoud.com/2016/06/02/keybase-github-being-you/", 
+            "title": "Signing git commits"
+        }, 
+        {
+            "location": "/Software/kvm/", 
+            "text": "kvm\n\n\nConvert raw to qcow2\n\n\nhttp://www.itdesignhouse.com/convert-kvm-virtual-machine-raw-qcow2-format/\n\n\nqemu-img convert -f raw -O qcow2 /home/libvirt/images/rhel01.img /home/libvirt/images/rhel01.qcow2\n\n\nsnapshot vm\n\n\nhttps://github.com/bioinformatics-ptp/kvmBackup/wiki/Create-a-snapshot\n\n\nfind /backup/logs/* -type f -maxdepth 0 -mtime +7 -exec rm -f {} \\;", 
+            "title": "Kvm"
+        }, 
+        {
+            "location": "/Software/lets_encrypt/", 
+            "text": "Install", 
+            "title": "Lets encrypt"
+        }, 
+        {
+            "location": "/Software/lets_encrypt/#install", 
+            "text": "", 
+            "title": "Install"
+        }, 
+        {
+            "location": "/Software/rsync/", 
+            "text": "rsync -azP aboutte@hostname.com:downloads/ /Volumes/media/andy/", 
+            "title": "Rsync"
+        }, 
+        {
+            "location": "/Software/sqlmap/", 
+            "text": "python ./sqlmap.py --user-agent \"test\" --url \"https://some_url.com\" --threads=4 --dbms MySQL --level=5 --risk=3 --banner --answers=\"union-char=Y\" --keep-alive --eta -v 3\n\n\nhttps://www.owasp.org/index.php/Automated_Audit_using_SQLMap", 
+            "title": "Sqlmap"
+        }, 
+        {
+            "location": "/Software/virtualBox/", 
+            "text": "virtualBox\n\n\nUsing physical disk in virtualBox\n\n\nNormally with virtualBox you install the OS to a virtual disk.  virtualBox can be configured to install the OS to a physical disk.  These are the steps to do that:\n\n\n\n\ndiskutil list\n\n\nget device id of USB hard drive\n\n\nsudo chown aboutte /dev/disk3*\n\n\nVBoxManage internalcommands createrawvmdk -filename ~/Desktop/pfsense.vmdk -rawdisk /dev/disk3\n\n\nin virtualBox create a VM but don't add a virtual disk\n\n\nin the settings add an existing hard drive and select ~/Desktop/pfsense.vmdk", 
+            "title": "virtualBox"
+        }, 
+        {
+            "location": "/Software/virtualBox/#virtualbox", 
+            "text": "", 
+            "title": "virtualBox"
+        }, 
+        {
+            "location": "/Software/virtualBox/#using-physical-disk-in-virtualbox", 
+            "text": "Normally with virtualBox you install the OS to a virtual disk.  virtualBox can be configured to install the OS to a physical disk.  These are the steps to do that:   diskutil list  get device id of USB hard drive  sudo chown aboutte /dev/disk3*  VBoxManage internalcommands createrawvmdk -filename ~/Desktop/pfsense.vmdk -rawdisk /dev/disk3  in virtualBox create a VM but don't add a virtual disk  in the settings add an existing hard drive and select ~/Desktop/pfsense.vmdk", 
+            "title": "Using physical disk in virtualBox"
+        }, 
+        {
+            "location": "/Software/Networking/HP/ProCurve/", 
+            "text": "Asign vlan to interface\n\n\nshow vlan\nconfigure\nvlan 30\nuntagged 1\ntagged 3-7\nend\n\n\n\nlist mac addresses by port\n\n\nshow mac-address\n\n\n\nshow running configure\n\n\nshow config\n\n\n\nSave the running config to preserve between reboots\n\n\nwr mem\n\n\n\ntagged v untagged\n\n\neverything is from the sw01 perspective.\n\n\nuntagged - the packets coming into the switch are not already tagged because the device\nis not vlan aware\n\n\ntagged - the device plugged into this port is vlan aware so the switch needs to leave\nthe vlan bits of the packet intact so the device itself can read the vlan id\n\n\nunused ports should be added to vlan 999 to blackhole them\n\n\nports that should be connected to the LAN should be vlan 1 untaggged\n\n\nhttps://doc.pfsense.org/index.php/Migrate_Assigned_LAN_to_LAGG\nhttp://techierambles.blogspot.com/2009/07/enable-lacp-on-hp-procurve-switch.html", 
+            "title": "ProCurve"
+        }, 
+        {
+            "location": "/Software/Networking/HP/ProCurve/#asign-vlan-to-interface", 
+            "text": "show vlan\nconfigure\nvlan 30\nuntagged 1\ntagged 3-7\nend", 
+            "title": "Asign vlan to interface"
+        }, 
+        {
+            "location": "/Software/Networking/HP/ProCurve/#list-mac-addresses-by-port", 
+            "text": "show mac-address", 
+            "title": "list mac addresses by port"
+        }, 
+        {
+            "location": "/Software/Networking/HP/ProCurve/#show-running-configure", 
+            "text": "show config", 
+            "title": "show running configure"
+        }, 
+        {
+            "location": "/Software/Networking/HP/ProCurve/#save-the-running-config-to-preserve-between-reboots", 
+            "text": "wr mem  tagged v untagged  everything is from the sw01 perspective.  untagged - the packets coming into the switch are not already tagged because the device\nis not vlan aware  tagged - the device plugged into this port is vlan aware so the switch needs to leave\nthe vlan bits of the packet intact so the device itself can read the vlan id  unused ports should be added to vlan 999 to blackhole them  ports that should be connected to the LAN should be vlan 1 untaggged  https://doc.pfsense.org/index.php/Migrate_Assigned_LAN_to_LAGG\nhttp://techierambles.blogspot.com/2009/07/enable-lacp-on-hp-procurve-switch.html", 
+            "title": "Save the running config to preserve between reboots"
+        }, 
+        {
+            "location": "/Software/Networking/pfSense/README/", 
+            "text": "pfsense\n\n\nsetting up pfBlockerNG\n\n\nblocking tor\n\n\nupdated lists of tor exit nodes:\n\n\nhttp://list.iblocklist.com/?list=togdoptykrlolpddwbvz\nfileformat=p2p\narchiveformat=gz\nhttps://torstatus.blutmagie.de/ip_list_exit.php/Tor_ip_list_EXIT.csv\nhttps://rules.emergingthreats.net/open/suricata/rules/tor.rules", 
+            "title": "README"
+        }, 
+        {
+            "location": "/Software/Networking/pfSense/README/#pfsense", 
+            "text": "", 
+            "title": "pfsense"
+        }, 
+        {
+            "location": "/Software/Networking/pfSense/README/#setting-up-pfblockerng", 
+            "text": "", 
+            "title": "setting up pfBlockerNG"
+        }, 
+        {
+            "location": "/Software/Networking/pfSense/README/#blocking-tor", 
+            "text": "updated lists of tor exit nodes:  http://list.iblocklist.com/?list=togdoptykrlolpddwbvz fileformat=p2p archiveformat=gz\nhttps://torstatus.blutmagie.de/ip_list_exit.php/Tor_ip_list_EXIT.csv\nhttps://rules.emergingthreats.net/open/suricata/rules/tor.rules", 
+            "title": "blocking tor"
+        }, 
+        {
+            "location": "/Software/Networking/pfSense/backup/", 
+            "text": "pfSense Backup\n\n\nSoftware\n\n\nHardware", 
+            "title": "Backup"
+        }, 
+        {
+            "location": "/Software/Networking/pfSense/backup/#pfsense-backup", 
+            "text": "", 
+            "title": "pfSense Backup"
+        }, 
+        {
+            "location": "/Software/Networking/pfSense/backup/#software", 
+            "text": "", 
+            "title": "Software"
+        }, 
+        {
+            "location": "/Software/Networking/pfSense/backup/#hardware", 
+            "text": "", 
+            "title": "Hardware"
+        }, 
+        {
+            "location": "/Software/WordPress/README/", 
+            "text": "wpscan\n\n\nSetup\n\n\nvagrant init centos/7; vagrant up --provider virtualbox\nvagrant ssh\ngpg2 --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3\ncurl -sSL https://get.rvm.io | bash -s stable --ruby\nsource /usr/local/rvm/scripts/rvm\necho \"source source /usr/local/rvm/scripts/rvm\" \n ~/.bashrc\nrvm install 2.3.1\nrvm use 2.3.1 --default\necho \"gem: --no-ri --no-rdoc\" \n ~/.gemrc\ngem install bundler\nsudo yum install -y git vim epel-release bind-utils nmap-ncat net-tools htop wget\ngit clone https://github.com/wpscanteam/wpscan.git\ncd wpscan\nbundle install --without test\n./wpscan.rb --update\n\n\n\nUsing wpscan\n\n\n./wpscan.rb --url www.example.com\n\n\n\nget users\n\n\n./wpscan.rb --url www.example.com --enumerate u\n\n\n\nbrute force users\n\n\n./wpscan.rb --url www.example.com --enumerate u[1-30] --proxy socks5://127.0.0.1:9151 --threads 10 --wordlist ./passwords.txt\n\n\n\nForce wpscan to use tor network\n\n\n\n\nstart tor browser on mac\n\n\n\n\nsetup ssh tunnel to vagrant vm (run this from mac)\n\n\nssh -f -N -T -R9151:localhost:9150 vagrant@127.0.0.1 -p 2222 -i .vagrant/machines/default/virtualbox/private_key\n\n\n\n\n\n\ninside vagrant run:\n\n\n./wpscan.rb --url www.example.com --enumerate u --proxy socks5://127.0.0.1:9151\n\n\n\n\n\n\nNotes\n\n\n\n\nhttps://github.com/wpscanteam/wpscan\n\n\nhttps://hackertarget.com/attacking-wordpress/", 
+            "title": "README"
+        }, 
+        {
+            "location": "/Software/WordPress/README/#wpscan", 
+            "text": "", 
+            "title": "wpscan"
+        }, 
+        {
+            "location": "/Software/WordPress/README/#setup", 
+            "text": "vagrant init centos/7; vagrant up --provider virtualbox\nvagrant ssh\ngpg2 --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3\ncurl -sSL https://get.rvm.io | bash -s stable --ruby\nsource /usr/local/rvm/scripts/rvm\necho \"source source /usr/local/rvm/scripts/rvm\"   ~/.bashrc\nrvm install 2.3.1\nrvm use 2.3.1 --default\necho \"gem: --no-ri --no-rdoc\"   ~/.gemrc\ngem install bundler\nsudo yum install -y git vim epel-release bind-utils nmap-ncat net-tools htop wget\ngit clone https://github.com/wpscanteam/wpscan.git\ncd wpscan\nbundle install --without test\n./wpscan.rb --update", 
+            "title": "Setup"
+        }, 
+        {
+            "location": "/Software/WordPress/README/#using-wpscan", 
+            "text": "./wpscan.rb --url www.example.com", 
+            "title": "Using wpscan"
+        }, 
+        {
+            "location": "/Software/WordPress/README/#get-users", 
+            "text": "./wpscan.rb --url www.example.com --enumerate u", 
+            "title": "get users"
+        }, 
+        {
+            "location": "/Software/WordPress/README/#brute-force-users", 
+            "text": "./wpscan.rb --url www.example.com --enumerate u[1-30] --proxy socks5://127.0.0.1:9151 --threads 10 --wordlist ./passwords.txt", 
+            "title": "brute force users"
+        }, 
+        {
+            "location": "/Software/WordPress/README/#force-wpscan-to-use-tor-network", 
+            "text": "start tor browser on mac   setup ssh tunnel to vagrant vm (run this from mac)  ssh -f -N -T -R9151:localhost:9150 vagrant@127.0.0.1 -p 2222 -i .vagrant/machines/default/virtualbox/private_key    inside vagrant run:  ./wpscan.rb --url www.example.com --enumerate u --proxy socks5://127.0.0.1:9151", 
+            "title": "Force wpscan to use tor network"
+        }, 
+        {
+            "location": "/Software/WordPress/README/#notes", 
+            "text": "https://github.com/wpscanteam/wpscan  https://hackertarget.com/attacking-wordpress/", 
+            "title": "Notes"
+        }, 
+        {
+            "location": "/Software/strace/README/", 
+            "text": "strace\n\n\nThe following are some of the useful switches\n\n\n-t          Prefix each line of the trace with the time of day.\n\n\n-tt         If given twice, the time printed will include the microseconds.\n\n\n-ttt        If given thrice, the time printed will include the microseconds and the leading portion will be printed as the number of seconds since the epoch.\n\n\n-T          Show the time spent in system calls. This records the time difference between the beginning and the end of each system call.\n\n\n-r          Print a relative timestamp upon entry to each system call.  This records the time difference between the beginning of successive system calls.\n\n\n-C          Count  time, calls, and errors for each system call and report a summary on program exit.\n\n\n-f          Trace  child  processes  as they are created by currently traced processes", 
+            "title": "README"
+        }, 
+        {
+            "location": "/Software/strace/README/#strace", 
+            "text": "The following are some of the useful switches  -t          Prefix each line of the trace with the time of day.  -tt         If given twice, the time printed will include the microseconds.  -ttt        If given thrice, the time printed will include the microseconds and the leading portion will be printed as the number of seconds since the epoch.  -T          Show the time spent in system calls. This records the time difference between the beginning and the end of each system call.  -r          Print a relative timestamp upon entry to each system call.  This records the time difference between the beginning of successive system calls.  -C          Count  time, calls, and errors for each system call and report a summary on program exit.  -f          Trace  child  processes  as they are created by currently traced processes", 
+            "title": "strace"
+        }, 
+        {
+            "location": "/Synology/iscsi/", 
+            "text": "iqn.2000-01.com.synology:synology.Target-11.7887d99f77 - aboutte\niqn.2000-01.com.synology:synology.Target-12.7887d99f77 - kboutte\niqn.2000-01.com.synology:synology.Target-13.7887d99f77 - kvm\n\n\nlog into target\n\n\niscsiadm -m node -l\n\n\nlist sessions\n\n\niscsiadm -m session -P 3\n\n\nhttp://opentodo.net/2012/10/setup-iscsi-target-initiator-on-centos-6/\nhttps://www.synology.com/en-us/knowledgebase/DSM/tutorial/Virtualization/How_to_set_up_and_use_iSCSI_target_on_Linux\n\n\n[root@www ~]# yum -y install iscsi-initiator-utils\n[root@www ~]# vi /etc/iscsi/initiatorname.iscsi\n\n\nchange to the same IQN you set on the iSCSI target server\n\n\nInitiatorName=iqn.2014-07.world.srv:www.srv.world\n\n\ndiscover targets on iscsi server:\n\n\niscsiadm --mode discovery -t sendtargets --portal 192.168.0.7\n\n\nlist what targets are mounted:\n\n\niscsiadm --mode session --op show\n\n\nFrom OS perspective list iscsi targets:\n\n\nfdisk -l\n\n\nremove iscsi target:\n\n\niscsiadm --m node -T iqn.2000-01.com.synology:synology.Target-11.7887d99f77 --portal 192.168.0.7:3260 -u", 
+            "title": "Iscsi"
+        }, 
+        {
+            "location": "/Synology/iscsi/#change-to-the-same-iqn-you-set-on-the-iscsi-target-server", 
+            "text": "InitiatorName=iqn.2014-07.world.srv:www.srv.world  discover targets on iscsi server:  iscsiadm --mode discovery -t sendtargets --portal 192.168.0.7  list what targets are mounted:  iscsiadm --mode session --op show  From OS perspective list iscsi targets:  fdisk -l  remove iscsi target:  iscsiadm --m node -T iqn.2000-01.com.synology:synology.Target-11.7887d99f77 --portal 192.168.0.7:3260 -u", 
+            "title": "change to the same IQN you set on the iSCSI target server"
+        }, 
+        {
+            "location": "/VPN/README/", 
+            "text": "pivpn\n\n\nhttps://github.com/iphoting/ovpnmcgen.rb\n\n\nFor iPhone export in pfSense:\n- set p12 export password that is in pfSense\n- export using Bundled Configurations: Archive\n\n\nFor Laptop export in pfsense:\n- set p12 password to empty field\n- export Viscosity (Mac OS X and Windows: Viscosity inline config\n\n\ncd /Users/aboutte/Documents/r/docs/vpn\novpnmcgen.rb generate aboutte iphone \n /Volumes/openvpn_configs/aboutte-iphone.mobileconfig\n\n\nremove probe for Cellular\n\n\nremove probe from home WiFi\n\n\nadd username password\n\n\nauth-user-pass\n\n  \nuser\\nPassword\n\n\nscp /Volumes/openvpn_configs/aboutte-iphone.mobileconfig root@mobileconfig.andyboutte.com:/var/www/mobileconfigs/aboutte-iphone.mobileconfig", 
+            "title": "README"
+        }, 
+        {
+            "location": "/VPN/README/#remove-probe-for-cellular", 
+            "text": "", 
+            "title": "remove probe for Cellular"
+        }, 
+        {
+            "location": "/VPN/README/#remove-probe-from-home-wifi", 
+            "text": "", 
+            "title": "remove probe from home WiFi"
+        }, 
+        {
+            "location": "/VPN/README/#add-username-password", 
+            "text": "auth-user-pass \n   user\\nPassword  scp /Volumes/openvpn_configs/aboutte-iphone.mobileconfig root@mobileconfig.andyboutte.com:/var/www/mobileconfigs/aboutte-iphone.mobileconfig", 
+            "title": "add username password"
+        }, 
+        {
+            "location": "/docker/README/", 
+            "text": "centos 7\n\n\nyum update\nyum install vim git net-tools htop nmap-ncat bind-utils epel-release python-pip\ncurl -fsSL https://get.docker.com/ | sh\nsystemctl start docker\nsystemctl enable docker\nusermod -aG docker aboutte\npip install docker-compose\nyum upgrade python*\n\n\nrunning ELK stack in docker\n\n\ngit clone https://github.com/aboutte/docker-elk\ndocker-compose up", 
+            "title": "README"
+        }, 
+        {
+            "location": "/docker/README/#running-elk-stack-in-docker", 
+            "text": "git clone https://github.com/aboutte/docker-elk\ndocker-compose up", 
+            "title": "running ELK stack in docker"
+        }, 
+        {
+            "location": "/ham/README/", 
+            "text": "", 
+            "title": "README"
+        }, 
+        {
+            "location": "/ham/chirp/README/", 
+            "text": "clone radio -\n chrip\n\n\nWhile radio is off hold down f/n button and turn radio on\nOpen chirp and go to radio -\n download\npress band on radio\n\n\nthe clone from radio -\n chirp will start\n\n\nclone chrip -\n radio\n\n\nWhile radio is off hold down f/n button and turn radio on\nOpen chirp and go to radio -\n upload\npress mode on radio", 
+            "title": "README"
+        }, 
+        {
+            "location": "/ham/chirp/README/#clone-radio-chrip", 
+            "text": "While radio is off hold down f/n button and turn radio on\nOpen chirp and go to radio -  download\npress band on radio  the clone from radio -  chirp will start", 
+            "title": "clone radio -&gt; chrip"
+        }, 
+        {
+            "location": "/ham/chirp/README/#clone-chrip-radio", 
+            "text": "While radio is off hold down f/n button and turn radio on\nOpen chirp and go to radio -  upload\npress mode on radio", 
+            "title": "clone chrip -&gt; radio"
+        }, 
+        {
+            "location": "/nginx/security/", 
+            "text": "", 
+            "title": "Security"
+        }, 
+        {
+            "location": "/ngx_pagespeed/README/", 
+            "text": "About\n\n\nInstall ngx_pagespeed on Ubuntu 14.04\n\n\nhttps://developers.google.com/speed/pagespeed/module/build_ngx_pagespeed_from_source\n\n\nhttps://www.maxcdn.com/blog/nginx-performance-tips-with-the-google-pagespeed-team/\n\n\nI am using this knife plugin to bootstrap the DO droplet:\n\n\nhttps://github.com/rmoriz/knife-digital_ocean\n\n\ncommand to install\n\n\nchef gem install knife-digital_ocean\ngem install knife-solo\n\nknife digital_ocean droplet list --digital_ocean_access_token $DIGITALOCEAN_ACCESS_TOKEN\n\n\n\nsfo1\n4gb\n9801954 (ubuntu 14)\n94228 (my ssh key)\n\n\nCreate a droplet with no bootstrap\n\n\nknife digital_ocean droplet create --server-name aboutte-test-01 --image ubuntu-14-04-x64 --location sfo1 --size 4gb --ssh-keys 94228 --ssh-port 22 --digital_ocean_access_token $DIGITALOCEAN_ACCESS_TOKEN\n\n\nCreate a droplet and bootstrap it:\n\n\ncd /Users/aboutte/r/docs/ngx_pagespeed; knife digital_ocean droplet create --server-name aboutte-test-02 --image ubuntu-14-04-x64 --location sfo1 --size 4gb --ssh-keys 94228 --run-list \"ngx\" --solo --digital_ocean_access_token $DIGITALOCEAN_ACCESS_TOKEN\n\n\nrun the following command to install the .deb\n\n\nsudo dpkg -i ngx-pagespeed_1.11.33.2-1_amd64.deb", 
+            "title": "README"
+        }, 
+        {
+            "location": "/ngx_pagespeed/README/#about", 
+            "text": "", 
+            "title": "About"
+        }, 
+        {
+            "location": "/ngx_pagespeed/README/#install-ngx_pagespeed-on-ubuntu-1404", 
+            "text": "https://developers.google.com/speed/pagespeed/module/build_ngx_pagespeed_from_source  https://www.maxcdn.com/blog/nginx-performance-tips-with-the-google-pagespeed-team/  I am using this knife plugin to bootstrap the DO droplet:  https://github.com/rmoriz/knife-digital_ocean  command to install  chef gem install knife-digital_ocean\ngem install knife-solo\n\nknife digital_ocean droplet list --digital_ocean_access_token $DIGITALOCEAN_ACCESS_TOKEN  sfo1\n4gb\n9801954 (ubuntu 14)\n94228 (my ssh key)  Create a droplet with no bootstrap  knife digital_ocean droplet create --server-name aboutte-test-01 --image ubuntu-14-04-x64 --location sfo1 --size 4gb --ssh-keys 94228 --ssh-port 22 --digital_ocean_access_token $DIGITALOCEAN_ACCESS_TOKEN  Create a droplet and bootstrap it:  cd /Users/aboutte/r/docs/ngx_pagespeed; knife digital_ocean droplet create --server-name aboutte-test-02 --image ubuntu-14-04-x64 --location sfo1 --size 4gb --ssh-keys 94228 --run-list \"ngx\" --solo --digital_ocean_access_token $DIGITALOCEAN_ACCESS_TOKEN  run the following command to install the .deb  sudo dpkg -i ngx-pagespeed_1.11.33.2-1_amd64.deb", 
+            "title": "Install ngx_pagespeed on Ubuntu 14.04"
+        }, 
+        {
+            "location": "/ngx_pagespeed/cookbooks/ngx/CHANGELOG/", 
+            "text": "ngx CHANGELOG\n\n\nThis file is used to list changes made in each version of the ngx cookbook.\n\n\n0.1.0\n\n\n\n\n[your_name] - Initial release of ngx\n\n\n\n\n\n\nCheck the \nMarkdown Syntax Guide\n for help with Markdown.\n\n\nThe \nGithub Flavored Markdown page\n describes the differences between markdown on github and standard markdown.", 
+            "title": "CHANGELOG"
+        }, 
+        {
+            "location": "/ngx_pagespeed/cookbooks/ngx/CHANGELOG/#ngx-changelog", 
+            "text": "This file is used to list changes made in each version of the ngx cookbook.", 
+            "title": "ngx CHANGELOG"
+        }, 
+        {
+            "location": "/ngx_pagespeed/cookbooks/ngx/CHANGELOG/#010", 
+            "text": "[your_name] - Initial release of ngx    Check the  Markdown Syntax Guide  for help with Markdown.  The  Github Flavored Markdown page  describes the differences between markdown on github and standard markdown.", 
+            "title": "0.1.0"
+        }, 
+        {
+            "location": "/ngx_pagespeed/cookbooks/ngx/README/", 
+            "text": "", 
+            "title": "README"
+        }, 
+        {
+            "location": "/performance/performance/", 
+            "text": "yum install strace iotop sysstat\n\n\n\n\nuptime\ndmesg | tail\nvmstat -w 1\nmpstat -P ALL 1\npidstat 1\niostat -xz 1 (if high io found use \niotop -o -d 5\n to find process)\nfree -m\nsar -n DEV 1\nsar -n TCP,ETCP 1\ntop", 
+            "title": "Performance"
+        }, 
+        {
+            "location": "/performance/throughput/", 
+            "text": "disk throughput\n\n\nhdparm supports testing read speed (hdparm linux only)\n\n\nhdparm -tT /dev/sda\n\n\ndd\n\n\ndd can be used to test read and write speed.  I have a script in dotfiles repo for this\n    disk_performance \"/Volumes/media/andy/testfile\"\n\n\nnetwork\n\n\nclient\n    time iperf --num 1GB --interval 5 --client rtr.andyboutte.com --format M -P 5\n\n\nserver\n     iperf -s\n\n\nbidirection test (throughput)\n\n\nadd -d switch to client\n\n\nparallel streams\n\n\nadd -P 2 to client\n\n\ncalculating max throughput\n\n\n\n\nhttp://bradhedlund.com/2008/12/19/how-to-calculate-tcp-throughput-for-long-distance-links/\n\n\nmax TCP window size is 64KB = 65536 Bytes. 65536 * 8 = 524288 bits\n\n\n\n\nactual TCP window size being used can be retrieved from Wireshark\n\n\n\n\n\n\nuse tcptrace to capture the TCP RTT\n\n\n\n\nmax window size / RTT = throughput\n\n\n\n\nexample: 524288 bits / 0.030 (30ms RTT) seconds = 17476266 bits per second throughput = 17.4 Mbps maximum possible throughput\n\n\n(TCP Window Size / (RTT ms / 1000) ) / 1000000 = real world throughput in Mbps\n\n\nBandwidth (Mbit/s) = ((65535 * 8)/(RTT latency in ms/1000))/1000000\n\n\ntcptrace\n\n\nhttp://prefetch.net/blog/index.php/2006/04/17/debugging-tcp-connections-with-tcptrace/\n\n\ntcptrace tcpdump.pcap\ntcptrace -r -l -o7 ec2.pcapng\n\n\ntcptrace -houtput # describes the output from -l", 
+            "title": "Throughput"
+        }, 
+        {
+            "location": "/performance/throughput/#disk-throughput", 
+            "text": "", 
+            "title": "disk throughput"
+        }, 
+        {
+            "location": "/performance/throughput/#hdparm-supports-testing-read-speed-hdparm-linux-only", 
+            "text": "hdparm -tT /dev/sda", 
+            "title": "hdparm supports testing read speed (hdparm linux only)"
+        }, 
+        {
+            "location": "/performance/throughput/#dd", 
+            "text": "dd can be used to test read and write speed.  I have a script in dotfiles repo for this\n    disk_performance \"/Volumes/media/andy/testfile\"", 
+            "title": "dd"
+        }, 
+        {
+            "location": "/performance/throughput/#network", 
+            "text": "client\n    time iperf --num 1GB --interval 5 --client rtr.andyboutte.com --format M -P 5  server\n     iperf -s", 
+            "title": "network"
+        }, 
+        {
+            "location": "/performance/throughput/#bidirection-test-throughput", 
+            "text": "add -d switch to client", 
+            "title": "bidirection test (throughput)"
+        }, 
+        {
+            "location": "/performance/throughput/#parallel-streams", 
+            "text": "add -P 2 to client", 
+            "title": "parallel streams"
+        }, 
+        {
+            "location": "/performance/throughput/#calculating-max-throughput", 
+            "text": "http://bradhedlund.com/2008/12/19/how-to-calculate-tcp-throughput-for-long-distance-links/  max TCP window size is 64KB = 65536 Bytes. 65536 * 8 = 524288 bits   actual TCP window size being used can be retrieved from Wireshark    use tcptrace to capture the TCP RTT   max window size / RTT = throughput   example: 524288 bits / 0.030 (30ms RTT) seconds = 17476266 bits per second throughput = 17.4 Mbps maximum possible throughput  (TCP Window Size / (RTT ms / 1000) ) / 1000000 = real world throughput in Mbps  Bandwidth (Mbit/s) = ((65535 * 8)/(RTT latency in ms/1000))/1000000", 
+            "title": "calculating max throughput"
+        }, 
+        {
+            "location": "/performance/throughput/#tcptrace", 
+            "text": "http://prefetch.net/blog/index.php/2006/04/17/debugging-tcp-connections-with-tcptrace/  tcptrace tcpdump.pcap\ntcptrace -r -l -o7 ec2.pcapng  tcptrace -houtput # describes the output from -l", 
+            "title": "tcptrace"
+        }, 
+        {
+            "location": "/rip/abcde/README/", 
+            "text": "abcde\n\n\nhttp://www.andrews-corner.org/abcde.html#flac", 
+            "title": "README"
+        }, 
+        {
+            "location": "/rip/abcde/README/#abcde", 
+            "text": "http://www.andrews-corner.org/abcde.html#flac", 
+            "title": "abcde"
+        }, 
+        {
+            "location": "/rip/handbrake/README/", 
+            "text": "https://github.com/donmelton/video_transcoding", 
+            "title": "README"
+        }, 
+        {
+            "location": "/security/ddos/", 
+            "text": "#! /bin/bash\nwhile [ 1 ] ;\n do\n for ip in `lsof -ni | grep httpd | grep -iv listen | awk '{print $8\n}' | cut -d : -f 2 | sort | uniq | sed s/\nhttp-\n//` ;\n # the line above gets the list of all connections and connection\nattempts, and produces a list of uniq IPs\n # and iterates through the list\n  do\n    noconns=`lsof -ni | grep $ip | wc -l`;\n    # This finds how many connections there are from this particular IP address\n    echo $ip : $noconns ;\n    if [ \n$noconns\n -gt \n10\n ] ;\n    # if there are more than 10 connections established or connecting\nfrom this IP\n    then\n      # echo More;\n      # echo `date` \n$ip has $noconns connections.  Total connections\nto prod spider:  `lsof -ni | grep httpd | grep -iv listen | wc -l`\n \n\n/var/log/Ddos/Ddos.log\n      # to keep track of the IPs uncomment the above two lines and\nmake sure you can write to the appropriate place\n      iptables -I INPUT -s $ip -p tcp -j REJECT --reject-with tcp-reset\n      # for these connections, add an iptables statement to send\nresets on any packets recieved\n    else\n        # echo Less;\n    fi;\n  done\nsleep 60\ndone", 
+            "title": "Ddos"
         }
     ]
 }
