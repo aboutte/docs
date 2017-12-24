@@ -1412,30 +1412,39 @@
               
                 
                 
-                <p>apt-get update; apt-get upgrade -y
-apt-get install -y wget curl vim git unzip</p>
-<h1 id="database">database</h1>
-<p>apt-get install postgresql -y
+                <h1 id="install-booktype">Install Booktype</h1>
+<h1 id="update-os-and-install-general-dependencies">Update OS and install general dependencies</h1>
+<pre><code>apt-get update; apt-get upgrade -y
+apt-get install -y wget curl vim git unzip
+</code></pre>
+<h1 id="install-database">Install database</h1>
+<pre><code>apt-get install postgresql -y
 sudo -u postgres createuser -SDRP booktype-user (password: password)
 sudo -u postgres createdb -E utf8 -T template0 -O booktype-user booktype-db
-service postgresql restart</p>
-<h1 id="pdf">pdf</h1>
-<p>apt-get install -y php5-cli php5-gd
+service postgresql restart
+</code></pre>
+<h1 id="install-pdf-dependencies">Install PDF dependencies</h1>
+<pre><code>apt-get install -y php5-cli php5-gd
 mkdir -p /var/www/
 cd /tmp/
 wget http://www.mpdfonline.com/repos/MPDF_6_0.zip
 unzip MPDF_6_0.zip -d /var/www/
 cd /var/www/mpdf60/
-chown www-data.www-data examples/test.pdf graph_cache/ tmp/ ttfontdata/</p>
-<h1 id="booktype">booktype</h1>
-<h1 id="add-booktype-repo-to-apt-get">add booktype repo to apt-get</h1>
-<p>vim /etc/apt/sources.list</p>
-<h2 id="booktype_1"># Booktype</h2>
-<h2 id="deb-httpaptsourcefabricorg-trusty-main">deb http://apt.sourcefabric.org/ trusty main</h2>
-<p>apt-get update
+chown www-data.www-data examples/test.pdf graph_cache/ tmp/ ttfontdata/
+</code></pre>
+<h1 id="add-booktype-repo-to-apt-get">Add Booktype repo to apt-get</h1>
+<pre><code>vim /etc/apt/sources.list
+</code></pre>
+<h1 id="add-the-following-contents">Add the following contents</h1>
+<pre><code># Booktype
+deb http://apt.sourcefabric.org/ trusty main
+</code></pre>
+<h1 id="install-booktype_1">Install Booktype</h1>
+<pre><code>apt-get update
 apt-get install sourcefabric-keyring --force-yes -y
 apt-get update
-apt-get install booktype -y</p>
+apt-get install booktype -y
+</code></pre>
                 
                   
                 

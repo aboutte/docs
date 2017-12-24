@@ -97,38 +97,43 @@
         }, 
         {
             "location": "/Booktype/Install/", 
-            "text": "apt-get update; apt-get upgrade -y\napt-get install -y wget curl vim git unzip\n\n\ndatabase\n\n\napt-get install postgresql -y\nsudo -u postgres createuser -SDRP booktype-user (password: password)\nsudo -u postgres createdb -E utf8 -T template0 -O booktype-user booktype-db\nservice postgresql restart\n\n\npdf\n\n\napt-get install -y php5-cli php5-gd\nmkdir -p /var/www/\ncd /tmp/\nwget http://www.mpdfonline.com/repos/MPDF_6_0.zip\nunzip MPDF_6_0.zip -d /var/www/\ncd /var/www/mpdf60/\nchown www-data.www-data examples/test.pdf graph_cache/ tmp/ ttfontdata/\n\n\nbooktype\n\n\nadd booktype repo to apt-get\n\n\nvim /etc/apt/sources.list\n\n\n# Booktype\n\n\ndeb http://apt.sourcefabric.org/ trusty main\n\n\napt-get update\napt-get install sourcefabric-keyring --force-yes -y\napt-get update\napt-get install booktype -y", 
+            "text": "Install Booktype\n\n\nUpdate OS and install general dependencies\n\n\napt-get update; apt-get upgrade -y\napt-get install -y wget curl vim git unzip\n\n\n\nInstall database\n\n\napt-get install postgresql -y\nsudo -u postgres createuser -SDRP booktype-user (password: password)\nsudo -u postgres createdb -E utf8 -T template0 -O booktype-user booktype-db\nservice postgresql restart\n\n\n\nInstall PDF dependencies\n\n\napt-get install -y php5-cli php5-gd\nmkdir -p /var/www/\ncd /tmp/\nwget http://www.mpdfonline.com/repos/MPDF_6_0.zip\nunzip MPDF_6_0.zip -d /var/www/\ncd /var/www/mpdf60/\nchown www-data.www-data examples/test.pdf graph_cache/ tmp/ ttfontdata/\n\n\n\nAdd Booktype repo to apt-get\n\n\nvim /etc/apt/sources.list\n\n\n\nAdd the following contents\n\n\n# Booktype\ndeb http://apt.sourcefabric.org/ trusty main\n\n\n\nInstall Booktype\n\n\napt-get update\napt-get install sourcefabric-keyring --force-yes -y\napt-get update\napt-get install booktype -y", 
             "title": "Install"
         }, 
         {
-            "location": "/Booktype/Install/#database", 
-            "text": "apt-get install postgresql -y\nsudo -u postgres createuser -SDRP booktype-user (password: password)\nsudo -u postgres createdb -E utf8 -T template0 -O booktype-user booktype-db\nservice postgresql restart", 
-            "title": "database"
-        }, 
-        {
-            "location": "/Booktype/Install/#pdf", 
-            "text": "apt-get install -y php5-cli php5-gd\nmkdir -p /var/www/\ncd /tmp/\nwget http://www.mpdfonline.com/repos/MPDF_6_0.zip\nunzip MPDF_6_0.zip -d /var/www/\ncd /var/www/mpdf60/\nchown www-data.www-data examples/test.pdf graph_cache/ tmp/ ttfontdata/", 
-            "title": "pdf"
-        }, 
-        {
-            "location": "/Booktype/Install/#booktype", 
+            "location": "/Booktype/Install/#install-booktype", 
             "text": "", 
-            "title": "booktype"
+            "title": "Install Booktype"
+        }, 
+        {
+            "location": "/Booktype/Install/#update-os-and-install-general-dependencies", 
+            "text": "apt-get update; apt-get upgrade -y\napt-get install -y wget curl vim git unzip", 
+            "title": "Update OS and install general dependencies"
+        }, 
+        {
+            "location": "/Booktype/Install/#install-database", 
+            "text": "apt-get install postgresql -y\nsudo -u postgres createuser -SDRP booktype-user (password: password)\nsudo -u postgres createdb -E utf8 -T template0 -O booktype-user booktype-db\nservice postgresql restart", 
+            "title": "Install database"
+        }, 
+        {
+            "location": "/Booktype/Install/#install-pdf-dependencies", 
+            "text": "apt-get install -y php5-cli php5-gd\nmkdir -p /var/www/\ncd /tmp/\nwget http://www.mpdfonline.com/repos/MPDF_6_0.zip\nunzip MPDF_6_0.zip -d /var/www/\ncd /var/www/mpdf60/\nchown www-data.www-data examples/test.pdf graph_cache/ tmp/ ttfontdata/", 
+            "title": "Install PDF dependencies"
         }, 
         {
             "location": "/Booktype/Install/#add-booktype-repo-to-apt-get", 
             "text": "vim /etc/apt/sources.list", 
-            "title": "add booktype repo to apt-get"
+            "title": "Add Booktype repo to apt-get"
         }, 
         {
-            "location": "/Booktype/Install/#booktype_1", 
-            "text": "", 
-            "title": "# Booktype"
+            "location": "/Booktype/Install/#add-the-following-contents", 
+            "text": "# Booktype\ndeb http://apt.sourcefabric.org/ trusty main", 
+            "title": "Add the following contents"
         }, 
         {
-            "location": "/Booktype/Install/#deb-httpaptsourcefabricorg-trusty-main", 
+            "location": "/Booktype/Install/#install-booktype_1", 
             "text": "apt-get update\napt-get install sourcefabric-keyring --force-yes -y\napt-get update\napt-get install booktype -y", 
-            "title": "deb http://apt.sourcefabric.org/ trusty main"
+            "title": "Install Booktype"
         }, 
         {
             "location": "/CUPS/README/", 
