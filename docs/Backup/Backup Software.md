@@ -13,6 +13,7 @@ I currently have an Unlimited Family subscription with CrashPlan and backup ~5 m
     1. 3-2-1 Backup Strategy - 3 copies, two local on different devices, and one remote
     2. Central reporting (dashboard) or notifications
     3. CLI
+    4. Baremetal restore
 
 ## Backup Software
 
@@ -24,10 +25,12 @@ I currently have an Unlimited Family subscription with CrashPlan and backup ~5 m
 | [Borg](https://borgbackup.readthedocs.io/en/stable/)|
 | [CloudBerry](https://www.cloudberrylab.com/)||
 | [Duplicacy](https://github.com/gilbertchen/duplicacy)|	 |
-| [Duplicity](http://duplicity.nongnu.org/ )	||
+| [Duplicity](http://duplicity.nongnu.org/ ) | Y | Y | N | Y | N | Y |
 | [Duplicati](https://www.duplicati.com/)||
 | [urbackup](https://www.urbackup.org/)	| |
-| [wasabi](https://wasabi.com)||
+| [Wasabi](https://wasabi.com)||
+
+
 
 ## Notes
 
@@ -36,3 +39,7 @@ I currently have an Unlimited Family subscription with CrashPlan and backup ~5 m
 #### Section 1.a
 
 Arq has no Linux client.
+
+### Wasabi
+
+When I first saw Wasabi mentioned online I misunderstood what they are.  Wasabi is a cloud object store that is 100% compatible with S3.
