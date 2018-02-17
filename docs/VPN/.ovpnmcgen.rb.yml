@@ -2,10 +2,13 @@ trusted_ssids: [prairie patch, prairie patch 5GHz]
 host: rtr.andyboutte.com
 proto: udp
 port: 1194
-security_level: paranoid
+security_level: medium
 url_probe: http://captive.apple.com/hotspot-detect.html
 cafile: /Volumes/openvpn_configs/common/pfSense+Firewall.crt
 tafile: /Volumes/openvpn_configs/common/ta.key
 
-p12file: /Volumes/openvpn_configs/rtr-UDP4-1194-aboutte-laptop/rtr-UDP4-1194-aboutte-laptop.p12
-ovpnconfigfile: /Volumes/openvpn_configs/rtr-UDP4-1194-aboutte-laptop/rtr-UDP4-1194-aboutte-laptop.ovpn
+p12file: /Volumes/openvpn_configs/rtr-UDP4-1194-aboutte-iphone/rtr-UDP4-1194-aboutte-iphone.p12
+ovpnconfigfile: /Volumes/openvpn_configs/rtr-UDP4-1194-aboutte-iphone/rtr-UDP4-1194-aboutte-iphone.ovpn
+
+#p12file: /Volumes/openvpn_configs/rtr-UDP4-1194-aboutte-laptop/rtr-UDP4-1194-aboutte-laptop.p12
+#ovpnconfigfile: /Volumes/openvpn_configs/rtr-UDP4-1194-aboutte-laptop/rtr-UDP4-1194-aboutte-laptop.ovpn

@@ -12,13 +12,14 @@ For Laptop export in pfsense:
 - export Viscosity (Mac OS X and Windows: Viscosity inline config
 
 
-cd /Users/aboutte/Documents/r/docs/vpn
-ovpnmcgen.rb generate aboutte iphone > /Volumes/openvpn_configs/aboutte-iphone.mobileconfig
-# remove probe for Cellular
-# remove probe from home WiFi
+cd /Users/aboutte/Documents/r/docs/docs/VPN
+ovpnmcgen.rb generate aboutte iphone -o /Volumes/openvpn_configs/aboutte-iphone.mobileconfig
+
 # add username password
 
 <key>auth-user-pass</key>
   <string>user\nPassword</string>
 
 scp /Volumes/openvpn_configs/aboutte-iphone.mobileconfig root@mobileconfig.andyboutte.com:/var/www/mobileconfigs/aboutte-iphone.mobileconfig
+
+Open mobileconfig.andyboutte.com in Safari on iPhone
