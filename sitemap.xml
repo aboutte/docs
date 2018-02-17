@@ -4,7 +4,7 @@
     
     <url>
      <loc>http://docs.andyboutte.com/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,7 +13,7 @@
         
     <url>
      <loc>http://docs.andyboutte.com/AWS/VPC Flow Logs/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -22,14 +22,32 @@
     
         
     <url>
-     <loc>http://docs.andyboutte.com/Backup/Personal Backup Review/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <loc>http://docs.andyboutte.com/Backup/Backup Software/</loc>
+     <lastmod>2018-02-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.andyboutte.com/Backup/Cloud Storage/</loc>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://docs.andyboutte.com/Backup/Storage Tiers/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.andyboutte.com/Backup/duplicacy/</loc>
+     <lastmod>2018-02-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.andyboutte.com/Backup/wasabi/</loc>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -39,7 +57,7 @@
         
     <url>
      <loc>http://docs.andyboutte.com/Booktype/Install/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -49,7 +67,17 @@
         
     <url>
      <loc>http://docs.andyboutte.com/CUPS/README/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://docs.andyboutte.com/DNS/Troubleshooting/</loc>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -59,7 +87,7 @@
         
     <url>
      <loc>http://docs.andyboutte.com/ELK/Elasticsearch Snapshotting/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -69,7 +97,7 @@
         
     <url>
      <loc>http://docs.andyboutte.com/Mac OS X/AirPort/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -79,13 +107,13 @@
         
     <url>
      <loc>http://docs.andyboutte.com/Packet Capture/README/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://docs.andyboutte.com/Packet Capture/tshark commands/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -95,7 +123,7 @@
         
     <url>
      <loc>http://docs.andyboutte.com/Raspberry Pi/ntp/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -105,67 +133,67 @@
         
     <url>
      <loc>http://docs.andyboutte.com/Software/crashplan/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://docs.andyboutte.com/Software/dd/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://docs.andyboutte.com/Software/ddrescue/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://docs.andyboutte.com/Software/encrypt/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://docs.andyboutte.com/Software/ffmpeg/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://docs.andyboutte.com/Software/keybase/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://docs.andyboutte.com/Software/kvm/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://docs.andyboutte.com/Software/lets_encrypt/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://docs.andyboutte.com/Software/rsync/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://docs.andyboutte.com/Software/sqlmap/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://docs.andyboutte.com/Software/virtualBox/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -193,7 +221,7 @@
         
     <url>
      <loc>http://docs.andyboutte.com/Synology/iscsi/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -203,7 +231,7 @@
         
     <url>
      <loc>http://docs.andyboutte.com/VPN/README/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -213,7 +241,7 @@
         
     <url>
      <loc>http://docs.andyboutte.com/docker/README/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -223,7 +251,7 @@
         
     <url>
      <loc>http://docs.andyboutte.com/ham/README/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -239,7 +267,7 @@
         
     <url>
      <loc>http://docs.andyboutte.com/nginx/security/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -249,7 +277,7 @@
         
     <url>
      <loc>http://docs.andyboutte.com/ngx_pagespeed/README/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -265,13 +293,13 @@
         
     <url>
      <loc>http://docs.andyboutte.com/performance/performance/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://docs.andyboutte.com/performance/throughput/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -297,7 +325,7 @@
         
     <url>
      <loc>http://docs.andyboutte.com/security/ddos/</loc>
-     <lastmod>2017-12-23</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

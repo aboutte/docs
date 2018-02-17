@@ -10,7 +10,7 @@
         <meta name="description" content="Andy Boutte's Documentation">
       
       
-        <link rel="canonical" href="http://docs.andyboutte.com/Backup/Personal Backup Review/">
+        <link rel="canonical" href="http://docs.andyboutte.com/Backup/duplicacy/">
       
       
         <meta name="author" content="Andy Boutte">
@@ -37,7 +37,7 @@
     
     
       
-        <title>Personal Backup Review - Andy Boutte's Documentation</title>
+        <title>Duplicacy - Andy Boutte's Documentation</title>
       
     
     
@@ -105,7 +105,7 @@
                 </span>
               
             
-            Personal Backup Review
+            Duplicacy
           
         </span>
       </div>
@@ -282,6 +282,42 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../Backup Software/" title="Backup Software" class="md-nav__link">
+      Backup Software
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Cloud Storage/" title="Cloud Storage" class="md-nav__link">
+      Cloud Storage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Storage Tiers/" title="Storage Tiers" class="md-nav__link">
+      Storage Tiers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -293,11 +329,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Personal Backup Review
+        Duplicacy
       </label>
     
-    <a href="./" title="Personal Backup Review" class="md-nav__link md-nav__link--active">
-      Personal Backup Review
+    <a href="./" title="Duplicacy" class="md-nav__link md-nav__link--active">
+      Duplicacy
     </a>
     
       
@@ -311,38 +347,86 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#requirements" title="Requirements" class="md-nav__link">
-    Requirements
+  <a href="#init" title="init" class="md-nav__link">
+    init
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#backup-software" title="Backup Software" class="md-nav__link">
-    Backup Software
+  <a href="#backup" title="backup" class="md-nav__link">
+    backup
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#notes" title="Notes" class="md-nav__link">
-    Notes
+  <a href="#list" title="list" class="md-nav__link">
+    list
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restore" title="restore" class="md-nav__link">
+    restore
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#launchd" title="launchd" class="md-nav__link">
+    launchd
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#arq" title="Arq" class="md-nav__link">
-    Arq
+  <a href="#repo" title="repo" class="md-nav__link">
+    repo
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#section-1a" title="Section 1.a" class="md-nav__link">
-    Section 1.a
+  <a href="#backup_1" title="backup" class="md-nav__link">
+    backup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prune" title="prune" class="md-nav__link">
+    prune
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#home" title="home" class="md-nav__link">
+    home
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backup_2" title="backup" class="md-nav__link">
+    backup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prune_1" title="prune" class="md-nav__link">
+    prune
   </a>
   
 </li>
@@ -354,6 +438,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schedule" title="Schedule" class="md-nav__link">
+    Schedule
+  </a>
   
 </li>
       
@@ -372,8 +463,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Storage Tiers/" title="Storage Tiers" class="md-nav__link">
-      Storage Tiers
+    <a href="../wasabi/" title="Wasabi" class="md-nav__link">
+      Wasabi
     </a>
   </li>
 
@@ -465,10 +556,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
-      ELK
+      DNS
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
+        DNS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DNS/Troubleshooting/" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      ELK
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
         ELK
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -498,13 +625,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-7">
+    <label class="md-nav__link" for="nav-8">
       Mac OS X
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+      <label class="md-nav__title" for="nav-8">
         Mac OS X
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -534,13 +661,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
-    <label class="md-nav__link" for="nav-8">
+    <label class="md-nav__link" for="nav-9">
       Packet Capture
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
+      <label class="md-nav__title" for="nav-9">
         Packet Capture
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -582,13 +709,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
     
-    <label class="md-nav__link" for="nav-9">
+    <label class="md-nav__link" for="nav-10">
       Raspberry Pi
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-9">
+      <label class="md-nav__title" for="nav-10">
         Raspberry Pi
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -618,13 +745,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
     
-    <label class="md-nav__link" for="nav-10">
+    <label class="md-nav__link" for="nav-11">
       Software
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
+      <label class="md-nav__title" for="nav-11">
         Software
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -769,13 +896,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-12" type="checkbox" id="nav-10-12">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-12" type="checkbox" id="nav-11-12">
     
-    <label class="md-nav__link" for="nav-10-12">
+    <label class="md-nav__link" for="nav-11-12">
       Networking
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-10-12">
+      <label class="md-nav__title" for="nav-11-12">
         Networking
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -786,15 +913,27 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../../Software/Networking/Palo Alto/" title="Palo Alto" class="md-nav__link">
+      Palo Alto
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-12-1" type="checkbox" id="nav-10-12-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-12-2" type="checkbox" id="nav-11-12-2">
     
-    <label class="md-nav__link" for="nav-10-12-1">
+    <label class="md-nav__link" for="nav-11-12-2">
       HP
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-10-12-1">
+      <label class="md-nav__title" for="nav-11-12-2">
         HP
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -824,13 +963,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-12-2" type="checkbox" id="nav-10-12-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-12-3" type="checkbox" id="nav-11-12-3">
     
-    <label class="md-nav__link" for="nav-10-12-2">
+    <label class="md-nav__link" for="nav-11-12-3">
       pfSense
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-10-12-2">
+      <label class="md-nav__title" for="nav-11-12-3">
         pfSense
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -877,13 +1016,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-13" type="checkbox" id="nav-10-13">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-13" type="checkbox" id="nav-11-13">
     
-    <label class="md-nav__link" for="nav-10-13">
+    <label class="md-nav__link" for="nav-11-13">
       WordPress
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-10-13">
+      <label class="md-nav__title" for="nav-11-13">
         WordPress
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -913,13 +1052,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-14" type="checkbox" id="nav-10-14">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-14" type="checkbox" id="nav-11-14">
     
-    <label class="md-nav__link" for="nav-10-14">
+    <label class="md-nav__link" for="nav-11-14">
       Strace
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-10-14">
+      <label class="md-nav__title" for="nav-11-14">
         Strace
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -954,13 +1093,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
     
-    <label class="md-nav__link" for="nav-11">
+    <label class="md-nav__link" for="nav-12">
       Synology
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-11">
+      <label class="md-nav__title" for="nav-12">
         Synology
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -990,13 +1129,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
     
-    <label class="md-nav__link" for="nav-12">
+    <label class="md-nav__link" for="nav-13">
       VPN
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-12">
+      <label class="md-nav__title" for="nav-13">
         VPN
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1026,13 +1165,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
     
-    <label class="md-nav__link" for="nav-13">
+    <label class="md-nav__link" for="nav-14">
       Docker
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-13">
+      <label class="md-nav__title" for="nav-14">
         Docker
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1062,13 +1201,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15">
     
-    <label class="md-nav__link" for="nav-14">
+    <label class="md-nav__link" for="nav-15">
       Ham
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-14">
+      <label class="md-nav__title" for="nav-15">
         Ham
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1093,13 +1232,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14-2" type="checkbox" id="nav-14-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15-2" type="checkbox" id="nav-15-2">
     
-    <label class="md-nav__link" for="nav-14-2">
+    <label class="md-nav__link" for="nav-15-2">
       Chirp
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-14-2">
+      <label class="md-nav__title" for="nav-15-2">
         Chirp
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1134,13 +1273,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-16" type="checkbox" id="nav-16">
     
-    <label class="md-nav__link" for="nav-15">
+    <label class="md-nav__link" for="nav-16">
       Nginx
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-15">
+      <label class="md-nav__title" for="nav-16">
         Nginx
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1170,13 +1309,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-16" type="checkbox" id="nav-16">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-17" type="checkbox" id="nav-17">
     
-    <label class="md-nav__link" for="nav-16">
+    <label class="md-nav__link" for="nav-17">
       Ngx pagespeed
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-16">
+      <label class="md-nav__title" for="nav-17">
         Ngx pagespeed
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1201,13 +1340,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-16-2" type="checkbox" id="nav-16-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-17-2" type="checkbox" id="nav-17-2">
     
-    <label class="md-nav__link" for="nav-16-2">
+    <label class="md-nav__link" for="nav-17-2">
       Cookbooks
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-16-2">
+      <label class="md-nav__title" for="nav-17-2">
         Cookbooks
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1220,13 +1359,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-16-2-1" type="checkbox" id="nav-16-2-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-17-2-1" type="checkbox" id="nav-17-2-1">
     
-    <label class="md-nav__link" for="nav-16-2-1">
+    <label class="md-nav__link" for="nav-17-2-1">
       Ngx
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-16-2-1">
+      <label class="md-nav__title" for="nav-17-2-1">
         Ngx
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1278,13 +1417,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-17" type="checkbox" id="nav-17">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-18" type="checkbox" id="nav-18">
     
-    <label class="md-nav__link" for="nav-17">
+    <label class="md-nav__link" for="nav-18">
       Performance
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-17">
+      <label class="md-nav__title" for="nav-18">
         Performance
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1326,13 +1465,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-18" type="checkbox" id="nav-18">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-19" type="checkbox" id="nav-19">
     
-    <label class="md-nav__link" for="nav-18">
+    <label class="md-nav__link" for="nav-19">
       Rip
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-18">
+      <label class="md-nav__title" for="nav-19">
         Rip
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1345,13 +1484,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-18-1" type="checkbox" id="nav-18-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-19-1" type="checkbox" id="nav-19-1">
     
-    <label class="md-nav__link" for="nav-18-1">
+    <label class="md-nav__link" for="nav-19-1">
       Abcde
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-18-1">
+      <label class="md-nav__title" for="nav-19-1">
         Abcde
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1381,13 +1520,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-18-2" type="checkbox" id="nav-18-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-19-2" type="checkbox" id="nav-19-2">
     
-    <label class="md-nav__link" for="nav-18-2">
+    <label class="md-nav__link" for="nav-19-2">
       Handbrake
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-18-2">
+      <label class="md-nav__title" for="nav-19-2">
         Handbrake
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1422,13 +1561,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-19" type="checkbox" id="nav-19">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-20" type="checkbox" id="nav-20">
     
-    <label class="md-nav__link" for="nav-19">
+    <label class="md-nav__link" for="nav-20">
       Security
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-19">
+      <label class="md-nav__title" for="nav-20">
         Security
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1472,38 +1611,86 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#requirements" title="Requirements" class="md-nav__link">
-    Requirements
+  <a href="#init" title="init" class="md-nav__link">
+    init
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#backup-software" title="Backup Software" class="md-nav__link">
-    Backup Software
+  <a href="#backup" title="backup" class="md-nav__link">
+    backup
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#notes" title="Notes" class="md-nav__link">
-    Notes
+  <a href="#list" title="list" class="md-nav__link">
+    list
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restore" title="restore" class="md-nav__link">
+    restore
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#launchd" title="launchd" class="md-nav__link">
+    launchd
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#arq" title="Arq" class="md-nav__link">
-    Arq
+  <a href="#repo" title="repo" class="md-nav__link">
+    repo
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#section-1a" title="Section 1.a" class="md-nav__link">
-    Section 1.a
+  <a href="#backup_1" title="backup" class="md-nav__link">
+    backup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prune" title="prune" class="md-nav__link">
+    prune
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#home" title="home" class="md-nav__link">
+    home
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backup_2" title="backup" class="md-nav__link">
+    backup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prune_1" title="prune" class="md-nav__link">
+    prune
   </a>
   
 </li>
@@ -1515,6 +1702,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schedule" title="Schedule" class="md-nav__link">
+    Schedule
+  </a>
   
 </li>
       
@@ -1533,134 +1727,54 @@
               
                 
                 
-                <h1 id="personal-backup-review">Personal Backup Review</h1>
-<p>My personal CrashPlan subscription is expiring in January 2018.  I need to find a replacement backup solution.<br />
-I currently have an Unlimited Family subscription with CrashPlan and backup ~5 machines with ~1.5TB of data.</p>
-<h2 id="requirements">Requirements</h2>
+                <h1 id="duplicacy-notes">Duplicacy Notes</h1>
+<p>wiki - https://github.com/gilbertchen/duplicacy/wiki</p>
+<h2 id="init">init</h2>
 <ol>
-<li>High<ol>
-<li>Cross platform - Mac and Linux at a minimum</li>
-<li>Custom encryption key</li>
-<li>Scheduled</li>
-</ol>
+<li>
+<p>change directory to the source of the backups</p>
+<p>cd ~/r/</p>
 </li>
-<li>Medium<ol>
-<li>3-2-1 Backup Strategy - 3 copies, two local on different devices, and one remote</li>
-<li>Central reporting (dashboard) or notifications</li>
-<li>CLI</li>
-</ol>
+<li>
+<p>Register the directory as the duplicacy repository</p>
+<p>duplicacy init -e -pref-dir ~/r/dotfiles/duplicacy/${repo_name} ${repo_name} s3://us-east-1@s3.wasabisys.com/aboutte.backup.boutte/13mbpr01-aboutte</p>
 </li>
 </ol>
-<h2 id="backup-software">Backup Software</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>1.a</th>
-<th>1.b</th>
-<th>1.c</th>
-<th>2.a</th>
-<th>2.b</th>
-<th>2.c</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://www.arqbackup.com/">Arq</a></td>
-<td>N</td>
-<td>Y</td>
-<td></td>
-<td>Y</td>
-<td></td>
-<td>N</td>
-</tr>
-<tr>
-<td><a href="https://blog.bacula.org/">Bacula</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="http://burp.grke.org/">Burp</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://borgbackup.readthedocs.io/en/stable/">Borg</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://www.cloudberrylab.com/">CloudBerry</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://github.com/gilbertchen/duplicacy">Duplicacy</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="http://duplicity.nongnu.org/">Duplicity</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://www.duplicati.com/">Duplicati</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://www.urbackup.org/">urbackup</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://wasabi.com">wasabi</a></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="notes">Notes</h2>
-<h3 id="arq">Arq</h3>
-<h4 id="section-1a">Section 1.a</h4>
-<p>Arq has no Linux client.</p>
+<h2 id="backup">backup</h2>
+<pre><code>cd ~/r/
+duplicacy backup -stats -t initial
+</code></pre>
+<h2 id="list">list</h2>
+<p>listing backups can be used to figure which snapshot to restore</p>
+<pre><code>duplicacy list -all
+duplicacy list -id repo
+</code></pre>
+<h2 id="restore">restore</h2>
+<p>use the init command to setup a repository with the same name of a previously backed up repository</p>
+<pre><code>cd ~/Desktop/
+mkdir restore
+cd restore/
+duplicacy init -e -pref-dir ~/r/dotfiles/duplicacy/${repo_name} ${repo_name} s3://us-east-1@s3.wasabisys.com/aboutte.backup.boutte/13mbpr01-aboutte
+# By default duplicacy will restore the entire snapshot.  Filters can be used to exclude everything and just include the required directory/file 
+duplicacy restore -stats -threads 20 -r 177 -- i:rean-platform/.*$  e:.*
+</code></pre>
+<h2 id="launchd">launchd</h2>
+<h3 id="repo">repo</h3>
+<h4 id="backup_1">backup</h4>
+<p>curl -o ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.repo.plist http://launched.zerowidth.com/plists/839cd4c0-def3-0135-4bb3-25eaf5b91f13.xml
+launchctl load -w ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.repo.plist</p>
+<h4 id="prune">prune</h4>
+<h3 id="home">home</h3>
+<h4 id="backup_2">backup</h4>
+<p>curl -o ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.home.plist http://launched.zerowidth.com/plists/97dda290-def3-0135-4bb3-25eaf5b91f13.xml
+launchctl load -w ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.home.plist</p>
+<h4 id="prune_1">prune</h4>
+<p>duplicacy -log prune -keep 1:15      # Keep 1 snapshot every 1 day(s) if older than 15 day(s)    - hourly for 0-15 days
+duplicacy -log prune -keep 1:90      # Keep 1 snapshot every 1 day(s) if older than 90 day(s)    - daily for 0-90 days
+duplicacy -log prune -keep 30:180    # Keep 1 snapshot every 30 day(s) if older than 180 day(s)  - monthly for 0-360 days
+duplicacy -log prune -keep 360:360   # Keep 1 snapshot every 360 day(s) if older than 360 day(s) - yearly forever</p>
+<h2 id="schedule">Schedule</h2>
+<p>https://superuser.com/questions/132084/run-script-when-a-specific-disk-memory-card-is-mounted-under-osx</p>
                 
                   
                 
@@ -1679,7 +1793,7 @@ I currently have an Unlimited Family subscription with CrashPlan and backup ~5 m
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../AWS/VPC Flow Logs/" title="VPC Flow Logs" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Storage Tiers/" title="Storage Tiers" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1688,19 +1802,19 @@ I currently have an Unlimited Family subscription with CrashPlan and backup ~5 m
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                VPC Flow Logs
+                Storage Tiers
               </span>
             </div>
           </a>
         
         
-          <a href="../Storage Tiers/" title="Storage Tiers" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../wasabi/" title="Wasabi" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Storage Tiers
+                Wasabi
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

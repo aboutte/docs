@@ -36,43 +36,58 @@
             "title": "Get rows that are inter VPC communication and drop intra VPC communication"
         }, 
         {
-            "location": "/Backup/Personal Backup Review/", 
-            "text": "Personal Backup Review\n\n\nMy personal CrashPlan subscription is expiring in January 2018.  I need to find a replacement backup solution.\n\nI currently have an Unlimited Family subscription with CrashPlan and backup ~5 machines with ~1.5TB of data.\n\n\nRequirements\n\n\n\n\nHigh\n\n\nCross platform - Mac and Linux at a minimum\n\n\nCustom encryption key\n\n\nScheduled\n\n\n\n\n\n\nMedium\n\n\n3-2-1 Backup Strategy - 3 copies, two local on different devices, and one remote\n\n\nCentral reporting (dashboard) or notifications\n\n\nCLI\n\n\n\n\n\n\n\n\nBackup Software\n\n\n\n\n\n\n\n\nName\n\n\n1.a\n\n\n1.b\n\n\n1.c\n\n\n2.a\n\n\n2.b\n\n\n2.c\n\n\n\n\n\n\n\n\n\n\nArq\n\n\nN\n\n\nY\n\n\n\n\nY\n\n\n\n\nN\n\n\n\n\n\n\nBacula\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBurp\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBorg\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCloudBerry\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDuplicacy\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDuplicity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDuplicati\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nurbackup\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nwasabi\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNotes\n\n\nArq\n\n\nSection 1.a\n\n\nArq has no Linux client.", 
-            "title": "Personal Backup Review"
+            "location": "/Backup/Backup Software/", 
+            "text": "Personal Backup Review\n\n\nMy personal CrashPlan subscription is expiring in January 2018.  I need to find a replacement backup solution.\n\nI currently have an Unlimited Family subscription with CrashPlan and backup ~5 machines with ~1.5TB of data.\n\n\nRequirements\n\n\n\n\nHigh\n\n\nCross platform - Mac and Linux at a minimum\n\n\nCustom encryption key\n\n\nScheduled\n\n\n\n\n\n\nMedium\n\n\n3-2-1 Backup Strategy - 3 copies, two local on different devices, and one remote\n\n\nCentral reporting (dashboard) or notifications\n\n\nCLI\n\n\nBaremetal restore\n\n\n\n\n\n\n\n\nBackup Software\n\n\n\n\n\n\n\n\nName\n\n\n1.a\n\n\n1.b\n\n\n1.c\n\n\n2.a\n\n\n2.b\n\n\n2.c\n\n\n\n\n\n\n\n\n\n\nArq\n\n\nN\n\n\nY\n\n\n\n\nY\n\n\n\n\nN\n\n\n\n\n\n\nBacula\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBurp\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBorg\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCloudBerry\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDuplicacy\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDuplicity\n\n\nY\n\n\nY\n\n\nN\n\n\nY\n\n\nN\n\n\nY\n\n\n\n\n\n\nDuplicati\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nurbackup\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWasabi\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNotes\n\n\nArq\n\n\nSection 1.a\n\n\nArq has no Linux client.\n\n\nWasabi\n\n\nWhen I first saw Wasabi mentioned online I misunderstood what they are.  Wasabi is a cloud object store that is 100% compatible with S3.", 
+            "title": "Backup Software"
         }, 
         {
-            "location": "/Backup/Personal Backup Review/#personal-backup-review", 
+            "location": "/Backup/Backup Software/#personal-backup-review", 
             "text": "My personal CrashPlan subscription is expiring in January 2018.  I need to find a replacement backup solution. \nI currently have an Unlimited Family subscription with CrashPlan and backup ~5 machines with ~1.5TB of data.", 
             "title": "Personal Backup Review"
         }, 
         {
-            "location": "/Backup/Personal Backup Review/#requirements", 
-            "text": "High  Cross platform - Mac and Linux at a minimum  Custom encryption key  Scheduled    Medium  3-2-1 Backup Strategy - 3 copies, two local on different devices, and one remote  Central reporting (dashboard) or notifications  CLI", 
+            "location": "/Backup/Backup Software/#requirements", 
+            "text": "High  Cross platform - Mac and Linux at a minimum  Custom encryption key  Scheduled    Medium  3-2-1 Backup Strategy - 3 copies, two local on different devices, and one remote  Central reporting (dashboard) or notifications  CLI  Baremetal restore", 
             "title": "Requirements"
         }, 
         {
-            "location": "/Backup/Personal Backup Review/#backup-software", 
-            "text": "Name  1.a  1.b  1.c  2.a  2.b  2.c      Arq  N  Y   Y   N    Bacula          Burp          Borg          CloudBerry          Duplicacy          Duplicity          Duplicati          urbackup          wasabi", 
+            "location": "/Backup/Backup Software/#backup-software", 
+            "text": "Name  1.a  1.b  1.c  2.a  2.b  2.c      Arq  N  Y   Y   N    Bacula          Burp          Borg          CloudBerry          Duplicacy          Duplicity  Y  Y  N  Y  N  Y    Duplicati          urbackup          Wasabi", 
             "title": "Backup Software"
         }, 
         {
-            "location": "/Backup/Personal Backup Review/#notes", 
+            "location": "/Backup/Backup Software/#notes", 
             "text": "", 
             "title": "Notes"
         }, 
         {
-            "location": "/Backup/Personal Backup Review/#arq", 
+            "location": "/Backup/Backup Software/#arq", 
             "text": "", 
             "title": "Arq"
         }, 
         {
-            "location": "/Backup/Personal Backup Review/#section-1a", 
+            "location": "/Backup/Backup Software/#section-1a", 
             "text": "Arq has no Linux client.", 
             "title": "Section 1.a"
         }, 
         {
+            "location": "/Backup/Backup Software/#wasabi", 
+            "text": "When I first saw Wasabi mentioned online I misunderstood what they are.  Wasabi is a cloud object store that is 100% compatible with S3.", 
+            "title": "Wasabi"
+        }, 
+        {
+            "location": "/Backup/Cloud Storage/", 
+            "text": "Cloud Storage\n\n\nS3 \nWasabi\nbackblaze\nGoogle\nAzure\nRackspace", 
+            "title": "Cloud Storage"
+        }, 
+        {
+            "location": "/Backup/Cloud Storage/#cloud-storage", 
+            "text": "S3 \nWasabi\nbackblaze\nGoogle\nAzure\nRackspace", 
+            "title": "Cloud Storage"
+        }, 
+        {
             "location": "/Backup/Storage Tiers/", 
-            "text": "Storage Tiers\n\n\nTier 1\n\n\nTier 2\n\n\nTier 3", 
+            "text": "Storage Tiers\n\n\nTier 1\n\n\nDefinition\n\n\nAny irreplaceable data\n\n\nExamples\n\n\n\n\nPhotos\n\n\n\n\nTier 2\n\n\nDefinition\n\n\nAny data that can be recreated / replaced but would be extremely time consuming\n\n\nExamples\n\n\n\n\nCoding projects\n\n\nImportant documents", 
             "title": "Storage Tiers"
         }, 
         {
@@ -86,14 +101,104 @@
             "title": "Tier 1"
         }, 
         {
+            "location": "/Backup/Storage Tiers/#definition", 
+            "text": "Any irreplaceable data", 
+            "title": "Definition"
+        }, 
+        {
+            "location": "/Backup/Storage Tiers/#examples", 
+            "text": "Photos", 
+            "title": "Examples"
+        }, 
+        {
             "location": "/Backup/Storage Tiers/#tier-2", 
             "text": "", 
             "title": "Tier 2"
         }, 
         {
-            "location": "/Backup/Storage Tiers/#tier-3", 
+            "location": "/Backup/Storage Tiers/#definition_1", 
+            "text": "Any data that can be recreated / replaced but would be extremely time consuming", 
+            "title": "Definition"
+        }, 
+        {
+            "location": "/Backup/Storage Tiers/#examples_1", 
+            "text": "Coding projects  Important documents", 
+            "title": "Examples"
+        }, 
+        {
+            "location": "/Backup/duplicacy/", 
+            "text": "Duplicacy Notes\n\n\nwiki - https://github.com/gilbertchen/duplicacy/wiki\n\n\ninit\n\n\n\n\n\n\nchange directory to the source of the backups\n\n\ncd ~/r/\n\n\n\n\n\n\nRegister the directory as the duplicacy repository\n\n\nduplicacy init -e -pref-dir ~/r/dotfiles/duplicacy/${repo_name} ${repo_name} s3://us-east-1@s3.wasabisys.com/aboutte.backup.boutte/13mbpr01-aboutte\n\n\n\n\n\n\nbackup\n\n\ncd ~/r/\nduplicacy backup -stats -t initial\n\n\n\nlist\n\n\nlisting backups can be used to figure which snapshot to restore\n\n\nduplicacy list -all\nduplicacy list -id repo\n\n\n\nrestore\n\n\nuse the init command to setup a repository with the same name of a previously backed up repository\n\n\ncd ~/Desktop/\nmkdir restore\ncd restore/\nduplicacy init -e -pref-dir ~/r/dotfiles/duplicacy/${repo_name} ${repo_name} s3://us-east-1@s3.wasabisys.com/aboutte.backup.boutte/13mbpr01-aboutte\n# By default duplicacy will restore the entire snapshot.  Filters can be used to exclude everything and just include the required directory/file \nduplicacy restore -stats -threads 20 -r 177 -- i:rean-platform/.*$  e:.*\n\n\n\nlaunchd\n\n\nrepo\n\n\nbackup\n\n\ncurl -o ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.repo.plist http://launched.zerowidth.com/plists/839cd4c0-def3-0135-4bb3-25eaf5b91f13.xml\nlaunchctl load -w ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.repo.plist\n\n\nprune\n\n\nhome\n\n\nbackup\n\n\ncurl -o ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.home.plist http://launched.zerowidth.com/plists/97dda290-def3-0135-4bb3-25eaf5b91f13.xml\nlaunchctl load -w ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.home.plist\n\n\nprune\n\n\nduplicacy -log prune -keep 1:15      # Keep 1 snapshot every 1 day(s) if older than 15 day(s)    - hourly for 0-15 days\nduplicacy -log prune -keep 1:90      # Keep 1 snapshot every 1 day(s) if older than 90 day(s)    - daily for 0-90 days\nduplicacy -log prune -keep 30:180    # Keep 1 snapshot every 30 day(s) if older than 180 day(s)  - monthly for 0-360 days\nduplicacy -log prune -keep 360:360   # Keep 1 snapshot every 360 day(s) if older than 360 day(s) - yearly forever\n\n\nSchedule\n\n\nhttps://superuser.com/questions/132084/run-script-when-a-specific-disk-memory-card-is-mounted-under-osx", 
+            "title": "Duplicacy"
+        }, 
+        {
+            "location": "/Backup/duplicacy/#duplicacy-notes", 
+            "text": "wiki - https://github.com/gilbertchen/duplicacy/wiki", 
+            "title": "Duplicacy Notes"
+        }, 
+        {
+            "location": "/Backup/duplicacy/#init", 
+            "text": "change directory to the source of the backups  cd ~/r/    Register the directory as the duplicacy repository  duplicacy init -e -pref-dir ~/r/dotfiles/duplicacy/${repo_name} ${repo_name} s3://us-east-1@s3.wasabisys.com/aboutte.backup.boutte/13mbpr01-aboutte", 
+            "title": "init"
+        }, 
+        {
+            "location": "/Backup/duplicacy/#backup", 
+            "text": "cd ~/r/\nduplicacy backup -stats -t initial", 
+            "title": "backup"
+        }, 
+        {
+            "location": "/Backup/duplicacy/#list", 
+            "text": "listing backups can be used to figure which snapshot to restore  duplicacy list -all\nduplicacy list -id repo", 
+            "title": "list"
+        }, 
+        {
+            "location": "/Backup/duplicacy/#restore", 
+            "text": "use the init command to setup a repository with the same name of a previously backed up repository  cd ~/Desktop/\nmkdir restore\ncd restore/\nduplicacy init -e -pref-dir ~/r/dotfiles/duplicacy/${repo_name} ${repo_name} s3://us-east-1@s3.wasabisys.com/aboutte.backup.boutte/13mbpr01-aboutte\n# By default duplicacy will restore the entire snapshot.  Filters can be used to exclude everything and just include the required directory/file \nduplicacy restore -stats -threads 20 -r 177 -- i:rean-platform/.*$  e:.*", 
+            "title": "restore"
+        }, 
+        {
+            "location": "/Backup/duplicacy/#launchd", 
             "text": "", 
-            "title": "Tier 3"
+            "title": "launchd"
+        }, 
+        {
+            "location": "/Backup/duplicacy/#repo", 
+            "text": "", 
+            "title": "repo"
+        }, 
+        {
+            "location": "/Backup/duplicacy/#backup_1", 
+            "text": "curl -o ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.repo.plist http://launched.zerowidth.com/plists/839cd4c0-def3-0135-4bb3-25eaf5b91f13.xml\nlaunchctl load -w ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.repo.plist", 
+            "title": "backup"
+        }, 
+        {
+            "location": "/Backup/duplicacy/#prune", 
+            "text": "", 
+            "title": "prune"
+        }, 
+        {
+            "location": "/Backup/duplicacy/#home", 
+            "text": "", 
+            "title": "home"
+        }, 
+        {
+            "location": "/Backup/duplicacy/#backup_2", 
+            "text": "curl -o ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.home.plist http://launched.zerowidth.com/plists/97dda290-def3-0135-4bb3-25eaf5b91f13.xml\nlaunchctl load -w ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.home.plist", 
+            "title": "backup"
+        }, 
+        {
+            "location": "/Backup/duplicacy/#prune_1", 
+            "text": "duplicacy -log prune -keep 1:15      # Keep 1 snapshot every 1 day(s) if older than 15 day(s)    - hourly for 0-15 days\nduplicacy -log prune -keep 1:90      # Keep 1 snapshot every 1 day(s) if older than 90 day(s)    - daily for 0-90 days\nduplicacy -log prune -keep 30:180    # Keep 1 snapshot every 30 day(s) if older than 180 day(s)  - monthly for 0-360 days\nduplicacy -log prune -keep 360:360   # Keep 1 snapshot every 360 day(s) if older than 360 day(s) - yearly forever", 
+            "title": "prune"
+        }, 
+        {
+            "location": "/Backup/duplicacy/#schedule", 
+            "text": "https://superuser.com/questions/132084/run-script-when-a-specific-disk-memory-card-is-mounted-under-osx", 
+            "title": "Schedule"
+        }, 
+        {
+            "location": "/Backup/wasabi/", 
+            "text": "create backup group\ncreate user\nadd user to backup group\nadd policy to backup group to just access their bucket", 
+            "title": "Wasabi"
         }, 
         {
             "location": "/Booktype/Install/", 
@@ -174,6 +279,16 @@
             "location": "/CUPS/README/#browse-bonjour-devices", 
             "text": "avahi-browse -alr", 
             "title": "Browse Bonjour devices"
+        }, 
+        {
+            "location": "/DNS/Troubleshooting/", 
+            "text": "DNSSEC\n\n\nIf you do a lookup using a recursive resolver that enforces DNSSEC you should expect to see the AD-Flag (Authenticated answer)\n\n\nIf you want to manually verify the domain run the following command:\n\n\ndig @214.16.26.1 +dnssec +sigchase ${domain} A | cat -n\n\n\n\nhttp://backreference.org/2010/11/17/dnssec-verification-with-dig/", 
+            "title": "Troubleshooting"
+        }, 
+        {
+            "location": "/DNS/Troubleshooting/#dnssec", 
+            "text": "If you do a lookup using a recursive resolver that enforces DNSSEC you should expect to see the AD-Flag (Authenticated answer)  If you want to manually verify the domain run the following command:  dig @214.16.26.1 +dnssec +sigchase ${domain} A | cat -n  http://backreference.org/2010/11/17/dnssec-verification-with-dig/", 
+            "title": "DNSSEC"
         }, 
         {
             "location": "/ELK/Elasticsearch Snapshotting/", 
@@ -317,8 +432,13 @@
         }, 
         {
             "location": "/Software/dd/", 
-            "text": "dd if=/dev/hda of=~/hdadisk.img\n\n\nIf dd does not work try unetbootin\n\n\nsudo umount /dev/disk3\nsudo diskutil eraseDisk FAT32 NAME MBRFormat /dev/disk3\n\n\na fat32 usb stick should show up in unetbootin", 
+            "text": "dd\n\n\ndd if=/dev/hda of=~/hdadisk.img\n\n\n\nIf dd does not work try unetbootin\n\n\nsudo umount /dev/disk3\nsudo diskutil eraseDisk FAT32 NAME MBRFormat /dev/disk3\n\n\n\na fat32 usb stick should show up in unetbootin", 
             "title": "Dd"
+        }, 
+        {
+            "location": "/Software/dd/#dd", 
+            "text": "dd if=/dev/hda of=~/hdadisk.img  If dd does not work try unetbootin  sudo umount /dev/disk3\nsudo diskutil eraseDisk FAT32 NAME MBRFormat /dev/disk3  a fat32 usb stick should show up in unetbootin", 
+            "title": "dd"
         }, 
         {
             "location": "/Software/ddrescue/", 
@@ -347,7 +467,7 @@
         }, 
         {
             "location": "/Software/ffmpeg/", 
-            "text": "ffmpeg -i IMG_2829_cut.mp4 -ss 00:00:00 -t 00:00:48 -async 1 IMG_2829_cut2.mp4\n\n\nffmpeg -i IMG_6708.mov -s 640x480 -c:v libx264 -crf 25 -c:a libfaac -movflags faststart IMG_6708_converted.mp4\n\n\nffmpeg -i in.mov -vf \"transpose=2\" out.mov\n\n\n0 = 90CounterCLockwise and Vertical Flip (default)\n1 = 90Clockwise\n2 = 90CounterClockwise\n3 = 90Clockwise and Vertical Flip", 
+            "text": "ffmpeg -i IMG_2829_cut.mp4 -ss 00:00:00 -t 00:00:48 -async 1 IMG_2829_cut2.mp4\n\n\nffmpeg -i IMG_4674.m4v -s 480x640 -c:v libx264 -crf 25 -c:a aac -movflags faststart IMG_4674_converted.mp4\n\n\nffmpeg -i in.mov -vf \"transpose=2\" out.mov\n\n\n0 = 90CounterCLockwise and Vertical Flip (default)\n1 = 90Clockwise\n2 = 90CounterClockwise\n3 = 90Clockwise and Vertical Flip", 
             "title": "Ffmpeg"
         }, 
         {
@@ -399,6 +519,16 @@
             "location": "/Software/virtualBox/#using-physical-disk-in-virtualbox", 
             "text": "Normally with virtualBox you install the OS to a virtual disk.  virtualBox can be configured to install the OS to a physical disk.  These are the steps to do that:   diskutil list  get device id of USB hard drive  sudo chown aboutte /dev/disk3*  VBoxManage internalcommands createrawvmdk -filename ~/Desktop/pfsense.vmdk -rawdisk /dev/disk3  in virtualBox create a VM but don't add a virtual disk  in the settings add an existing hard drive and select ~/Desktop/pfsense.vmdk", 
             "title": "Using physical disk in virtualBox"
+        }, 
+        {
+            "location": "/Software/Networking/Palo Alto/", 
+            "text": "Troubleshooting\n\n\nhttps://blog.webernetz.net/cli-commands-for-troubleshooting-palo-alto-firewalls/", 
+            "title": "Palo Alto"
+        }, 
+        {
+            "location": "/Software/Networking/Palo Alto/#troubleshooting", 
+            "text": "https://blog.webernetz.net/cli-commands-for-troubleshooting-palo-alto-firewalls/", 
+            "title": "Troubleshooting"
         }, 
         {
             "location": "/Software/Networking/HP/ProCurve/", 
@@ -527,22 +657,12 @@
         }, 
         {
             "location": "/VPN/README/", 
-            "text": "pivpn\n\n\nhttps://github.com/iphoting/ovpnmcgen.rb\n\n\nFor iPhone export in pfSense:\n- set p12 export password that is in pfSense\n- export using Bundled Configurations: Archive\n\n\nFor Laptop export in pfsense:\n- set p12 password to empty field\n- export Viscosity (Mac OS X and Windows: Viscosity inline config\n\n\ncd /Users/aboutte/Documents/r/docs/vpn\novpnmcgen.rb generate aboutte iphone \n /Volumes/openvpn_configs/aboutte-iphone.mobileconfig\n\n\nremove probe for Cellular\n\n\nremove probe from home WiFi\n\n\nadd username password\n\n\nauth-user-pass\n\n  \nuser\\nPassword\n\n\nscp /Volumes/openvpn_configs/aboutte-iphone.mobileconfig root@mobileconfig.andyboutte.com:/var/www/mobileconfigs/aboutte-iphone.mobileconfig", 
+            "text": "pivpn\n\n\nhttps://github.com/iphoting/ovpnmcgen.rb\n\n\nFor iPhone export in pfSense:\n- set p12 export password that is in pfSense\n- export using Bundled Configurations: Archive\n\n\nFor Laptop export in pfsense:\n- set p12 password to empty field\n- export Viscosity (Mac OS X and Windows: Viscosity inline config\n\n\ncd /Users/aboutte/Documents/r/docs/docs/VPN\novpnmcgen.rb generate aboutte iphone -o /Volumes/openvpn_configs/aboutte-iphone.mobileconfig\n\n\nadd username password\n\n\nauth-user-pass\n\n  \nuser\\nPassword\n\n\nscp /Volumes/openvpn_configs/aboutte-iphone.mobileconfig root@mobileconfig.andyboutte.com:/var/www/mobileconfigs/aboutte-iphone.mobileconfig\n\n\nOpen mobileconfig.andyboutte.com in Safari on iPhone", 
             "title": "README"
         }, 
         {
-            "location": "/VPN/README/#remove-probe-for-cellular", 
-            "text": "", 
-            "title": "remove probe for Cellular"
-        }, 
-        {
-            "location": "/VPN/README/#remove-probe-from-home-wifi", 
-            "text": "", 
-            "title": "remove probe from home WiFi"
-        }, 
-        {
             "location": "/VPN/README/#add-username-password", 
-            "text": "auth-user-pass \n   user\\nPassword  scp /Volumes/openvpn_configs/aboutte-iphone.mobileconfig root@mobileconfig.andyboutte.com:/var/www/mobileconfigs/aboutte-iphone.mobileconfig", 
+            "text": "auth-user-pass \n   user\\nPassword  scp /Volumes/openvpn_configs/aboutte-iphone.mobileconfig root@mobileconfig.andyboutte.com:/var/www/mobileconfigs/aboutte-iphone.mobileconfig  Open mobileconfig.andyboutte.com in Safari on iPhone", 
             "title": "add username password"
         }, 
         {
@@ -622,7 +742,7 @@
         }, 
         {
             "location": "/performance/throughput/", 
-            "text": "disk throughput\n\n\nhdparm supports testing read speed (hdparm linux only)\n\n\nhdparm -tT /dev/sda\n\n\ndd\n\n\ndd can be used to test read and write speed.  I have a script in dotfiles repo for this\n    disk_performance \"/Volumes/media/andy/testfile\"\n\n\nnetwork\n\n\nclient\n    time iperf --num 1GB --interval 5 --client rtr.andyboutte.com --format M -P 5\n\n\nserver\n     iperf -s\n\n\nbidirection test (throughput)\n\n\nadd -d switch to client\n\n\nparallel streams\n\n\nadd -P 2 to client\n\n\ncalculating max throughput\n\n\n\n\nhttp://bradhedlund.com/2008/12/19/how-to-calculate-tcp-throughput-for-long-distance-links/\n\n\nmax TCP window size is 64KB = 65536 Bytes. 65536 * 8 = 524288 bits\n\n\n\n\nactual TCP window size being used can be retrieved from Wireshark\n\n\n\n\n\n\nuse tcptrace to capture the TCP RTT\n\n\n\n\nmax window size / RTT = throughput\n\n\n\n\nexample: 524288 bits / 0.030 (30ms RTT) seconds = 17476266 bits per second throughput = 17.4 Mbps maximum possible throughput\n\n\n(TCP Window Size / (RTT ms / 1000) ) / 1000000 = real world throughput in Mbps\n\n\nBandwidth (Mbit/s) = ((65535 * 8)/(RTT latency in ms/1000))/1000000\n\n\ntcptrace\n\n\nhttp://prefetch.net/blog/index.php/2006/04/17/debugging-tcp-connections-with-tcptrace/\n\n\ntcptrace tcpdump.pcap\ntcptrace -r -l -o7 ec2.pcapng\n\n\ntcptrace -houtput # describes the output from -l", 
+            "text": "disk throughput\n\n\nhdparm supports testing read speed (hdparm linux only)\n\n\nhdparm -tT /dev/sda\n\n\ndd\n\n\ndd can be used to test read and write speed.  I have a script in dotfiles repo for this\n\n\ndisk_performance \"/Volumes/media/andy/testfile\"\n\n\n\nnetwork\n\n\nclient\n\n\ntime iperf --num 1GB --interval 5 --client rtr.andyboutte.com --format M -P 5\n\n\n\nserver\n\n\n iperf -s\n\n\n\nbidirection test (throughput)\n\n\nadd -d switch to client\n\n\nparallel streams\n\n\nadd -P 2 to client\n\n\ncalculating max throughput\n\n\n\n\nhttp://bradhedlund.com/2008/12/19/how-to-calculate-tcp-throughput-for-long-distance-links/\n\n\nmax TCP window size is 64KB = 65536 Bytes. 65536 * 8 = 524288 bits\n\n\n\n\nactual TCP window size being used can be retrieved from Wireshark\n\n\n\n\n\n\nuse tcptrace to capture the TCP RTT\n\n\n\n\nmax window size / RTT = throughput\n\n\n\n\nexample: 524288 bits / 0.030 (30ms RTT) seconds = 17476266 bits per second throughput = 17.4 Mbps maximum possible throughput\n\n\n(TCP Window Size / (RTT ms / 1000) ) / 1000000 = real world throughput in Mbps\n\n\nBandwidth (Mbit/s) = ((65535 * 8)/(RTT latency in ms/1000))/1000000\n\n\ntcptrace\n\n\nhttp://prefetch.net/blog/index.php/2006/04/17/debugging-tcp-connections-with-tcptrace/\n\n\ntcptrace tcpdump.pcap\ntcptrace -r -l -o7 ec2.pcapng\n\n\ntcptrace -houtput # describes the output from -l", 
             "title": "Throughput"
         }, 
         {
@@ -637,12 +757,12 @@
         }, 
         {
             "location": "/performance/throughput/#dd", 
-            "text": "dd can be used to test read and write speed.  I have a script in dotfiles repo for this\n    disk_performance \"/Volumes/media/andy/testfile\"", 
+            "text": "dd can be used to test read and write speed.  I have a script in dotfiles repo for this  disk_performance \"/Volumes/media/andy/testfile\"", 
             "title": "dd"
         }, 
         {
             "location": "/performance/throughput/#network", 
-            "text": "client\n    time iperf --num 1GB --interval 5 --client rtr.andyboutte.com --format M -P 5  server\n     iperf -s", 
+            "text": "client  time iperf --num 1GB --interval 5 --client rtr.andyboutte.com --format M -P 5  server   iperf -s", 
             "title": "network"
         }, 
         {
