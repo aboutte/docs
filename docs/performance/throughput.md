@@ -1,18 +1,22 @@
 # disk throughput
 
 ## hdparm supports testing read speed (hdparm linux only)
+
    hdparm -tT /dev/sda
 
 ## dd
 dd can be used to test read and write speed.  I have a script in dotfiles repo for this
+
     disk_performance "/Volumes/media/andy/testfile"
 
 # network
 
 client
+
     time iperf --num 1GB --interval 5 --client rtr.andyboutte.com --format M -P 5
 
 server
+
      iperf -s
 
 ## bidirection test (throughput)
