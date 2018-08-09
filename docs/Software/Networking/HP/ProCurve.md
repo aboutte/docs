@@ -18,7 +18,7 @@
 
     wr mem
 
-
+http://blog.petrilopia.net/info/hp-procurve-cli-cheatsheet-2/
 
 
 tagged v untagged

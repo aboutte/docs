@@ -3,15 +3,25 @@
     pip install awslogs
 
 
+# List groups
+
+    awslogs groups
+
+# List streams
+
+    awslogs streams
+
+# capture from sepcific stream
+
+    awslogs get ${group name} ALL --start="2h"
+
 # Capture
 
     awslogs get aws_vpc_log_groups ALL --start='12/05/2017 17:00' --end='12/05/2017 20:00' > vpcflowlog
 
-
 # Remove first two columns
 
     cat vpcflowlog | awk '{print $3 " " $4 " " $5 " " $6 " " $7 " " $8 " " $9 " " $10 " " $11 " " $12 " " $13 " " $14 " " $15 " " $16}' > tmp
-
 
 
 # Get rows that are inter VPC communication and drop intra VPC communication
