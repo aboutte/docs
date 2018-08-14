@@ -26,6 +26,12 @@ listing backups can be used to figure which snapshot to restore
 
     duplicacy list -all
     duplicacy list -id repo
+    
+## history
+
+find all the revisions where a specific file was backed up
+
+    duplicacy history ~/Desktop/filename    
 
 ## restore
 
@@ -34,7 +40,7 @@ use the init command to setup a repository with the same name of a previously ba
     cd ~/Desktop/
     mkdir restore
     cd restore/
-    duplicacy init ${repo_name} s3://us-east-1@s3.wasabisys.com/aboutte.backup.boutte/13mbpr01-aboutte
+    duplicacy init -e ${repo_name} s3://us-east-1@s3.wasabisys.com/aboutte.backup.boutte/13mbpr01-aboutte
     # By default duplicacy will restore the entire snapshot.  Filters can be used to exclude everything and just include the required directory/file 
     duplicacy restore -stats -threads 20 -r 177 -- i:rean-platform/.*$  e:.*
 
