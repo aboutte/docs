@@ -10,7 +10,7 @@
         <meta name="description" content="Andy Boutte's Documentation">
       
       
-        <link rel="canonical" href="http://docs.andyboutte.com/Software/ffmpeg/">
+        <link rel="canonical" href="http://docs.andyboutte.com/Software/ssh/">
       
       
         <meta name="author" content="Andy Boutte">
@@ -37,7 +37,7 @@
     
     
       
-        <title>Ffmpeg - Andy Boutte's Documentation</title>
+        <title>Ssh - Andy Boutte's Documentation</title>
       
     
     
@@ -105,7 +105,7 @@
                 </span>
               
             
-            Ffmpeg
+            Ssh
           
         </span>
       </div>
@@ -678,18 +678,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-    <a href="./" title="Ffmpeg" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../ffmpeg/" title="Ffmpeg" class="md-nav__link">
       Ffmpeg
     </a>
-    
   </li>
 
         
@@ -757,11 +750,47 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../ssh/" title="Ssh" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Ssh
+      </label>
+    
+    <a href="./" title="Ssh" class="md-nav__link md-nav__link--active">
       Ssh
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-tunnel-example" title="ssh tunnel example" class="md-nav__link">
+    ssh tunnel example
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1492,6 +1521,22 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-tunnel-example" title="ssh tunnel example" class="md-nav__link">
+    ssh tunnel example
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1504,15 +1549,14 @@
               
                 
                 
-                  <h1>Ffmpeg</h1>
-                
-                <p>ffmpeg -i IMG_2829_cut.mp4 -ss 00:00:00 -t 00:00:48 -async 1 IMG_2829_cut2.mp4</p>
-<p>ffmpeg -i IMG_4674.m4v -s 480x640 -c:v libx264 -crf 25 -c:a aac -movflags faststart IMG_4674_converted.mp4</p>
-<p>ffmpeg -i in.mov -vf "transpose=2" out.mov</p>
-<p>0 = 90CounterCLockwise and Vertical Flip (default)
-1 = 90Clockwise
-2 = 90CounterClockwise
-3 = 90Clockwise and Vertical Flip</p>
+                <h1 id="ssh-tunneling">ssh tunneling</h1>
+<p>good diagram that explains the different options</p>
+<p>https://unix.stackexchange.com/a/46271</p>
+<h2 id="ssh-tunnel-example">ssh tunnel example</h2>
+<p>if server is running service on 127.0.0.1:5601 you can access it locally at localhost:9000</p>
+<p>ssh -L 9000:localhost:5601 ec2-user@10.0.27.226</p>
+<h1 id="socks-proxy-for-accessing-mgmt-network">socks proxy for accessing mgmt network</h1>
+<p>ssh -D 3128 -f -C -q -N root@$bastion.mgmt.andyboutte.com</p>
                 
                   
                 
@@ -1531,7 +1575,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../encrypt/" title="Encrypt" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../sqlmap/" title="Sqlmap" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1540,19 +1584,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Encrypt
+                Sqlmap
               </span>
             </div>
           </a>
         
         
-          <a href="../keybase/" title="Keybase" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../virtualBox/" title="virtualBox" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Keybase
+                virtualBox
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

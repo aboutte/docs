@@ -745,11 +745,25 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
+      
+    
     
     <a href="./" title="Sqlmap" class="md-nav__link md-nav__link--active">
       Sqlmap
     </a>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ssh/" title="Ssh" class="md-nav__link">
+      Ssh
+    </a>
   </li>
 
         
@@ -772,13 +786,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-12" type="checkbox" id="nav-11-12">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-13" type="checkbox" id="nav-11-13">
     
-    <label class="md-nav__link" for="nav-11-12">
+    <label class="md-nav__link" for="nav-11-13">
       Networking
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-11-12">
+      <label class="md-nav__title" for="nav-11-13">
         Networking
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -803,13 +817,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-12-2" type="checkbox" id="nav-11-12-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-13-2" type="checkbox" id="nav-11-13-2">
     
-    <label class="md-nav__link" for="nav-11-12-2">
+    <label class="md-nav__link" for="nav-11-13-2">
       HP
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-11-12-2">
+      <label class="md-nav__title" for="nav-11-13-2">
         HP
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -839,13 +853,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-12-3" type="checkbox" id="nav-11-12-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-13-3" type="checkbox" id="nav-11-13-3">
     
-    <label class="md-nav__link" for="nav-11-12-3">
+    <label class="md-nav__link" for="nav-11-13-3">
       pfSense
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-11-12-3">
+      <label class="md-nav__title" for="nav-11-13-3">
         pfSense
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -892,13 +906,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-13" type="checkbox" id="nav-11-13">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-14" type="checkbox" id="nav-11-14">
     
-    <label class="md-nav__link" for="nav-11-13">
+    <label class="md-nav__link" for="nav-11-14">
       WordPress
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-11-13">
+      <label class="md-nav__title" for="nav-11-14">
         WordPress
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -928,13 +942,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-14" type="checkbox" id="nav-11-14">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-15" type="checkbox" id="nav-11-15">
     
-    <label class="md-nav__link" for="nav-11-14">
+    <label class="md-nav__link" for="nav-11-15">
       Strace
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-11-14">
+      <label class="md-nav__title" for="nav-11-15">
         Strace
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1480,6 +1494,8 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
 </nav>
                   </div>
@@ -1492,10 +1508,13 @@
               
                 
                 
-                  <h1>Sqlmap</h1>
-                
-                <p>python ./sqlmap.py --user-agent "test" --url "https://some_url.com" --threads=4 --dbms MySQL --level=5 --risk=3 --banner --answers="union-char=Y" --keep-alive --eta -v 3</p>
+                <p>cd ~/Desktop/
+git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev
+cd sqlmap-dev/
+python ./sqlmap.py --user-agent "test" --url "https://boutte-reanplatform-dockerhost-1002413089.us-gov-west-1.elb.amazonaws.com" --threads=4 --dbms MySQL --level=5 --risk=3 --banner --answers="union-char=Y" --keep-alive --eta -v 3</p>
 <p>https://www.owasp.org/index.php/Automated_Audit_using_SQLMap</p>
+<h1 id="attach-post-request-with-configuration-coming-from-burp-file">attach post request with configuration coming from burp file</h1>
+<p>./sqlmap.py -r search-test.txt -p tfUPass</p>
                 
                   
                 
@@ -1529,13 +1548,13 @@
           </a>
         
         
-          <a href="../virtualBox/" title="virtualBox" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../ssh/" title="Ssh" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                virtualBox
+                Ssh
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

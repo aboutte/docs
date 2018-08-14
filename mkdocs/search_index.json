@@ -12,13 +12,28 @@
         }, 
         {
             "location": "/AWS/VPC Flow Logs/", 
-            "text": "Install awslogs\n\n\npip install awslogs\n\n\n\nCapture\n\n\nawslogs get aws_vpc_log_groups ALL --start='12/05/2017 17:00' --end='12/05/2017 20:00' \n vpcflowlog\n\n\n\nRemove first two columns\n\n\ncat vpcflowlog | awk '{print $3 \" \" $4 \" \" $5 \" \" $6 \" \" $7 \" \" $8 \" \" $9 \" \" $10 \" \" $11 \" \" $12 \" \" $13 \" \" $14 \" \" $15 \" \" $16}' \n tmp\n\n\n\nGet rows that are inter VPC communication and drop intra VPC communication\n\n\ncat tmp | awk '{ if( $4 ~ /10\\.100/ \n $5 ~ /10\\.100/ ) {} else { print } }' \n vpcflowlog", 
+            "text": "Install awslogs\n\n\npip install awslogs\n\n\n\nList groups\n\n\nawslogs groups\n\n\n\nList streams\n\n\nawslogs streams\n\n\n\ncapture from sepcific stream\n\n\nawslogs get ${group name} ALL --start=\"2h\"\n\n\n\nCapture\n\n\nawslogs get aws_vpc_log_groups ALL --start='12/05/2017 17:00' --end='12/05/2017 20:00' \n vpcflowlog\n\n\n\nRemove first two columns\n\n\ncat vpcflowlog | awk '{print $3 \" \" $4 \" \" $5 \" \" $6 \" \" $7 \" \" $8 \" \" $9 \" \" $10 \" \" $11 \" \" $12 \" \" $13 \" \" $14 \" \" $15 \" \" $16}' \n tmp\n\n\n\nGet rows that are inter VPC communication and drop intra VPC communication\n\n\ncat tmp | awk '{ if( $4 ~ /10\\.100/ \n $5 ~ /10\\.100/ ) {} else { print } }' \n vpcflowlog", 
             "title": "VPC Flow Logs"
         }, 
         {
             "location": "/AWS/VPC Flow Logs/#install-awslogs", 
             "text": "pip install awslogs", 
             "title": "Install awslogs"
+        }, 
+        {
+            "location": "/AWS/VPC Flow Logs/#list-groups", 
+            "text": "awslogs groups", 
+            "title": "List groups"
+        }, 
+        {
+            "location": "/AWS/VPC Flow Logs/#list-streams", 
+            "text": "awslogs streams", 
+            "title": "List streams"
+        }, 
+        {
+            "location": "/AWS/VPC Flow Logs/#capture-from-sepcific-stream", 
+            "text": "awslogs get ${group name} ALL --start=\"2h\"", 
+            "title": "capture from sepcific stream"
         }, 
         {
             "location": "/AWS/VPC Flow Logs/#capture", 
@@ -127,7 +142,7 @@
         }, 
         {
             "location": "/Backup/duplicacy/", 
-            "text": "Duplicacy Notes\n\n\nwiki - https://github.com/gilbertchen/duplicacy/wiki\n\n\ninit\n\n\n\n\n\n\nchange directory to the source of the backups\n\n\ncd ~/r/\n\n\n\n\n\n\nRegister the directory as the duplicacy repository\n\n\nduplicacy init -e -pref-dir ~/r/dotfiles/duplicacy/${repo_name} ${repo_name} s3://us-east-1@s3.wasabisys.com/aboutte.backup.boutte/13mbpr01-aboutte\n\n\n\n\n\n\nbackup\n\n\ncd ~/r/\nduplicacy backup -stats -t initial\n\n\n\nlist\n\n\nlisting backups can be used to figure which snapshot to restore\n\n\nduplicacy list -all\nduplicacy list -id repo\n\n\n\nrestore\n\n\nuse the init command to setup a repository with the same name of a previously backed up repository\n\n\ncd ~/Desktop/\nmkdir restore\ncd restore/\nduplicacy init -e -pref-dir ~/r/dotfiles/duplicacy/${repo_name} ${repo_name} s3://us-east-1@s3.wasabisys.com/aboutte.backup.boutte/13mbpr01-aboutte\n# By default duplicacy will restore the entire snapshot.  Filters can be used to exclude everything and just include the required directory/file \nduplicacy restore -stats -threads 20 -r 177 -- i:rean-platform/.*$  e:.*\n\n\n\nlaunchd\n\n\nrepo\n\n\nbackup\n\n\ncurl -o ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.repo.plist http://launched.zerowidth.com/plists/839cd4c0-def3-0135-4bb3-25eaf5b91f13.xml\nlaunchctl load -w ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.repo.plist\n\n\nprune\n\n\nhome\n\n\nbackup\n\n\ncurl -o ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.home.plist http://launched.zerowidth.com/plists/97dda290-def3-0135-4bb3-25eaf5b91f13.xml\nlaunchctl load -w ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.home.plist\n\n\nprune\n\n\nduplicacy -log prune -keep 1:15      # Keep 1 snapshot every 1 day(s) if older than 15 day(s)    - hourly for 0-15 days\nduplicacy -log prune -keep 1:90      # Keep 1 snapshot every 1 day(s) if older than 90 day(s)    - daily for 0-90 days\nduplicacy -log prune -keep 30:180    # Keep 1 snapshot every 30 day(s) if older than 180 day(s)  - monthly for 0-360 days\nduplicacy -log prune -keep 360:360   # Keep 1 snapshot every 360 day(s) if older than 360 day(s) - yearly forever\n\n\nSchedule\n\n\nhttps://superuser.com/questions/132084/run-script-when-a-specific-disk-memory-card-is-mounted-under-osx", 
+            "text": "Duplicacy Notes\n\n\nwiki - https://github.com/gilbertchen/duplicacy/wiki\n\n\ninit\n\n\n\n\n\n\nchange directory to the source of the backups\n\n\ncd ~/r/\n\n\n\n\n\n\nRegister the directory as the duplicacy repository\n\n\nduplicacy init -e -pref-dir ~/r/dotfiles/duplicacy/${repo_name} ${repo_name} s3://us-east-1@s3.wasabisys.com/aboutte.backup.boutte/13mbpr01-aboutte\n\n\n\n\n\n\nbackup\n\n\ncd ~/r/\nduplicacy backup -stats -t initial\n\n\n\nlist\n\n\nlisting backups can be used to figure which snapshot to restore\n\n\nduplicacy list -all\nduplicacy list -id repo\n\n\n\nhistory\n\n\nfind all the revisions where a specific file was backed up\n\n\nduplicacy history ~/Desktop/filename\n\n\n\nrestore\n\n\nuse the init command to setup a repository with the same name of a previously backed up repository\n\n\ncd ~/Desktop/\nmkdir restore\ncd restore/\nduplicacy init -e ${repo_name} s3://us-east-1@s3.wasabisys.com/aboutte.backup.boutte/13mbpr01-aboutte\n# By default duplicacy will restore the entire snapshot.  Filters can be used to exclude everything and just include the required directory/file \nduplicacy restore -stats -threads 20 -r 177 -- i:rean-platform/.*$  e:.*\n\n\n\nlaunchd\n\n\nrepo\n\n\nbackup\n\n\ncurl -o ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.repo.plist http://launched.zerowidth.com/plists/839cd4c0-def3-0135-4bb3-25eaf5b91f13.xml\nlaunchctl load -w ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.repo.plist\n\n\nprune\n\n\nhome\n\n\nbackup\n\n\ncurl -o ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.home.plist http://launched.zerowidth.com/plists/97dda290-def3-0135-4bb3-25eaf5b91f13.xml\nlaunchctl load -w ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.home.plist\n\n\nprune\n\n\nduplicacy -log prune -keep 1:15      # Keep 1 snapshot every 1 day(s) if older than 15 day(s)    - hourly for 0-15 days\nduplicacy -log prune -keep 1:90      # Keep 1 snapshot every 1 day(s) if older than 90 day(s)    - daily for 0-90 days\nduplicacy -log prune -keep 30:180    # Keep 1 snapshot every 30 day(s) if older than 180 day(s)  - monthly for 0-360 days\nduplicacy -log prune -keep 360:360   # Keep 1 snapshot every 360 day(s) if older than 360 day(s) - yearly forever\n\n\nSchedule\n\n\nhttps://superuser.com/questions/132084/run-script-when-a-specific-disk-memory-card-is-mounted-under-osx", 
             "title": "Duplicacy"
         }, 
         {
@@ -151,8 +166,13 @@
             "title": "list"
         }, 
         {
+            "location": "/Backup/duplicacy/#history", 
+            "text": "find all the revisions where a specific file was backed up  duplicacy history ~/Desktop/filename", 
+            "title": "history"
+        }, 
+        {
             "location": "/Backup/duplicacy/#restore", 
-            "text": "use the init command to setup a repository with the same name of a previously backed up repository  cd ~/Desktop/\nmkdir restore\ncd restore/\nduplicacy init -e -pref-dir ~/r/dotfiles/duplicacy/${repo_name} ${repo_name} s3://us-east-1@s3.wasabisys.com/aboutte.backup.boutte/13mbpr01-aboutte\n# By default duplicacy will restore the entire snapshot.  Filters can be used to exclude everything and just include the required directory/file \nduplicacy restore -stats -threads 20 -r 177 -- i:rean-platform/.*$  e:.*", 
+            "text": "use the init command to setup a repository with the same name of a previously backed up repository  cd ~/Desktop/\nmkdir restore\ncd restore/\nduplicacy init -e ${repo_name} s3://us-east-1@s3.wasabisys.com/aboutte.backup.boutte/13mbpr01-aboutte\n# By default duplicacy will restore the entire snapshot.  Filters can be used to exclude everything and just include the required directory/file \nduplicacy restore -stats -threads 20 -r 177 -- i:rean-platform/.*$  e:.*", 
             "title": "restore"
         }, 
         {
@@ -502,8 +522,33 @@
         }, 
         {
             "location": "/Software/sqlmap/", 
-            "text": "python ./sqlmap.py --user-agent \"test\" --url \"https://some_url.com\" --threads=4 --dbms MySQL --level=5 --risk=3 --banner --answers=\"union-char=Y\" --keep-alive --eta -v 3\n\n\nhttps://www.owasp.org/index.php/Automated_Audit_using_SQLMap", 
+            "text": "cd ~/Desktop/\ngit clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev\ncd sqlmap-dev/\npython ./sqlmap.py --user-agent \"test\" --url \"https://boutte-reanplatform-dockerhost-1002413089.us-gov-west-1.elb.amazonaws.com\" --threads=4 --dbms MySQL --level=5 --risk=3 --banner --answers=\"union-char=Y\" --keep-alive --eta -v 3\n\n\nhttps://www.owasp.org/index.php/Automated_Audit_using_SQLMap\n\n\nattach post request with configuration coming from burp file\n\n\n./sqlmap.py -r search-test.txt -p tfUPass", 
             "title": "Sqlmap"
+        }, 
+        {
+            "location": "/Software/sqlmap/#attach-post-request-with-configuration-coming-from-burp-file", 
+            "text": "./sqlmap.py -r search-test.txt -p tfUPass", 
+            "title": "attach post request with configuration coming from burp file"
+        }, 
+        {
+            "location": "/Software/ssh/", 
+            "text": "ssh tunneling\n\n\ngood diagram that explains the different options\n\n\nhttps://unix.stackexchange.com/a/46271\n\n\nssh tunnel example\n\n\nif server is running service on 127.0.0.1:5601 you can access it locally at localhost:9000\n\n\nssh -L 9000:localhost:5601 ec2-user@10.0.27.226\n\n\nsocks proxy for accessing mgmt network\n\n\nssh -D 3128 -f -C -q -N root@$bastion.mgmt.andyboutte.com", 
+            "title": "Ssh"
+        }, 
+        {
+            "location": "/Software/ssh/#ssh-tunneling", 
+            "text": "good diagram that explains the different options  https://unix.stackexchange.com/a/46271", 
+            "title": "ssh tunneling"
+        }, 
+        {
+            "location": "/Software/ssh/#ssh-tunnel-example", 
+            "text": "if server is running service on 127.0.0.1:5601 you can access it locally at localhost:9000  ssh -L 9000:localhost:5601 ec2-user@10.0.27.226", 
+            "title": "ssh tunnel example"
+        }, 
+        {
+            "location": "/Software/ssh/#socks-proxy-for-accessing-mgmt-network", 
+            "text": "ssh -D 3128 -f -C -q -N root@$bastion.mgmt.andyboutte.com", 
+            "title": "socks proxy for accessing mgmt network"
         }, 
         {
             "location": "/Software/virtualBox/", 
@@ -532,7 +577,7 @@
         }, 
         {
             "location": "/Software/Networking/HP/ProCurve/", 
-            "text": "Asign vlan to interface\n\n\nshow vlan\nconfigure\nvlan 30\nuntagged 1\ntagged 3-7\nend\n\n\n\nlist mac addresses by port\n\n\nshow mac-address\n\n\n\nshow running configure\n\n\nshow config\n\n\n\nSave the running config to preserve between reboots\n\n\nwr mem\n\n\n\ntagged v untagged\n\n\neverything is from the sw01 perspective.\n\n\nuntagged - the packets coming into the switch are not already tagged because the device\nis not vlan aware\n\n\ntagged - the device plugged into this port is vlan aware so the switch needs to leave\nthe vlan bits of the packet intact so the device itself can read the vlan id\n\n\nunused ports should be added to vlan 999 to blackhole them\n\n\nports that should be connected to the LAN should be vlan 1 untaggged\n\n\nhttps://doc.pfsense.org/index.php/Migrate_Assigned_LAN_to_LAGG\nhttp://techierambles.blogspot.com/2009/07/enable-lacp-on-hp-procurve-switch.html", 
+            "text": "Asign vlan to interface\n\n\nshow vlan\nconfigure\nvlan 30\nuntagged 1\ntagged 3-7\nend\n\n\n\nlist mac addresses by port\n\n\nshow mac-address\n\n\n\nshow running configure\n\n\nshow config\n\n\n\nSave the running config to preserve between reboots\n\n\nwr mem\n\n\n\nhttp://blog.petrilopia.net/info/hp-procurve-cli-cheatsheet-2/\n\n\ntagged v untagged\n\n\neverything is from the sw01 perspective.\n\n\nuntagged - the packets coming into the switch are not already tagged because the device\nis not vlan aware\n\n\ntagged - the device plugged into this port is vlan aware so the switch needs to leave\nthe vlan bits of the packet intact so the device itself can read the vlan id\n\n\nunused ports should be added to vlan 999 to blackhole them\n\n\nports that should be connected to the LAN should be vlan 1 untaggged\n\n\nhttps://doc.pfsense.org/index.php/Migrate_Assigned_LAN_to_LAGG\nhttp://techierambles.blogspot.com/2009/07/enable-lacp-on-hp-procurve-switch.html", 
             "title": "ProCurve"
         }, 
         {
@@ -552,7 +597,7 @@
         }, 
         {
             "location": "/Software/Networking/HP/ProCurve/#save-the-running-config-to-preserve-between-reboots", 
-            "text": "wr mem  tagged v untagged  everything is from the sw01 perspective.  untagged - the packets coming into the switch are not already tagged because the device\nis not vlan aware  tagged - the device plugged into this port is vlan aware so the switch needs to leave\nthe vlan bits of the packet intact so the device itself can read the vlan id  unused ports should be added to vlan 999 to blackhole them  ports that should be connected to the LAN should be vlan 1 untaggged  https://doc.pfsense.org/index.php/Migrate_Assigned_LAN_to_LAGG\nhttp://techierambles.blogspot.com/2009/07/enable-lacp-on-hp-procurve-switch.html", 
+            "text": "wr mem  http://blog.petrilopia.net/info/hp-procurve-cli-cheatsheet-2/  tagged v untagged  everything is from the sw01 perspective.  untagged - the packets coming into the switch are not already tagged because the device\nis not vlan aware  tagged - the device plugged into this port is vlan aware so the switch needs to leave\nthe vlan bits of the packet intact so the device itself can read the vlan id  unused ports should be added to vlan 999 to blackhole them  ports that should be connected to the LAN should be vlan 1 untaggged  https://doc.pfsense.org/index.php/Migrate_Assigned_LAN_to_LAGG\nhttp://techierambles.blogspot.com/2009/07/enable-lacp-on-hp-procurve-switch.html", 
             "title": "Save the running config to preserve between reboots"
         }, 
         {
@@ -597,7 +642,7 @@
         }, 
         {
             "location": "/Software/WordPress/README/", 
-            "text": "wpscan\n\n\nSetup\n\n\nvagrant init centos/7; vagrant up --provider virtualbox\nvagrant ssh\ngpg2 --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3\ncurl -sSL https://get.rvm.io | bash -s stable --ruby\nsource /usr/local/rvm/scripts/rvm\necho \"source source /usr/local/rvm/scripts/rvm\" \n ~/.bashrc\nrvm install 2.3.1\nrvm use 2.3.1 --default\necho \"gem: --no-ri --no-rdoc\" \n ~/.gemrc\ngem install bundler\nsudo yum install -y git vim epel-release bind-utils nmap-ncat net-tools htop wget\ngit clone https://github.com/wpscanteam/wpscan.git\ncd wpscan\nbundle install --without test\n./wpscan.rb --update\n\n\n\nUsing wpscan\n\n\n./wpscan.rb --url www.example.com\n\n\n\nget users\n\n\n./wpscan.rb --url www.example.com --enumerate u\n\n\n\nbrute force users\n\n\n./wpscan.rb --url www.example.com --enumerate u[1-30] --proxy socks5://127.0.0.1:9151 --threads 10 --wordlist ./passwords.txt\n\n\n\nForce wpscan to use tor network\n\n\n\n\nstart tor browser on mac\n\n\n\n\nsetup ssh tunnel to vagrant vm (run this from mac)\n\n\nssh -f -N -T -R9151:localhost:9150 vagrant@127.0.0.1 -p 2222 -i .vagrant/machines/default/virtualbox/private_key\n\n\n\n\n\n\ninside vagrant run:\n\n\n./wpscan.rb --url www.example.com --enumerate u --proxy socks5://127.0.0.1:9151\n\n\n\n\n\n\nNotes\n\n\n\n\nhttps://github.com/wpscanteam/wpscan\n\n\nhttps://hackertarget.com/attacking-wordpress/", 
+            "text": "wpscan\n\n\nSetup\n\n\ndocker pull wpscanteam/wpscan\ndocker run --net=host -it --rm wpscanteam/wpscan -u https://yourblog.com [options] --proxy socks5://127.0.0.1:9151\n\n\n\nUsing wpscan\n\n\n./wpscan.rb --url www.example.com\n\n\n\nget users\n\n\n./wpscan.rb --url www.example.com --enumerate u\n\n\n\nbrute force users\n\n\n./wpscan.rb --url www.example.com --enumerate u[1-30] --proxy socks5://127.0.0.1:9151 --threads 10 --wordlist ./passwords.txt\n\n\n\nNotes\n\n\n\n\nhttps://github.com/wpscanteam/wpscan\n\n\nhttps://hackertarget.com/attacking-wordpress/", 
             "title": "README"
         }, 
         {
@@ -607,7 +652,7 @@
         }, 
         {
             "location": "/Software/WordPress/README/#setup", 
-            "text": "vagrant init centos/7; vagrant up --provider virtualbox\nvagrant ssh\ngpg2 --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3\ncurl -sSL https://get.rvm.io | bash -s stable --ruby\nsource /usr/local/rvm/scripts/rvm\necho \"source source /usr/local/rvm/scripts/rvm\"   ~/.bashrc\nrvm install 2.3.1\nrvm use 2.3.1 --default\necho \"gem: --no-ri --no-rdoc\"   ~/.gemrc\ngem install bundler\nsudo yum install -y git vim epel-release bind-utils nmap-ncat net-tools htop wget\ngit clone https://github.com/wpscanteam/wpscan.git\ncd wpscan\nbundle install --without test\n./wpscan.rb --update", 
+            "text": "docker pull wpscanteam/wpscan\ndocker run --net=host -it --rm wpscanteam/wpscan -u https://yourblog.com [options] --proxy socks5://127.0.0.1:9151", 
             "title": "Setup"
         }, 
         {
@@ -624,11 +669,6 @@
             "location": "/Software/WordPress/README/#brute-force-users", 
             "text": "./wpscan.rb --url www.example.com --enumerate u[1-30] --proxy socks5://127.0.0.1:9151 --threads 10 --wordlist ./passwords.txt", 
             "title": "brute force users"
-        }, 
-        {
-            "location": "/Software/WordPress/README/#force-wpscan-to-use-tor-network", 
-            "text": "start tor browser on mac   setup ssh tunnel to vagrant vm (run this from mac)  ssh -f -N -T -R9151:localhost:9150 vagrant@127.0.0.1 -p 2222 -i .vagrant/machines/default/virtualbox/private_key    inside vagrant run:  ./wpscan.rb --url www.example.com --enumerate u --proxy socks5://127.0.0.1:9151", 
-            "title": "Force wpscan to use tor network"
         }, 
         {
             "location": "/Software/WordPress/README/#notes", 

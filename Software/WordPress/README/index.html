@@ -756,6 +756,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../ssh/" title="Ssh" class="md-nav__link">
+      Ssh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../virtualBox/" title="virtualBox" class="md-nav__link">
       virtualBox
     </a>
@@ -769,13 +781,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-12" type="checkbox" id="nav-11-12">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-13" type="checkbox" id="nav-11-13">
     
-    <label class="md-nav__link" for="nav-11-12">
+    <label class="md-nav__link" for="nav-11-13">
       Networking
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-11-12">
+      <label class="md-nav__title" for="nav-11-13">
         Networking
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -800,13 +812,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-12-2" type="checkbox" id="nav-11-12-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-13-2" type="checkbox" id="nav-11-13-2">
     
-    <label class="md-nav__link" for="nav-11-12-2">
+    <label class="md-nav__link" for="nav-11-13-2">
       HP
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-11-12-2">
+      <label class="md-nav__title" for="nav-11-13-2">
         HP
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -836,13 +848,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-12-3" type="checkbox" id="nav-11-12-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-13-3" type="checkbox" id="nav-11-13-3">
     
-    <label class="md-nav__link" for="nav-11-12-3">
+    <label class="md-nav__link" for="nav-11-13-3">
       pfSense
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-11-12-3">
+      <label class="md-nav__title" for="nav-11-13-3">
         pfSense
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -891,13 +903,13 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-13" type="checkbox" id="nav-11-13" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-14" type="checkbox" id="nav-11-14" checked>
     
-    <label class="md-nav__link" for="nav-11-13">
+    <label class="md-nav__link" for="nav-11-14">
       WordPress
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-11-13">
+      <label class="md-nav__title" for="nav-11-14">
         WordPress
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -964,19 +976,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#force-wpscan-to-use-tor-network" title="Force wpscan to use tor network" class="md-nav__link">
-    Force wpscan to use tor network
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
   <a href="#notes" title="Notes" class="md-nav__link">
     Notes
@@ -1010,13 +1009,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-14" type="checkbox" id="nav-11-14">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-15" type="checkbox" id="nav-11-15">
     
-    <label class="md-nav__link" for="nav-11-14">
+    <label class="md-nav__link" for="nav-11-15">
       Strace
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-11-14">
+      <label class="md-nav__title" for="nav-11-15">
         Strace
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1597,19 +1596,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#force-wpscan-to-use-tor-network" title="Force wpscan to use tor network" class="md-nav__link">
-    Force wpscan to use tor network
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
   <a href="#notes" title="Notes" class="md-nav__link">
     Notes
@@ -1639,21 +1625,8 @@
                 
                 <h1 id="wpscan">wpscan</h1>
 <h2 id="setup">Setup</h2>
-<pre><code>vagrant init centos/7; vagrant up --provider virtualbox
-vagrant ssh
-gpg2 --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-curl -sSL https://get.rvm.io | bash -s stable --ruby
-source /usr/local/rvm/scripts/rvm
-echo "source source /usr/local/rvm/scripts/rvm" &gt;&gt; ~/.bashrc
-rvm install 2.3.1
-rvm use 2.3.1 --default
-echo "gem: --no-ri --no-rdoc" &gt; ~/.gemrc
-gem install bundler
-sudo yum install -y git vim epel-release bind-utils nmap-ncat net-tools htop wget
-git clone https://github.com/wpscanteam/wpscan.git
-cd wpscan
-bundle install --without test
-./wpscan.rb --update
+<pre><code>docker pull wpscanteam/wpscan
+docker run --net=host -it --rm wpscanteam/wpscan -u https://yourblog.com [options] --proxy socks5://127.0.0.1:9151
 </code></pre>
 <h2 id="using-wpscan">Using wpscan</h2>
 <pre><code>./wpscan.rb --url www.example.com
@@ -1664,18 +1637,6 @@ bundle install --without test
 <h3 id="brute-force-users">brute force users</h3>
 <pre><code>./wpscan.rb --url www.example.com --enumerate u[1-30] --proxy socks5://127.0.0.1:9151 --threads 10 --wordlist ./passwords.txt
 </code></pre>
-<h2 id="force-wpscan-to-use-tor-network">Force wpscan to use tor network</h2>
-<ul>
-<li>start tor browser on mac</li>
-<li>
-<p>setup ssh tunnel to vagrant vm (run this from mac)</p>
-<p>ssh -f -N -T -R9151:localhost:9150 vagrant@127.0.0.1 -p 2222 -i .vagrant/machines/default/virtualbox/private_key</p>
-</li>
-<li>
-<p>inside vagrant run:</p>
-<p>./wpscan.rb --url www.example.com --enumerate u --proxy socks5://127.0.0.1:9151</p>
-</li>
-</ul>
 <h3 id="notes">Notes</h3>
 <ul>
 <li>https://github.com/wpscanteam/wpscan</li>
