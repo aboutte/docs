@@ -41,6 +41,7 @@ use the init command to setup a repository with the same name of a previously ba
     mkdir restore
     cd restore/
     duplicacy init -e ${repo_name} s3://us-east-1@s3.wasabisys.com/aboutte.backup.boutte/13mbpr01-aboutte
+    duplicacy list
     # By default duplicacy will restore the entire snapshot.  Filters can be used to exclude everything and just include the required directory/file 
     duplicacy restore -stats -threads 20 -r 177 -- i:rean-platform/.*$  e:.*
 
