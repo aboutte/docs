@@ -657,7 +657,7 @@
         }, 
         {
             "location": "/Software/WordPress/README/", 
-            "text": "wpscan\n\n\nSetup\n\n\ndocker pull wpscanteam/wpscan\ndocker run --net=\"host\" -it --rm wpscanteam/wpscan -u https://www.example.com/ --enumerate u --proxy socks5://host.docker.internal:9150 --random-agent\n\n\n\nUsing wpscan\n\n\n./wpscan.rb --url www.example.com\n\n\n\nget users\n\n\n./wpscan.rb --url www.example.com --enumerate u\n\n\n\nbrute force users\n\n\n./wpscan.rb --url www.example.com --enumerate u[1-30] --proxy socks5://127.0.0.1:9151 --threads 10 --wordlist ./passwords.txt\n\n\n\nNotes\n\n\n\n\nhttps://github.com/wpscanteam/wpscan\n\n\nhttps://hackertarget.com/attacking-wordpress/", 
+            "text": "wpscan\n\n\nSetup\n\n\ndocker pull wpscanteam/wpscan\n\n\n\nUsing wpscan\n\n\ndocker run --net=\"host\" -it --rm wpscanteam/wpscan wpscan --threads 2 --url www.example.com --proxy socks5://host.docker.internal:9150 --random-agent\n\n\n\nget users\n\n\ndocker run --net=\"host\" -it --rm wpscanteam/wpscan wpscan --threads 2 --url www.example.com --enumerate u --proxy socks5://host.docker.internal:9150 --random-agent\n\n\n\nbrute force users\n\n\ndocker run --net=\"host\" -it -v ~/r/docs/docs/Software/WordPress/:/wordlists --rm wpscanteam/wpscan wpscan --throttle 500 --threads 1 --url www.example.com --proxy socks5://host.docker.internal:9150 --random-agent --wordlist /wordlists/500-worst-passwords.txt --username admin\n\n\n\ntroubleshooting\n\n\n--debug-output\n-v\ncurl --socks5 127.0.0.1:9150 ipconfig.io\n\n\n\nNotes\n\n\n\n\nhttps://github.com/wpscanteam/wpscan\n\n\nhttps://hackertarget.com/attacking-wordpress/", 
             "title": "README"
         }, 
         {
@@ -667,23 +667,28 @@
         }, 
         {
             "location": "/Software/WordPress/README/#setup", 
-            "text": "docker pull wpscanteam/wpscan\ndocker run --net=\"host\" -it --rm wpscanteam/wpscan -u https://www.example.com/ --enumerate u --proxy socks5://host.docker.internal:9150 --random-agent", 
+            "text": "docker pull wpscanteam/wpscan", 
             "title": "Setup"
         }, 
         {
             "location": "/Software/WordPress/README/#using-wpscan", 
-            "text": "./wpscan.rb --url www.example.com", 
+            "text": "docker run --net=\"host\" -it --rm wpscanteam/wpscan wpscan --threads 2 --url www.example.com --proxy socks5://host.docker.internal:9150 --random-agent", 
             "title": "Using wpscan"
         }, 
         {
             "location": "/Software/WordPress/README/#get-users", 
-            "text": "./wpscan.rb --url www.example.com --enumerate u", 
+            "text": "docker run --net=\"host\" -it --rm wpscanteam/wpscan wpscan --threads 2 --url www.example.com --enumerate u --proxy socks5://host.docker.internal:9150 --random-agent", 
             "title": "get users"
         }, 
         {
             "location": "/Software/WordPress/README/#brute-force-users", 
-            "text": "./wpscan.rb --url www.example.com --enumerate u[1-30] --proxy socks5://127.0.0.1:9151 --threads 10 --wordlist ./passwords.txt", 
+            "text": "docker run --net=\"host\" -it -v ~/r/docs/docs/Software/WordPress/:/wordlists --rm wpscanteam/wpscan wpscan --throttle 500 --threads 1 --url www.example.com --proxy socks5://host.docker.internal:9150 --random-agent --wordlist /wordlists/500-worst-passwords.txt --username admin", 
             "title": "brute force users"
+        }, 
+        {
+            "location": "/Software/WordPress/README/#troubleshooting", 
+            "text": "--debug-output\n-v\ncurl --socks5 127.0.0.1:9150 ipconfig.io", 
+            "title": "troubleshooting"
         }, 
         {
             "location": "/Software/WordPress/README/#notes", 

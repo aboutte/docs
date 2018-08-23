@@ -977,6 +977,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#troubleshooting" title="troubleshooting" class="md-nav__link">
+    troubleshooting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#notes" title="Notes" class="md-nav__link">
     Notes
   </a>
@@ -1597,6 +1604,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#troubleshooting" title="troubleshooting" class="md-nav__link">
+    troubleshooting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#notes" title="Notes" class="md-nav__link">
     Notes
   </a>
@@ -1626,16 +1640,20 @@
                 <h1 id="wpscan">wpscan</h1>
 <h2 id="setup">Setup</h2>
 <pre><code>docker pull wpscanteam/wpscan
-docker run --net="host" -it --rm wpscanteam/wpscan -u https://www.example.com/ --enumerate u --proxy socks5://host.docker.internal:9150 --random-agent
 </code></pre>
 <h2 id="using-wpscan">Using wpscan</h2>
-<pre><code>./wpscan.rb --url www.example.com
+<pre><code>docker run --net="host" -it --rm wpscanteam/wpscan wpscan --threads 2 --url www.example.com --proxy socks5://host.docker.internal:9150 --random-agent
 </code></pre>
 <h3 id="get-users">get users</h3>
-<pre><code>./wpscan.rb --url www.example.com --enumerate u
+<pre><code>docker run --net="host" -it --rm wpscanteam/wpscan wpscan --threads 2 --url www.example.com --enumerate u --proxy socks5://host.docker.internal:9150 --random-agent
 </code></pre>
 <h3 id="brute-force-users">brute force users</h3>
-<pre><code>./wpscan.rb --url www.example.com --enumerate u[1-30] --proxy socks5://127.0.0.1:9151 --threads 10 --wordlist ./passwords.txt
+<pre><code>docker run --net="host" -it -v ~/r/docs/docs/Software/WordPress/:/wordlists --rm wpscanteam/wpscan wpscan --throttle 500 --threads 1 --url www.example.com --proxy socks5://host.docker.internal:9150 --random-agent --wordlist /wordlists/500-worst-passwords.txt --username admin
+</code></pre>
+<h3 id="troubleshooting">troubleshooting</h3>
+<pre><code>--debug-output
+-v
+curl --socks5 127.0.0.1:9150 ipconfig.io
 </code></pre>
 <h3 id="notes">Notes</h3>
 <ul>
