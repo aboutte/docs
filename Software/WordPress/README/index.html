@@ -1626,7 +1626,7 @@
                 <h1 id="wpscan">wpscan</h1>
 <h2 id="setup">Setup</h2>
 <pre><code>docker pull wpscanteam/wpscan
-docker run --net=host -it --rm wpscanteam/wpscan -u https://yourblog.com [options] --proxy socks5://127.0.0.1:9151
+docker run --net="host" -it --rm wpscanteam/wpscan -u https://www.example.com/ --enumerate u --proxy socks5://host.docker.internal:9150 --random-agent
 </code></pre>
 <h2 id="using-wpscan">Using wpscan</h2>
 <pre><code>./wpscan.rb --url www.example.com

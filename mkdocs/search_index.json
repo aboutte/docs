@@ -657,7 +657,7 @@
         }, 
         {
             "location": "/Software/WordPress/README/", 
-            "text": "wpscan\n\n\nSetup\n\n\ndocker pull wpscanteam/wpscan\ndocker run --net=host -it --rm wpscanteam/wpscan -u https://yourblog.com [options] --proxy socks5://127.0.0.1:9151\n\n\n\nUsing wpscan\n\n\n./wpscan.rb --url www.example.com\n\n\n\nget users\n\n\n./wpscan.rb --url www.example.com --enumerate u\n\n\n\nbrute force users\n\n\n./wpscan.rb --url www.example.com --enumerate u[1-30] --proxy socks5://127.0.0.1:9151 --threads 10 --wordlist ./passwords.txt\n\n\n\nNotes\n\n\n\n\nhttps://github.com/wpscanteam/wpscan\n\n\nhttps://hackertarget.com/attacking-wordpress/", 
+            "text": "wpscan\n\n\nSetup\n\n\ndocker pull wpscanteam/wpscan\ndocker run --net=\"host\" -it --rm wpscanteam/wpscan -u https://www.example.com/ --enumerate u --proxy socks5://host.docker.internal:9150 --random-agent\n\n\n\nUsing wpscan\n\n\n./wpscan.rb --url www.example.com\n\n\n\nget users\n\n\n./wpscan.rb --url www.example.com --enumerate u\n\n\n\nbrute force users\n\n\n./wpscan.rb --url www.example.com --enumerate u[1-30] --proxy socks5://127.0.0.1:9151 --threads 10 --wordlist ./passwords.txt\n\n\n\nNotes\n\n\n\n\nhttps://github.com/wpscanteam/wpscan\n\n\nhttps://hackertarget.com/attacking-wordpress/", 
             "title": "README"
         }, 
         {
@@ -667,7 +667,7 @@
         }, 
         {
             "location": "/Software/WordPress/README/#setup", 
-            "text": "docker pull wpscanteam/wpscan\ndocker run --net=host -it --rm wpscanteam/wpscan -u https://yourblog.com [options] --proxy socks5://127.0.0.1:9151", 
+            "text": "docker pull wpscanteam/wpscan\ndocker run --net=\"host\" -it --rm wpscanteam/wpscan -u https://www.example.com/ --enumerate u --proxy socks5://host.docker.internal:9150 --random-agent", 
             "title": "Setup"
         }, 
         {
