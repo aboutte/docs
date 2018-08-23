@@ -3,19 +3,24 @@
 ## Setup
 
     docker pull wpscanteam/wpscan
-    docker run --net="host" -it --rm wpscanteam/wpscan -u https://www.example.com/ --enumerate u --proxy socks5://host.docker.internal:9150 --random-agent
 
 ## Using wpscan
 
-    ./wpscan.rb --url www.example.com
+    docker run --net="host" -it --rm wpscanteam/wpscan wpscan --threads 2 --url www.example.com --proxy socks5://host.docker.internal:9150 --random-agent
 
 ### get users
 
-    ./wpscan.rb --url www.example.com --enumerate u
+    docker run --net="host" -it --rm wpscanteam/wpscan wpscan --threads 2 --url www.example.com --enumerate u --proxy socks5://host.docker.internal:9150 --random-agent
 
 ### brute force users
 
-    ./wpscan.rb --url www.example.com --enumerate u[1-30] --proxy socks5://127.0.0.1:9151 --threads 10 --wordlist ./passwords.txt
+    docker run --net="host" -it -v ~/r/docs/docs/Software/WordPress/:/wordlists --rm wpscanteam/wpscan wpscan --throttle 500 --threads 1 --url www.example.com --proxy socks5://host.docker.internal:9150 --random-agent --wordlist /wordlists/500-worst-passwords.txt --username admin
+    
+### troubleshooting
+
+    --debug-output
+    -v
+    curl --socks5 127.0.0.1:9150 ipconfig.io
 
 ### Notes
 
