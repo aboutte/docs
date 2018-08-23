@@ -522,13 +522,28 @@
         }, 
         {
             "location": "/Software/sqlmap/", 
-            "text": "cd ~/Desktop/\ngit clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev\ncd sqlmap-dev/\npython ./sqlmap.py --user-agent \"test\" --url \"https://boutte-reanplatform-dockerhost-1002413089.us-gov-west-1.elb.amazonaws.com\" --threads=4 --dbms MySQL --level=5 --risk=3 --banner --answers=\"union-char=Y\" --keep-alive --eta -v 3\n\n\nhttps://www.owasp.org/index.php/Automated_Audit_using_SQLMap\n\n\nattach post request with configuration coming from burp file\n\n\n./sqlmap.py -r search-test.txt -p tfUPass", 
+            "text": "install\n\n\nbrew install sqlmap\n\n\n\nusage\n\n\nexample usage\n\n\nsqlmap --user-agent \"test\" --url \"https://example.com\" --threads=4 --dbms MySQL --level=5 --risk=3 --banner --answers=\"union-char=Y\" --keep-alive --eta -v 3\n\n\n\nPOST\n\n\nsqlmap --user-agent \"test\" --url \"https://example.com\" --cookie=\"JSESSIONID=9C8352B26D684A5D1AA725628B0082EE;\"  -p \"userid\"  --level 5\n\n\n\nsqlmap -u https://boutte-reanplatform-dockerhost-208184116.us-gov-west-1.elb.amazonaws.com/reandeploy#/home/dnow/1 --forms --batch --crawl=10 --cookie=\"JSESSIONID=9C8352B26D684A5D1AA725628B0082EE;\" --level=5 --risk=3\n\n\nburp suite\n\n\nattach post request with configuration coming from burp file\n\n\n./sqlmap.py -r search-test.txt -p tfUPass", 
             "title": "Sqlmap"
         }, 
         {
-            "location": "/Software/sqlmap/#attach-post-request-with-configuration-coming-from-burp-file", 
-            "text": "./sqlmap.py -r search-test.txt -p tfUPass", 
-            "title": "attach post request with configuration coming from burp file"
+            "location": "/Software/sqlmap/#install", 
+            "text": "brew install sqlmap", 
+            "title": "install"
+        }, 
+        {
+            "location": "/Software/sqlmap/#usage", 
+            "text": "example usage  sqlmap --user-agent \"test\" --url \"https://example.com\" --threads=4 --dbms MySQL --level=5 --risk=3 --banner --answers=\"union-char=Y\" --keep-alive --eta -v 3", 
+            "title": "usage"
+        }, 
+        {
+            "location": "/Software/sqlmap/#post", 
+            "text": "sqlmap --user-agent \"test\" --url \"https://example.com\" --cookie=\"JSESSIONID=9C8352B26D684A5D1AA725628B0082EE;\"  -p \"userid\"  --level 5  sqlmap -u https://boutte-reanplatform-dockerhost-208184116.us-gov-west-1.elb.amazonaws.com/reandeploy#/home/dnow/1 --forms --batch --crawl=10 --cookie=\"JSESSIONID=9C8352B26D684A5D1AA725628B0082EE;\" --level=5 --risk=3", 
+            "title": "POST"
+        }, 
+        {
+            "location": "/Software/sqlmap/#burp-suite", 
+            "text": "attach post request with configuration coming from burp file  ./sqlmap.py -r search-test.txt -p tfUPass", 
+            "title": "burp suite"
         }, 
         {
             "location": "/Software/ssh/", 
