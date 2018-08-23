@@ -3,7 +3,7 @@
 ## Setup
 
     docker pull wpscanteam/wpscan
-    docker run --net=host -it --rm wpscanteam/wpscan -u https://yourblog.com [options] --proxy socks5://127.0.0.1:9151
+    docker run --net="host" -it --rm wpscanteam/wpscan -u https://www.example.com/ --enumerate u --proxy socks5://host.docker.internal:9150 --random-agent
 
 ## Using wpscan
 
