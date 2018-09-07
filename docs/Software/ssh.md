@@ -13,4 +13,4 @@ ssh -L 9000:localhost:5601 ec2-user@10.0.27.226
 
 # socks proxy for accessing mgmt network
 
-ssh -D 3128 -f -C -q -N root@$bastion.mgmt.andyboutte.com
+ssh -D 3128 -f -C -q -N bastion.mgmt.andyboutte.com
