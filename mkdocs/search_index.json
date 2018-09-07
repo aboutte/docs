@@ -522,7 +522,7 @@
         }, 
         {
             "location": "/Software/sqlmap/", 
-            "text": "install\n\n\nbrew install sqlmap\n\n\n\nusage\n\n\nexample usage\n\n\nsqlmap --user-agent \"test\" --url \"https://example.com\" --threads=4 --dbms MySQL --level=5 --risk=3 --banner --answers=\"union-char=Y\" --keep-alive --eta -v 3\n\n\n\nPOST\n\n\nsqlmap --user-agent \"test\" --url \"https://example.com\" --cookie=\"JSESSIONID=9C8352B26D684A5D1AA725628B0082EE;\"  -p \"userid\"  --level 5\n\n\n\nsqlmap -u https://boutte-reanplatform-dockerhost-208184116.us-gov-west-1.elb.amazonaws.com/reandeploy#/home/dnow/1 --forms --batch --crawl=10 --cookie=\"JSESSIONID=9C8352B26D684A5D1AA725628B0082EE;\" --level=5 --risk=3\n\n\nburp suite\n\n\nattach post request with configuration coming from burp file\n\n\n./sqlmap.py -r search-test.txt -p tfUPass", 
+            "text": "install\n\n\nbrew install sqlmap\n\n\n\nusage\n\n\nexample usage\n\n\nsqlmap --user-agent \"test\" --url \"https://example.com\" --threads=4 --dbms MySQL --level=5 --risk=3 --banner --answers=\"union-char=Y\" --keep-alive --eta -v 3\n\n\n\nGET\n\n\nsqlmap --dbms MySQL --banner -u \"https://example.com/api/user/*\" -v 4 --random-agent --threads 2 --cookie=\"JSESSIONID=23469E1D65EE8ECFA2D3620BDD5102B3;\"\n\n\n\nPOST\n\n\nsqlmap --user-agent \"test\" --url \"https://example.com\" --cookie=\"JSESSIONID=AB29721D2EBA6A05E59F57DEFA0CD5E9;\"  -p \"userid\"  --level 5\n\n\n\nsqlmap -u https://boutte-reanplatform-dockerhost-208184116.us-gov-west-1.elb.amazonaws.com/reandeploy#/home/dnow/1 --forms --batch --crawl=10 --cookie=\"JSESSIONID=9C8352B26D684A5D1AA725628B0082EE;\" --level=5 --risk=3\n\n\nburp suite\n\n\nattach post request with configuration coming from burp file\n\n\nsqlmap -r search-test.txt -p \"param1,param2,param3\" --dbms MySQL --banner --random-agent --tor --tor-check --threads 2", 
             "title": "Sqlmap"
         }, 
         {
@@ -536,18 +536,23 @@
             "title": "usage"
         }, 
         {
+            "location": "/Software/sqlmap/#get", 
+            "text": "sqlmap --dbms MySQL --banner -u \"https://example.com/api/user/*\" -v 4 --random-agent --threads 2 --cookie=\"JSESSIONID=23469E1D65EE8ECFA2D3620BDD5102B3;\"", 
+            "title": "GET"
+        }, 
+        {
             "location": "/Software/sqlmap/#post", 
-            "text": "sqlmap --user-agent \"test\" --url \"https://example.com\" --cookie=\"JSESSIONID=9C8352B26D684A5D1AA725628B0082EE;\"  -p \"userid\"  --level 5  sqlmap -u https://boutte-reanplatform-dockerhost-208184116.us-gov-west-1.elb.amazonaws.com/reandeploy#/home/dnow/1 --forms --batch --crawl=10 --cookie=\"JSESSIONID=9C8352B26D684A5D1AA725628B0082EE;\" --level=5 --risk=3", 
+            "text": "sqlmap --user-agent \"test\" --url \"https://example.com\" --cookie=\"JSESSIONID=AB29721D2EBA6A05E59F57DEFA0CD5E9;\"  -p \"userid\"  --level 5  sqlmap -u https://boutte-reanplatform-dockerhost-208184116.us-gov-west-1.elb.amazonaws.com/reandeploy#/home/dnow/1 --forms --batch --crawl=10 --cookie=\"JSESSIONID=9C8352B26D684A5D1AA725628B0082EE;\" --level=5 --risk=3", 
             "title": "POST"
         }, 
         {
             "location": "/Software/sqlmap/#burp-suite", 
-            "text": "attach post request with configuration coming from burp file  ./sqlmap.py -r search-test.txt -p tfUPass", 
+            "text": "attach post request with configuration coming from burp file  sqlmap -r search-test.txt -p \"param1,param2,param3\" --dbms MySQL --banner --random-agent --tor --tor-check --threads 2", 
             "title": "burp suite"
         }, 
         {
             "location": "/Software/ssh/", 
-            "text": "ssh tunneling\n\n\ngood diagram that explains the different options\n\n\nhttps://unix.stackexchange.com/a/46271\n\n\nssh tunnel example\n\n\nif server is running service on 127.0.0.1:5601 you can access it locally at localhost:9000\n\n\nssh -L 9000:localhost:5601 ec2-user@10.0.27.226\n\n\nsocks proxy for accessing mgmt network\n\n\nssh -D 3128 -f -C -q -N root@$bastion.mgmt.andyboutte.com", 
+            "text": "ssh tunneling\n\n\ngood diagram that explains the different options\n\n\nhttps://unix.stackexchange.com/a/46271\n\n\nssh tunnel example\n\n\nif server is running service on 127.0.0.1:5601 you can access it locally at localhost:9000\n\n\nssh -L 9000:localhost:5601 ec2-user@10.0.27.226\n\n\nsocks proxy for accessing mgmt network\n\n\nssh -D 3128 -f -C -q -N bastion.mgmt.andyboutte.com", 
             "title": "Ssh"
         }, 
         {
@@ -562,7 +567,7 @@
         }, 
         {
             "location": "/Software/ssh/#socks-proxy-for-accessing-mgmt-network", 
-            "text": "ssh -D 3128 -f -C -q -N root@$bastion.mgmt.andyboutte.com", 
+            "text": "ssh -D 3128 -f -C -q -N bastion.mgmt.andyboutte.com", 
             "title": "socks proxy for accessing mgmt network"
         }, 
         {
