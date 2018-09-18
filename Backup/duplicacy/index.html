@@ -1800,10 +1800,11 @@ launchctl load -w ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup
 <p>curl -o ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.home.plist http://launched.zerowidth.com/plists/97dda290-def3-0135-4bb3-25eaf5b91f13.xml
 launchctl load -w ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.home.plist</p>
 <h4 id="prune_1">prune</h4>
-<p>duplicacy -log prune -keep 1:15      # Keep 1 snapshot every 1 day(s) if older than 15 day(s)    - hourly for 0-15 days
+<pre><code>duplicacy -log prune -keep 1:15      # Keep 1 snapshot every 1 day(s) if older than 15 day(s)    - hourly for 0-15 days
 duplicacy -log prune -keep 1:90      # Keep 1 snapshot every 1 day(s) if older than 90 day(s)    - daily for 0-90 days
 duplicacy -log prune -keep 30:180    # Keep 1 snapshot every 30 day(s) if older than 180 day(s)  - monthly for 0-360 days
-duplicacy -log prune -keep 360:360   # Keep 1 snapshot every 360 day(s) if older than 360 day(s) - yearly forever</p>
+duplicacy -log prune -keep 360:360   # Keep 1 snapshot every 360 day(s) if older than 360 day(s) - yearly forever
+</code></pre>
 <h2 id="schedule">Schedule</h2>
 <p>https://superuser.com/questions/132084/run-script-when-a-specific-disk-memory-card-is-mounted-under-osx</p>
                 
