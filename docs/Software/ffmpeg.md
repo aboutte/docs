@@ -4,7 +4,7 @@
 
     ffmpeg -i IMG_4674.m4v -s 480x640 -c:v libx264 -crf 25 -c:a aac -movflags faststart IMG_4674_converted.mp4
 
-Use the following [site](https://pacoup.com/2011/06/12/list-of-true-169-resolutions/)to find aspect ratio to convert to.
+Use the following [site](https://pacoup.com/2011/06/12/list-of-true-169-resolutions/) to find aspect ratio to convert to.
 
 # Cut video
 
