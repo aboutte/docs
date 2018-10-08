@@ -1,12 +1,14 @@
 # ffmpeg 
 
-# Cut video
-
-    ffmpeg -i IMG_2829_cut.mp4 -ss 00:00:00 -t 00:00:48 -async 1 IMG_2829_cut2.mp4
-
 # Convert and reduce size
 
     ffmpeg -i IMG_4674.m4v -s 480x640 -c:v libx264 -crf 25 -c:a aac -movflags faststart IMG_4674_converted.mp4
+
+Use the following [site](https://pacoup.com/2011/06/12/list-of-true-169-resolutions/)to find aspect ratio to convert to.
+
+# Cut video
+
+    ffmpeg -i IMG_2829_cut.mp4 -ss 00:00:00 -t 00:00:48 -async 1 IMG_2829_cut2.mp4
 
 
 ## Rotate
