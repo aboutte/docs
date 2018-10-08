@@ -913,15 +913,27 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../../Software/youtube-dl/" title="Youtube dl" class="md-nav__link">
+      Youtube dl
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-13" type="checkbox" id="nav-11-13">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-14" type="checkbox" id="nav-11-14">
     
-    <label class="md-nav__link" for="nav-11-13">
+    <label class="md-nav__link" for="nav-11-14">
       Networking
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-11-13">
+      <label class="md-nav__title" for="nav-11-14">
         Networking
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -946,13 +958,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-13-2" type="checkbox" id="nav-11-13-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-14-2" type="checkbox" id="nav-11-14-2">
     
-    <label class="md-nav__link" for="nav-11-13-2">
+    <label class="md-nav__link" for="nav-11-14-2">
       HP
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-11-13-2">
+      <label class="md-nav__title" for="nav-11-14-2">
         HP
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -982,13 +994,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-13-3" type="checkbox" id="nav-11-13-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-14-3" type="checkbox" id="nav-11-14-3">
     
-    <label class="md-nav__link" for="nav-11-13-3">
+    <label class="md-nav__link" for="nav-11-14-3">
       pfSense
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-11-13-3">
+      <label class="md-nav__title" for="nav-11-14-3">
         pfSense
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1035,13 +1047,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-14" type="checkbox" id="nav-11-14">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-15" type="checkbox" id="nav-11-15">
     
-    <label class="md-nav__link" for="nav-11-14">
+    <label class="md-nav__link" for="nav-11-15">
       WordPress
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-11-14">
+      <label class="md-nav__title" for="nav-11-15">
         WordPress
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1071,13 +1083,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-15" type="checkbox" id="nav-11-15">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-16" type="checkbox" id="nav-11-16">
     
-    <label class="md-nav__link" for="nav-11-15">
+    <label class="md-nav__link" for="nav-11-16">
       Strace
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-11-15">
+      <label class="md-nav__title" for="nav-11-16">
         Strace
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1800,9 +1812,13 @@ launchctl load -w ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup
 <p>curl -o ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.home.plist http://launched.zerowidth.com/plists/97dda290-def3-0135-4bb3-25eaf5b91f13.xml
 launchctl load -w ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.home.plist</p>
 <h4 id="prune_1">prune</h4>
-<pre><code>duplicacy -log prune -keep 1:15      # Keep 1 snapshot every 1 day(s) if older than 15 day(s)    - hourly for 0-15 days
-duplicacy -log prune -keep 1:90      # Keep 1 snapshot every 1 day(s) if older than 90 day(s)    - daily for 0-90 days
-duplicacy -log prune -keep 30:180    # Keep 1 snapshot every 30 day(s) if older than 180 day(s)  - monthly for 0-360 days
+<p>The retention policies are specified by the -keep option, which accepts an argument in the form of two numbers n:m, 
+where n indicates the number of days between two consecutive snapshots to keep, 
+and m means that the policy only applies to snapshots at least m day old. </p>
+<p>If n is zero, any snapshots older than m days will be removed.</p>
+<pre><code>duplicacy -log prune -keep 1:30      # Keep 1 snapshot every 1 day(s) if older than 30 day(s)    - hourly for 0-30 days
+duplicacy -log prune -keep 1:90      # Keep 1 snapshot every 1 day(s) if older than 90 day(s)    - daily for 30-90 days
+duplicacy -log prune -keep 30:180    # Keep 1 snapshot every 30 day(s) if older than 180 day(s)  - monthly for 90-360 days
 duplicacy -log prune -keep 360:360   # Keep 1 snapshot every 360 day(s) if older than 360 day(s) - yearly forever
 </code></pre>
 <h2 id="schedule">Schedule</h2>

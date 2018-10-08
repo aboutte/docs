@@ -142,7 +142,7 @@
         }, 
         {
             "location": "/Backup/duplicacy/", 
-            "text": "Duplicacy Notes\n\n\nwiki - https://github.com/gilbertchen/duplicacy/wiki\n\n\ninit\n\n\n\n\n\n\nchange directory to the source of the backups\n\n\ncd ~/r/\n\n\n\n\n\n\nRegister the directory as the duplicacy repository\n\n\nduplicacy init -e -pref-dir ~/r/dotfiles/duplicacy/${repo_name} ${repo_name} s3://us-east-1@s3.wasabisys.com/aboutte.backup.boutte/13mbpr01-aboutte\n\n\n\n\n\n\nbackup\n\n\ncd ~/r/\nduplicacy backup -stats -t initial\n\n\n\nlist\n\n\nlisting backups can be used to figure which snapshot to restore\n\n\nduplicacy list -all\nduplicacy list -id repo\n\n\n\nhistory\n\n\nfind all the revisions where a specific file was backed up\n\n\nduplicacy history ~/Desktop/filename\n\n\n\nrestore\n\n\nuse the init command to setup a repository with the same name of a previously backed up repository\n\n\ncd ~/Desktop/\nmkdir restore\ncd restore/\nduplicacy init -e ${repo_name} s3://us-east-1@s3.wasabisys.com/aboutte.backup.boutte/13mbpr01-aboutte\nduplicacy list\n# By default duplicacy will restore the entire snapshot.  Filters can be used to exclude everything and just include the required directory/file \nduplicacy restore -stats -threads 20 -r 177 -- i:rean-platform/.*$  e:.*\n\n\n\nlaunchd\n\n\nrepo\n\n\nbackup\n\n\ncurl -o ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.repo.plist http://launched.zerowidth.com/plists/839cd4c0-def3-0135-4bb3-25eaf5b91f13.xml\nlaunchctl load -w ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.repo.plist\n\n\nprune\n\n\nhome\n\n\nbackup\n\n\ncurl -o ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.home.plist http://launched.zerowidth.com/plists/97dda290-def3-0135-4bb3-25eaf5b91f13.xml\nlaunchctl load -w ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.home.plist\n\n\nprune\n\n\nduplicacy -log prune -keep 1:15      # Keep 1 snapshot every 1 day(s) if older than 15 day(s)    - hourly for 0-15 days\nduplicacy -log prune -keep 1:90      # Keep 1 snapshot every 1 day(s) if older than 90 day(s)    - daily for 0-90 days\nduplicacy -log prune -keep 30:180    # Keep 1 snapshot every 30 day(s) if older than 180 day(s)  - monthly for 0-360 days\nduplicacy -log prune -keep 360:360   # Keep 1 snapshot every 360 day(s) if older than 360 day(s) - yearly forever\n\n\n\nSchedule\n\n\nhttps://superuser.com/questions/132084/run-script-when-a-specific-disk-memory-card-is-mounted-under-osx", 
+            "text": "Duplicacy Notes\n\n\nwiki - https://github.com/gilbertchen/duplicacy/wiki\n\n\ninit\n\n\n\n\n\n\nchange directory to the source of the backups\n\n\ncd ~/r/\n\n\n\n\n\n\nRegister the directory as the duplicacy repository\n\n\nduplicacy init -e -pref-dir ~/r/dotfiles/duplicacy/${repo_name} ${repo_name} s3://us-east-1@s3.wasabisys.com/aboutte.backup.boutte/13mbpr01-aboutte\n\n\n\n\n\n\nbackup\n\n\ncd ~/r/\nduplicacy backup -stats -t initial\n\n\n\nlist\n\n\nlisting backups can be used to figure which snapshot to restore\n\n\nduplicacy list -all\nduplicacy list -id repo\n\n\n\nhistory\n\n\nfind all the revisions where a specific file was backed up\n\n\nduplicacy history ~/Desktop/filename\n\n\n\nrestore\n\n\nuse the init command to setup a repository with the same name of a previously backed up repository\n\n\ncd ~/Desktop/\nmkdir restore\ncd restore/\nduplicacy init -e ${repo_name} s3://us-east-1@s3.wasabisys.com/aboutte.backup.boutte/13mbpr01-aboutte\nduplicacy list\n# By default duplicacy will restore the entire snapshot.  Filters can be used to exclude everything and just include the required directory/file \nduplicacy restore -stats -threads 20 -r 177 -- i:rean-platform/.*$  e:.*\n\n\n\nlaunchd\n\n\nrepo\n\n\nbackup\n\n\ncurl -o ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.repo.plist http://launched.zerowidth.com/plists/839cd4c0-def3-0135-4bb3-25eaf5b91f13.xml\nlaunchctl load -w ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.repo.plist\n\n\nprune\n\n\nhome\n\n\nbackup\n\n\ncurl -o ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.home.plist http://launched.zerowidth.com/plists/97dda290-def3-0135-4bb3-25eaf5b91f13.xml\nlaunchctl load -w ~/Library/LaunchAgents/com.zerowidth.launched.duplicacy.backup.home.plist\n\n\nprune\n\n\nThe retention policies are specified by the -keep option, which accepts an argument in the form of two numbers n:m, \nwhere n indicates the number of days between two consecutive snapshots to keep, \nand m means that the policy only applies to snapshots at least m day old. \n\n\nIf n is zero, any snapshots older than m days will be removed.\n\n\nduplicacy -log prune -keep 1:30      # Keep 1 snapshot every 1 day(s) if older than 30 day(s)    - hourly for 0-30 days\nduplicacy -log prune -keep 1:90      # Keep 1 snapshot every 1 day(s) if older than 90 day(s)    - daily for 30-90 days\nduplicacy -log prune -keep 30:180    # Keep 1 snapshot every 30 day(s) if older than 180 day(s)  - monthly for 90-360 days\nduplicacy -log prune -keep 360:360   # Keep 1 snapshot every 360 day(s) if older than 360 day(s) - yearly forever\n\n\n\nSchedule\n\n\nhttps://superuser.com/questions/132084/run-script-when-a-specific-disk-memory-card-is-mounted-under-osx", 
             "title": "Duplicacy"
         }, 
         {
@@ -207,7 +207,7 @@
         }, 
         {
             "location": "/Backup/duplicacy/#prune_1", 
-            "text": "duplicacy -log prune -keep 1:15      # Keep 1 snapshot every 1 day(s) if older than 15 day(s)    - hourly for 0-15 days\nduplicacy -log prune -keep 1:90      # Keep 1 snapshot every 1 day(s) if older than 90 day(s)    - daily for 0-90 days\nduplicacy -log prune -keep 30:180    # Keep 1 snapshot every 30 day(s) if older than 180 day(s)  - monthly for 0-360 days\nduplicacy -log prune -keep 360:360   # Keep 1 snapshot every 360 day(s) if older than 360 day(s) - yearly forever", 
+            "text": "The retention policies are specified by the -keep option, which accepts an argument in the form of two numbers n:m, \nwhere n indicates the number of days between two consecutive snapshots to keep, \nand m means that the policy only applies to snapshots at least m day old.   If n is zero, any snapshots older than m days will be removed.  duplicacy -log prune -keep 1:30      # Keep 1 snapshot every 1 day(s) if older than 30 day(s)    - hourly for 0-30 days\nduplicacy -log prune -keep 1:90      # Keep 1 snapshot every 1 day(s) if older than 90 day(s)    - daily for 30-90 days\nduplicacy -log prune -keep 30:180    # Keep 1 snapshot every 30 day(s) if older than 180 day(s)  - monthly for 90-360 days\nduplicacy -log prune -keep 360:360   # Keep 1 snapshot every 360 day(s) if older than 360 day(s) - yearly forever", 
             "title": "prune"
         }, 
         {
@@ -487,8 +487,28 @@
         }, 
         {
             "location": "/Software/ffmpeg/", 
-            "text": "ffmpeg -i IMG_2829_cut.mp4 -ss 00:00:00 -t 00:00:48 -async 1 IMG_2829_cut2.mp4\n\n\nffmpeg -i IMG_4674.m4v -s 480x640 -c:v libx264 -crf 25 -c:a aac -movflags faststart IMG_4674_converted.mp4\n\n\nffmpeg -i in.mov -vf \"transpose=2\" out.mov\n\n\n0 = 90CounterCLockwise and Vertical Flip (default)\n1 = 90Clockwise\n2 = 90CounterClockwise\n3 = 90Clockwise and Vertical Flip", 
+            "text": "ffmpeg\n\n\nCut video\n\n\nffmpeg -i IMG_2829_cut.mp4 -ss 00:00:00 -t 00:00:48 -async 1 IMG_2829_cut2.mp4\n\n\nConvert and reduce size\n\n\nffmpeg -i IMG_4674.m4v -s 480x640 -c:v libx264 -crf 25 -c:a aac -movflags faststart IMG_4674_converted.mp4\n\n\nRotate\n\n\nffmpeg -i in.mov -vf \"transpose=2\" out.mov\n\n\n\n\n0 = 90CounterCLockwise and Vertical Flip (default)\n\n\n1 = 90Clockwise\n\n\n2 = 90CounterClockwise\n\n\n3 = 90Clockwise and Vertical Flip", 
             "title": "Ffmpeg"
+        }, 
+        {
+            "location": "/Software/ffmpeg/#ffmpeg", 
+            "text": "", 
+            "title": "ffmpeg"
+        }, 
+        {
+            "location": "/Software/ffmpeg/#cut-video", 
+            "text": "ffmpeg -i IMG_2829_cut.mp4 -ss 00:00:00 -t 00:00:48 -async 1 IMG_2829_cut2.mp4", 
+            "title": "Cut video"
+        }, 
+        {
+            "location": "/Software/ffmpeg/#convert-and-reduce-size", 
+            "text": "ffmpeg -i IMG_4674.m4v -s 480x640 -c:v libx264 -crf 25 -c:a aac -movflags faststart IMG_4674_converted.mp4", 
+            "title": "Convert and reduce size"
+        }, 
+        {
+            "location": "/Software/ffmpeg/#rotate", 
+            "text": "ffmpeg -i in.mov -vf \"transpose=2\" out.mov   0 = 90CounterCLockwise and Vertical Flip (default)  1 = 90Clockwise  2 = 90CounterClockwise  3 = 90Clockwise and Vertical Flip", 
+            "title": "Rotate"
         }, 
         {
             "location": "/Software/keybase/", 
@@ -584,6 +604,21 @@
             "location": "/Software/virtualBox/#using-physical-disk-in-virtualbox", 
             "text": "Normally with virtualBox you install the OS to a virtual disk.  virtualBox can be configured to install the OS to a physical disk.  These are the steps to do that:   diskutil list  get device id of USB hard drive  sudo chown aboutte /dev/disk3*  VBoxManage internalcommands createrawvmdk -filename ~/Desktop/pfsense.vmdk -rawdisk /dev/disk3  in virtualBox create a VM but don't add a virtual disk  in the settings add an existing hard drive and select ~/Desktop/pfsense.vmdk", 
             "title": "Using physical disk in virtualBox"
+        }, 
+        {
+            "location": "/Software/youtube-dl/", 
+            "text": "download a list of videos from txt file\n\n\nyoutube-dl --playlist-reverse --download-archive ./downloaded -i -o \"%(uploader)s/%(playlist)s/%(playlist)s - S01E%(playlist_index)s - %(title)s [%(id)s].%(ext)s\" -f bestvideo[ext=mp4]+bestaudio[ext=m4a] --merge-output-format mp4 --add-metadata --write-thumbnail --batch-file=./download\n\n\ndownload a youtube playlist\n\n\nyoutube-dl -f bestvideo[ext=mp4]+bestaudio[ext=m4a] --merge-output-format mp4 --add-metadata -o \"%(uploader)s/%(playlist)s/%(playlist)s - S01E%(playlist_index)s - %(title)s [%(id)s].%(ext)s\"\n\n\nyoutube-dl -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' https://www.youtube.com/playlist?list=PL3LShjVgtVOh1bQJYyl_78iGwFLOZqcyA", 
+            "title": "Youtube dl"
+        }, 
+        {
+            "location": "/Software/youtube-dl/#download-a-list-of-videos-from-txt-file", 
+            "text": "youtube-dl --playlist-reverse --download-archive ./downloaded -i -o \"%(uploader)s/%(playlist)s/%(playlist)s - S01E%(playlist_index)s - %(title)s [%(id)s].%(ext)s\" -f bestvideo[ext=mp4]+bestaudio[ext=m4a] --merge-output-format mp4 --add-metadata --write-thumbnail --batch-file=./download", 
+            "title": "download a list of videos from txt file"
+        }, 
+        {
+            "location": "/Software/youtube-dl/#download-a-youtube-playlist", 
+            "text": "youtube-dl -f bestvideo[ext=mp4]+bestaudio[ext=m4a] --merge-output-format mp4 --add-metadata -o \"%(uploader)s/%(playlist)s/%(playlist)s - S01E%(playlist_index)s - %(title)s [%(id)s].%(ext)s\"  youtube-dl -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' https://www.youtube.com/playlist?list=PL3LShjVgtVOh1bQJYyl_78iGwFLOZqcyA", 
+            "title": "download a youtube playlist"
         }, 
         {
             "location": "/Software/Networking/Palo Alto/", 
