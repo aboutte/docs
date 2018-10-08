@@ -1521,11 +1521,12 @@
                 
                 
                 <h1 id="ffmpeg">ffmpeg</h1>
-<h1 id="cut-video">Cut video</h1>
-<pre><code>ffmpeg -i IMG_2829_cut.mp4 -ss 00:00:00 -t 00:00:48 -async 1 IMG_2829_cut2.mp4
-</code></pre>
 <h1 id="convert-and-reduce-size">Convert and reduce size</h1>
 <pre><code>ffmpeg -i IMG_4674.m4v -s 480x640 -c:v libx264 -crf 25 -c:a aac -movflags faststart IMG_4674_converted.mp4
+</code></pre>
+<p>Use the following <a href="https://pacoup.com/2011/06/12/list-of-true-169-resolutions/">site</a>to find aspect ratio to convert to.</p>
+<h1 id="cut-video">Cut video</h1>
+<pre><code>ffmpeg -i IMG_2829_cut.mp4 -ss 00:00:00 -t 00:00:48 -async 1 IMG_2829_cut2.mp4
 </code></pre>
 <h2 id="rotate">Rotate</h2>
 <pre><code>ffmpeg -i in.mov -vf "transpose=2" out.mov
