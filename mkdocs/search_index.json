@@ -11,6 +11,16 @@
             "title": "Andy Boutte's Documentation"
         }, 
         {
+            "location": "/lxc/", 
+            "text": "setting up LXC build machine\n\n\nhttps://www.itzgeek.com/how-tos/linux/ubuntu-how-tos/setup-linux-container-with-lxc-on-ubuntu-16-04-14-04.html\n\n\nhttps://www.packer.io/docs/builders/lxc.html#template_name\n\n\nhttps://linuxcontainers.org/lxc/manpages/man5/lxc.container.conf.5.html\n\n\nturnkey linux lxc template script:\n\n\nhttps://github.com/turnkeylinux-apps/lxc/blob/master/overlay/usr/share/lxc/templates/lxc-turnkey\n\n\nturnkey linux lxc template usage examples:\n\n\nhttps://github.com/turnkeylinux-apps/lxc/blob/master/docs/usage.rst", 
+            "title": "Lxc"
+        }, 
+        {
+            "location": "/lxc/#setting-up-lxc-build-machine", 
+            "text": "https://www.itzgeek.com/how-tos/linux/ubuntu-how-tos/setup-linux-container-with-lxc-on-ubuntu-16-04-14-04.html  https://www.packer.io/docs/builders/lxc.html#template_name  https://linuxcontainers.org/lxc/manpages/man5/lxc.container.conf.5.html  turnkey linux lxc template script:  https://github.com/turnkeylinux-apps/lxc/blob/master/overlay/usr/share/lxc/templates/lxc-turnkey  turnkey linux lxc template usage examples:  https://github.com/turnkeylinux-apps/lxc/blob/master/docs/usage.rst", 
+            "title": "setting up LXC build machine"
+        }, 
+        {
             "location": "/AWS/VPC Flow Logs/", 
             "text": "Install awslogs\n\n\npip install awslogs\n\n\n\nList groups\n\n\nawslogs groups\n\n\n\nList streams\n\n\nawslogs streams\n\n\n\ncapture from sepcific stream\n\n\nawslogs get ${group name} ALL --start=\"2h\"\n\n\n\nCapture\n\n\nawslogs get aws_vpc_log_groups ALL --start='12/05/2017 17:00' --end='12/05/2017 20:00' \n vpcflowlog\n\n\n\nRemove first two columns\n\n\ncat vpcflowlog | awk '{print $3 \" \" $4 \" \" $5 \" \" $6 \" \" $7 \" \" $8 \" \" $9 \" \" $10 \" \" $11 \" \" $12 \" \" $13 \" \" $14 \" \" $15 \" \" $16}' \n tmp\n\n\n\nGet rows that are inter VPC communication and drop intra VPC communication\n\n\ncat tmp | awk '{ if( $4 ~ /10\\.100/ \n $5 ~ /10\\.100/ ) {} else { print } }' \n vpcflowlog", 
             "title": "VPC Flow Logs"
