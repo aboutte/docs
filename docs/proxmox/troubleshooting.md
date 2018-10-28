@@ -13,7 +13,6 @@ if all nodes are registering as healthy it is likely just a status check issue
 
 ## restart the `pvestatd` service
 
-    /etc/init.d/cman status
+    systemctl restart pvestatd.service
 
 Check the cluster status in the web ui after the restart
-
