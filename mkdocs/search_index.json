@@ -897,7 +897,7 @@
         }, 
         {
             "location": "/proxmox/troubleshooting/", 
-            "text": "cluster status showing red\n\n\nif the web interface cluster status shows red for one or more nodes but no issues are apparent it is possibly a status check failure.\n\n\ncheck cluster status\n\n\nfirst check and make sure all nodes are seen:\n\n\ncat /etc/pve/.members\n\n\n\nif all nodes are registering as healthy it is likely just a status check issue\n\n\nrestart the \npvestatd\n service\n\n\n/etc/init.d/cman status\n\n\n\nCheck the cluster status in the web ui after the restart", 
+            "text": "cluster status showing red\n\n\nif the web interface cluster status shows red for one or more nodes but no issues are apparent it is possibly a status check failure.\n\n\ncheck cluster status\n\n\nfirst check and make sure all nodes are seen:\n\n\ncat /etc/pve/.members\n\n\n\nif all nodes are registering as healthy it is likely just a status check issue\n\n\nrestart the \npvestatd\n service\n\n\nsystemctl restart pvestatd.service\n\n\n\nCheck the cluster status in the web ui after the restart", 
             "title": "Troubleshooting"
         }, 
         {
@@ -912,7 +912,7 @@
         }, 
         {
             "location": "/proxmox/troubleshooting/#restart-the-pvestatd-service", 
-            "text": "/etc/init.d/cman status  Check the cluster status in the web ui after the restart", 
+            "text": "systemctl restart pvestatd.service  Check the cluster status in the web ui after the restart", 
             "title": "restart the pvestatd service"
         }, 
         {

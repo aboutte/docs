@@ -1631,7 +1631,7 @@
 </code></pre>
 <p>if all nodes are registering as healthy it is likely just a status check issue</p>
 <h2 id="restart-the-pvestatd-service">restart the <code>pvestatd</code> service</h2>
-<pre><code>/etc/init.d/cman status
+<pre><code>systemctl restart pvestatd.service
 </code></pre>
 <p>Check the cluster status in the web ui after the restart</p>
                 
