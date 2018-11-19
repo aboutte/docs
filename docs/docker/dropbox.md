@@ -1,0 +1,1 @@
+    docker run -d --net="host" --restart=always --name=dropbox -e DBOX_UID=501 -e DBOX_GID=20 -v ~/Documents/Dropbox:/dbox/Dropbox -v ~/.dropbox:/dbox/.dropbox janeczku/dropbox
